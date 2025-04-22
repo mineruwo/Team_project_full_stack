@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <title>THEJOEUN</title>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css/product.css">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <script src="js/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/31ff140207.js" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUCmgCdOGLjwNesBLeOWh4Kls_J9DIs4&callback=myMap" async defer></script>
+</head>
+
+<body>
+  <header class="header sub">
+    <div class="headerWrap">
+      <div class="headerInnerWrap">
+        <h1 class="logo" onclick="location.href='/'">
+          <div>
+            <p class="logoTxt">THE</p>
+            <p class="logoTxt">JOEUN</p>
+          </div>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li class="menu" onclick="location.href='product.html'">MEN</li>
+            <li class="menu" onclick="location.href='productWomen.html'">WOMEN</li>
+            <li class="menu" onclick="location.href='productKids.html'">KIDS</li>
+            <li class="menu" onclick="location.href='productBaby.html'">BABY</li>
+          </ul>
+        </nav>
+        <div class="iconWrap">
+          <div class="iconBtn" onclick="location.href='wishList.html'">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="iconBtn" onclick="location.href='cart.html'">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="cartNum">0</div>
+          </div>
+          <div class="iconBtn" onclick="location.href='login.html'">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </header> <!--header 영역 끝-->
+  <!--main 영역 시작-->
+  <main class="main">
+    <section id="visualSlider">
+      <div class="imgContainer">
+        <div class="imgBox">
+          <img src="https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+        <div class="imgBox">
+          <img src="https://cdn.pixabay.com/photo/2016/11/29/07/16/balancing-1868051_1280.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+        <div class="imgBox">
+          <img src="https://cdn.pixabay.com/photo/2015/06/19/09/39/lonely-814631_1280.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+      </div>
+    </section>
+    <div class="mainWrap">
+      <section class="productWrap">
+        <!--1번째 제품-->
+        <div class="product"> <!--제품 클릭시 디테일페이지로 이동 삽입-->
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/young-man-portrait_23-2148830366.jpg" id="topImg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>투버튼 트렌치코트</p>
+            <p class="price">&#8361; 199,000</p>
+          </div>
+        </div>
+        <!--2번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/young-man-with-chain-necklace-front-view_23-2149409789.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>인조가죽 바이커 재킷</p>
+            <p class="price">&#8361; 219,000</p>
+          </div>
+        </div>
+        <!--3번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/teenager-boy-stylish-clothes-posing_23-2149085217.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>스트레이트 핏 블랙진</p>
+            <p class="price">&#8361; 96,000</p>
+          </div>
+        </div>
+        <!--4번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/portrait-smiling-bearded-man-with-vintage-camera_171337-4806.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>벨벳 클래식 코트</p>
+            <p class="price">&#8361; 320,000</p>
+          </div>
+        </div>
+        <!--5번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/handsome-man-with-stylish-glasses_23-2148323611.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>오버핏 모직 블레이저</p>
+            <p class="price">&#8361; 255,000</p>
+          </div>
+        </div>
+        <!--6번째 제품 -->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/high-fashion-look-young-stylish-confident-happy-handsome-businessman-model-man-blue-suit-cloth-lifestyle-street_158538-9186.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>투버튼 코튼 재킷</p>
+            <p class="price">&#8361; 288,000</p>
+          </div>
+        </div>
+        <!--7번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/attractive-man-posing-floor_171337-20052.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>빈티지 데미지 청자켓</p>
+            <p class="price">&#8361; 168,000</p>
+          </div>
+        </div>
+        <!--8번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/young-man-portrait_23-2148830344.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>벨티드 와이드 팬츠</p>
+            <p class="price">&#8361; 89,000</p>
+          </div>
+        </div>
+        <!--9번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/full-shot-cool-man-wearing-chain-necklace_23-2149409722.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>트레이닝 세트</p>
+            <p class="price">&#8361; 104,000</p>
+          </div>
+        </div>
+        <!--10번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/school-scene-with-queer-teens_23-2150379369.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>프리미엄 데일리 니트</p>
+            <p class="price">&#8361; 152,000</p>
+          </div>
+        </div>
+        <!--11번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/portrait-man-wearing-lavender-colored-fashion-garments-color-year_23-2151386980.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>세미오버핏 프리미엄자켓</p>
+            <p class="price">&#8361; 129,000</p>
+          </div>
+        </div>
+        <!--12번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/front-view-man-with-sunglasses-talking-smartphone_23-2148682619.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>베이직 체크패턴 숏팬츠</p>
+            <p class="price">&#8361; 91,000</p>
+          </div>
+        </div>
+        <!--13번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/portrait-young-man-with-mobile-posing_23-2148931672.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>반폴라 짜임 니트</p>
+            <p class="price">&#8361; 79,000</p>
+          </div>
+        </div>
+        <!--14번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/artsy-non-binary-person-posing_23-2148757584.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>오버핏 모직 코트</p>
+            <p class="price">&#8361; 312,000</p>
+          </div>
+        </div>
+        <!--15번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/portrait-handsome-young-man_158595-219.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>데일리 원포켓 셔츠</p>
+            <p class="price">&#8361; 112,000</p>
+          </div>
+        </div>
+        <!--16번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/young-handsome-man-spectacles_1303-14472.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>슬림핏 블레이저</p>
+            <p class="price">&#8361; 192,000</p>
+          </div>
+        </div>
+        <!--17번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/young-male-model-thinking-staring-intensively_23-2148248504.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>캐시미어 투버튼 코트</p>
+            <p class="price">&#8361; 321,000</p>
+          </div>
+        </div>
+        <!--18번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/portrait-young-man-casual-outfit_23-2148316140.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>라운드넥 머슬핏 반팔티</p>
+            <p class="price">&#8361; 101,000</p>
+          </div>
+        </div>
+        <!--19번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/close-up-portrait-man-shirt-mockup_23-2149260912.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>라운드 멘투맨 오버티</p>
+            <p class="price">&#8361; 77,000</p>
+          </div>
+        </div>
+        <!--20번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/man-posing-grandstands-full-shot_23-2149659140.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>투포컷 트러커 자켓</p>
+            <p class="price">&#8361; 112,000</p>
+          </div>
+        </div>
+        <!--21번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/portrait-male-wearing-cap-sitting_23-2148854463.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>골지 밴딩 팬츠</p>
+            <p class="price">&#8361; 82,000</p>
+          </div>
+        </div>
+        <!--22번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/outdoor-fashion-portrait-handsome-guy-stylish-spring-sportive-outfit-listening-favorite-music_273443-2699.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>자수 포인트 누빔 야구점퍼</p>
+            <p class="price">&#8361; 212,000</p>
+          </div>
+        </div>
+        <!--23번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/vertical-shot-badass-male-with-black-leather-jacket-roof_181624-29362.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>가죽 이펙트 재켓</p>
+            <p class="price">&#8361; 237,000</p>
+          </div>
+        </div>
+        <!--24번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/male-dancer-posing-sneakers-suit-without-shirt_23-2148417931.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>체크 투버튼 블레이저 자켓</p>
+            <p class="price">&#8361; 272,000</p>
+          </div>
+        </div>
+        <!--25번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/young-caucasian-man-casual_144627-129.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>후드 떡볶이 코트</p>
+            <p class="price">&#8361; 312,000</p>
+          </div>
+        </div>
+        <!--26번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/fashion-hipster-male-model-posing-outdoor_158595-808.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>후드 가디건 자켓</p>
+            <p class="price">&#8361; 232,000</p>
+          </div>
+        </div>
+        <!--27번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/handsome-muscular-young-man-posing_158595-3044.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>U넥 포인트 반팔 티셔츠</p>
+            <p class="price">&#8361; 73,000</p>
+          </div>
+        </div>
+        <!--28번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/handsome-young-male-posing-with-sunglasses_23-2148466090.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>모직 더블 코트</p>
+            <p class="price">&#8361; 419,000</p>
+          </div>
+        </div>
+        <!--29번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/front-view-stylish-adult-male-posing-with-hat_23-2148466058.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>체크 투버튼 자켓</p>
+            <p class="price">&#8361; 184,000</p>
+          </div>
+        </div>
+        <!--30번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/young-cool-skater-boy_23-2147670713.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>플라워 패턴 반팔 셔츠</p>
+            <p class="price">&#8361; 102,000</p>
+          </div>
+        </div>
+        <!--31번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/portrait-handsome-fashion-stylish-hipster-businessman-model-dressed-elegant-brown-suit-sitting-near-dark_158538-11273.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>슬림핏 슬랙스 팬츠</p>
+            <p class="price">&#8361; 102,000</p>
+          </div>
+        </div>
+        <!--32번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/smiley-man-posing-grey-wall_23-2148448892.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>앙고라 블레이저 자켓</p>
+            <p class="price">&#8361; 422,000</p>
+          </div>
+        </div>
+        <!--33번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/front-view-basketball-player-hydrating_23-2148239448.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>밑트임 라운드 반팔 티셔츠</p>
+            <p class="price">&#8361; 89,000</p>
+          </div>
+        </div>
+        <!--34번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/fashionable-man-front-blue-wall_23-2148184895.jpg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>베이직 원버튼 롱코트</p>
+            <p class="price">&#8361; 176,000</p>
+          </div>
+        </div>
+        <!--35번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/young-man-portrait-with-flowers_23-2148830421.jpg"
+              id="bottomImg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>베이직 반폴라 티셔츠</p>
+            <p class="price">&#8361; 72,000</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="recentView">
+      <p>최근 본 상품</p>
+      <div class="viewContainer">
+        <div class="viewScroll"></div>
+      </div>
+    </div>
+    <!-- 플로팅 버튼 : 상하 이동, 최근 본 상품 -->
+    <div class="floatBtnContainer">
+      <div class="floatBtnBox">
+        <div class="buttonBox">
+          <i class="fa-solid fa-circle-dot"></i>
+        </div>
+        <div class="btnIconWrap">
+          <div class="btnIcon viewBtn">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div class="btnIcon topBtn">
+            <i class="fa-solid fa-arrow-up"></i>
+          </div>
+          <div class="btnIcon bottomBtn">
+            <i class="fa-solid fa-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main> <!--main 영역 끝-->
+  <!--footer 영역 시작-->
+  <footer class="footer">
+    <div class="footerWrap">
+      <ul class="footerNav">
+        <li class="footerMenu">회사정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">매장안내</li>
+        <li class="bar"></li>
+        <li class="footerMenu">채용정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">고객센터</li>
+        <li class="bar"></li>
+        <li class="footerMenu">대량구매</li>
+        <li class="bar"></li>
+        <li class="footerMenu mapOpen">찾아오는 길</li>
+        <li class="bar"></li>
+        <li class="footerMenu">이용약관</li>
+        <li class="bar"></li>
+        <li class="footerMenu">콘텐츠산업진흥법</li>
+      </ul>
+      <div class="footerBtn">개인정보처리방침</div>
+      <p class="footerContent">
+        더조은코리아(주) 대표 : 전아영, 김주영, 전지훈, 최우석, 한경수<br>
+        주소 : 서울특별시 종로구 우정국로2길 21<br>
+        사업자등록번호 : 123-45-67890<br>
+        통신판매업신고번호 : 2024-서울종로-1234<br>
+        호스팅서비스사업자 : The Joeun Co., Ltd.<br>
+        고객만족센터<br>
+        TEL: 080-123-4567 FAX: 02-1234-5678 Email: thejoeun@thejoeun.co.kr
+      </p>
+      <hr>
+      <div class="footerBottom">
+        <p class="copyright">Copyright &copy; THEJOEUN Co., Ltd. All rights reserved.</p>
+        <ul class="social">
+          <li class="socialIcon">
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-square-threads"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-youtube"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-x-twitter"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="mapModal">
+      <div class="mapContainer">
+        <p>찾아오는 길</p>
+        <div class="map" id="googleMap"></div>
+        <div class="closeBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </footer>
+  <div class="scrollBarContainer">
+    <div id="scrollBar"></div>
+  </div>
+  <script src="js/default.js"></script>
+  <script src="js/imgSlider.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/lastProduct.js"></script>
+  <script src="js/wishListFunc.js"></script>
+  <script src="js/cookieHandler.js"></script>
+  <script>
+    const products = document.querySelectorAll(".productImg > img");
+
+    for (let cyc in products) {
+      if (cyc == products.length) break;
+      products[cyc].addEventListener("click", () => {
+        location.href = "productDetail.html";
+      });
+    }
+  </script>
+</body>
+
+</html>

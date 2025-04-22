@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <title>THEJOEUN</title>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css/productDetail.css">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <script src="js/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/31ff140207.js" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUCmgCdOGLjwNesBLeOWh4Kls_J9DIs4&callback=myMap" async
+    defer></script>
+</head>
+<!-- 변경사항 
+ 1. 상세정보 펼치기 / 접기 div 위치를 <div class="body_detail"> 아래로 이동 (114번줄, 스크립트 259번줄)
+ 2. 상품상세정보, 사이즈표, 추천 내비 작동시 상품정보 펼치기 발동되게 설정 (107번줄, 스크립트 271번줄)
+ 3. 찜, 장바구니, 구매하기 버튼을 div로 감싸고 onclick 대신 각각 wish, cart, buy라는 클래스를 주고 css설정 => css는 간단하게 주었으니 변경할시 바꾸고 변경점만 알려줄것 (102번줄, css 91, 219번줄)
+ 
+ 해야할 사항
+ 1. 찜 장바구니 구매하기 버튼에 아이콘 추가 (114번줄) -------- 완료
+ 2. 추천아이템 추가 및 효과 넣기 (196번줄)
+ 3. TOP , DOWN 버튼 넣기(공통)                      -------- 진행중
+ 4. 이미지에 마우스 오버 시 확대스크린 제작(PC만)     ----
+ 5. 구매하기버튼 하단 고정(모바일,우선 PC는 제외)
+
+학원 시간 외 ProductDetail.html 및 ProductDetail.css 에 추가사항 및 변경사항 있을시 기입-->
+
+<body>
+  <header class="header sub">
+    <div class="headerWrap">
+      <div class="headerInnerWrap">
+        <h1 class="logo" onclick="location.href='/'">
+          <div>
+            <p class="logoTxt">THE</p>
+            <p class="logoTxt">JOEUN</p>
+          </div>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li class="menu" onclick="location.href='product.html'">MEN</li>
+            <li class="menu" onclick="location.href='productWomen.html'">WOMEN</li>
+            <li class="menu" onclick="location.href='productKids.html'">KIDS</li>
+            <li class="menu" onclick="location.href='productBaby.html'">BABY</li>
+          </ul>
+        </nav>
+        <div class="iconWrap">
+          <div class="iconBtn" onclick="location.href='wishList.html'">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="iconBtn" onclick="location.href='cart.html'">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="cartNum">0</div>
+          </div>
+          <div class="iconBtn" onclick="location.href='login.html'">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="mainWrap">
+      <div class="topWrap">
+        <div class="imgContainer">
+          <div class="bigImgWrap">
+            <div class="showBigImg">
+              <img id="bigImg" class="zoomImg" src="images/p_images/woman-dotted-pattern-frill-onepiece-01.jpg">
+            </div>
+          </div>
+          <div class="imgWrap_main">
+            <div class="imgWrap_mainSlider">
+              <div class="img_main">
+                <img class="selected" src="images/p_images/woman-dotted-pattern-frill-onepiece-01.jpg">
+              </div>
+              <div class="img_main">
+                <img src="images/p_images/woman-dotted-pattern-frill-onepiece-02.jpg">
+              </div>
+              <div class="img_main">
+                <img src="images/p_images/woman-dotted-pattern-frill-onepiece-03.jpg">
+              </div>
+              <div class="img_main">
+                <img src="images/p_images/woman-dotted-pattern-frill-onepiece-04.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="infoContainer">
+          <div class="imgZoominWrap">
+            <div class="imgZoomin"></div>
+          </div>
+          <div class="infoTxt">
+            <h2>
+              <span class="bold">제품명</span>
+              <span id="productName">도트 패턴 프릴 원피스</span>
+            </h2>
+            <div class="line"></div>
+            <p id="productPrice"><span class="bold">가격</span>109,000원</p>
+            <div class="line"></div>
+            <p><span class="bold">배송비</span>무료배송</p>
+          </div>
+          <div class="selectBox">
+            <select name="color">
+              <option value="" disabled hidden selected>Color</option>
+              <option value="brown">brown</option>
+              <option value="black">black</option>
+              <option value="white">white</option>
+              <option value="navy">navy</option>
+            </select>
+          </div>
+          <div class="selectBox">
+            <select name="size">
+              <option value="" disabled hidden selected>Size</option>
+              <option value="55">55</option>
+              <option value="66">66</option>
+              <option value="77">77</option>
+            </select>
+          </div>
+          <div id="totalPrice" class="totalSum">
+            총 금액 : <span id="totalAmount">0</span>원
+          </div>
+          <div class="btnContainer">
+            <button class="wish">
+              <span>
+                <i class="fa-solid fa-heart"></i>
+                <span>찜</span>
+              </span>
+            </button><!-- 찜 -->
+            <button class="cart">
+              <span>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>장바구니</span>
+              </span>
+            </button><!-- 장바구니 -->
+            <button class="buy">
+              <span>
+                <i class="fa-regular fa-credit-card"></i>
+                <span>구매하기</span>
+              </span>
+            </button><!-- 구매 -->
+          </div>
+        </div>
+      </div>
+      <nav class="info_detail">
+        <ul>
+          <li class="info"><a href="#detail">상품상세정보</a></li>
+          <li class="info"><a href="#size">사이즈표</a></li>
+          <li class="info"><a href="#item">추천</a></li>
+        </ul>
+        <div class="line"></div>
+      </nav>
+      <div class="body_detail"><!-- 이 div 버튼으로 숨기기 -->
+        <div class="body_detail_innerWrap">
+          <div id="detailInfo" class="hidden">
+            <h2 id="detail">Product Detail</h2>
+            <div class="firstHr"></div>
+            <div class="secondHr"></div>
+            <p id="detail_text">
+              제품명 : 도트 패턴 프릴 원피스<br>
+              색상 : 브라운 / 블랙 / 화이트 / 네이비<br>
+              사이즈 : 55 / 66 / 77<br>
+              소재 : 폴리에스터 97% 폴리우레탄 3%<br>
+              원산지 : 한국
+            </p>
+            <div class="imgWrap_detail"> <!--  제품 이미지는 프로덕트이미지 폴더에 있음 -->
+              <div class="img">
+                <img src="images/p_images/woman-dotted-pattern-frill-onepiece-01.jpg">
+              </div>
+              <div class="img">
+                <img src="images/p_images/woman-dotted-pattern-frill-onepiece-02.jpg">
+              </div>
+              <div class="img">
+                <img src="images/p_images/woman-dotted-pattern-frill-onepiece-03.jpg">
+              </div>
+              <div class="img">
+                <img src="images/p_images/woman-dotted-pattern-frill-onepiece-04.jpg">
+              </div>
+            </div>
+            <h2 id="size">Size</h2>
+            <div class="firstHr"></div>
+            <div class="secondHr"></div>
+            <div class="imgWrap_size">
+              <img src="images/p_images/woman-dotted-pattern-frill-onepiece-size.jpg">
+            </div>
+            <h3 id="model">Model Spec</h3>
+            <div class="firstHr"></div>
+            <div class="secondHr"></div>
+            <div class="imgWrap_model"> <!--  모델 이미지는 프로덕트이미지 폴더에 있음 -->
+              <ul class="img_model">
+                <li>
+                  <img
+                    src="https://img.freepik.com/free-photo/portrait-fashionable-boy-front-white-curtain_23-2148184882.jpg?t=st=1725506688~exp=1725510288~hmac=51d7d5f2220e6bb363825293d4daeea4038ae3e60d660f47d3d44d60763e604b&w=740">
+                  <p>184cm <br>L size</p>
+                </li>
+                <li>
+                  <img
+                    src="https://img.freepik.com/free-photo/portrait-young-man-yellow-scene_23-2148184678.jpg?t=st=1725506441~exp=1725510041~hmac=17540715b11011910196d010297ce1c0fbb0d392777b299f0e2080746ded6bab&w=740">
+                  <p>189cm <br>L size</p>
+                </li>
+                <li>
+                  <img
+                    src="https://img.freepik.com/free-photo/medium-shot-beautiful-female-model_23-2148365039.jpg?t=st=1725506304~exp=1725509904~hmac=e569932d3cb2668c0980a1afde7bd8ab4bb69a3ba89c5397ca3ca14ba5da536e&w=740">
+                  <p>167cm <br>S size</p>
+                </li>
+                <li>
+                  <img
+                    src="https://img.freepik.com/free-photo/beautiful-young-female-posing_23-2148880240.jpg?t=st=1725506324~exp=1725509924~hmac=3282790888cf96761dc22d8d39f70269f2a8acfe729b02d06b1ee0fcc677e0b4&w=740">
+                  <p>164cm <br>S size</p>
+                </li>
+              </ul>
+            </div>
+            <div class="detailMore"></div>
+            <a id="btnMore">상품정보 펼치기</a>
+          </div>
+          <h2 id="item">추천 아이템</h2>
+          <div class="line"></div>
+          <div class="itemSliderBox">
+            <div class="itemSliderWrap">
+              <div class="itemSlider">
+                <div class="sliderImgWrap">
+                  <img
+                    src="https://img.freepik.com/premium-photo/short-brown-hair-woman-denim-shirt_53876-154741.jpg?w=740">
+                </div>
+                <div class="sliderImgWrap">
+                  <img
+                    src="https://img.freepik.com/premium-photo/fashionable-woman-standing-by-white-wall_53876-149488.jpg?w=740">
+                </div>
+                <div class="sliderImgWrap">
+                  <img
+                    src="https://img.freepik.com/free-photo/fulllength-portrait-romantic-brunette-girl-pajamas-chilling-home-indoor-shot-charming-woman-relaxing-rest-her-apartment_197531-26111.jpg?t=st=1725497284~exp=1725500884~hmac=fc9bb1d1a449957f92a5642431bea54622bb674dad382f05e9c1d58ce31e9dc1&w=740">
+                </div>
+                <div class="sliderImgWrap">
+                  <img
+                    src="https://img.freepik.com/free-photo/portrait-young-japanese-woman-with-jacket_23-2148870732.jpg?t=st=1725497381~exp=1725500981~hmac=a7c1bb9bf3f4bdd382dfca68d5318482e7a70ee4a0a80fcaefdfd743581084ad&w=740">
+                </div>
+                <div class="sliderImgWrap">
+                  <img
+                    src="https://img.freepik.com/free-photo/portrait-beautiful-asian-woman-autumn-clothes_23-2149071315.jpg?t=st=1725497401~exp=1725501001~hmac=cd62dbb362ba3f10adecc5877ff2babf9712b6d73c1f1a21710475766c645636&w=740">
+                </div>
+                <div class="sliderImgWrap">
+                  <img
+                    src="https://img.freepik.com/free-photo/indoor-studio-photo-elegant-brunette-woman-stylish-dress-standing-urban-concrete-wall_273443-5090.jpg?t=st=1725497441~exp=1725501041~hmac=9b6ee12f66455a6068c014b16963425b773418549d10ee08ca7bd4c68c890a9e&w=1380">
+                </div>
+                <div class="sliderImgWrap">
+                  <img
+                    src="https://img.freepik.com/free-photo/beautiful-smiling-young-woman-sunglasses-looking-away-shoulder_158595-940.jpg?t=st=1725497488~exp=1725501088~hmac=c3555cbbfffdd182f794ab9aa56145412ac9201f11ed49bd0e53ea8eeda755cc&w=1380">
+                </div>
+                <div class="sliderImgWrap">
+                  <img
+                    src="https://img.freepik.com/free-photo/ginger-woman-clean-urban-environment_23-2149011405.jpg?t=st=1725497504~exp=1725501104~hmac=695c7028fb50fe3b6c1c104848685d1efd535a7f9c0599bc4339b26488a7eae9&w=740">
+                </div>
+                <div class="sliderImgWrap">
+                  <img
+                    src="https://img.freepik.com/free-photo/long-shot-standing-woman-holding-bunch-peppers_23-2148194041.jpg?t=st=1725497537~exp=1725501137~hmac=920f4fd580466351e13fc7ce99ddac25bc60e7537fd32a92b5a554d19268fb8e&w=740">
+                </div>
+                <div class="sliderImgWrap">
+                  <img
+                    src="https://img.freepik.com/free-photo/young-woman-model-wearing-long-gray-coat_1303-21156.jpg?t=st=1725497548~exp=1725501148~hmac=94a8f44fb02bf9942d56e2d7cd885a5e20cb10dbde0441c96798bacb4ac30708&w=740">
+                </div>
+              </div>
+            </div>
+            <div class="prev">
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="next">
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="recentView">
+      <p>최근 본 상품</p>
+      <div class="viewContainer">
+        <div class="viewScroll">
+          <!-- <div class="viewItem">
+                        <div class="viewImg">
+                            <img src="https://img.freepik.com/free-photo/artsy-non-binary-person-posing_23-2148757584.jpg?t=st=1724378814~exp=1724382414~hmac=243a6270acf37a969ad9754909b8278c470f587d51108c8c9f6b4183cae94513&w=740">
+                        </div>
+                        <p>오버핏 모직 코트</p>
+                        <p>&#8361; 312,000</p>
+                    </div>
+                    <div class="viewItem">
+                        <div class="viewImg">
+                            <img src="https://img.freepik.com/free-photo/young-male-model-thinking-staring-intensively_23-2148248504.jpg?t=st=1724378990~exp=1724382590~hmac=6cc9eca141b044e5d6154730d97dc927b090b68c6f38e2187e0bd85b97d4cf5f&w=740">
+                        </div>
+                        <p>캐시미어 투버튼 코트</p>
+                        <p>&#8361; 321,000</p>
+                    </div>
+                    <div class="viewItem">
+                        <div class="viewImg">
+                            <img src="https://img.freepik.com/free-photo/close-up-portrait-man-shirt-mockup_23-2149260912.jpg?t=st=1724379134~exp=1724382734~hmac=387d30cba41dcf030072b9185d9ba7e82e636dfe20ce97b8a071ebf1b0369e9c&w=740">
+                        </div>
+                        <p>라운드 멘투맨 오버티</p>
+                        <p>&#8361; 77,000</p>
+                    </div>
+                    <div class="viewItem">
+                        <div class="viewImg">
+                            <img src="https://img.freepik.com/free-photo/portrait-male-wearing-cap-sitting_23-2148854463.jpg?t=st=1724380235~exp=1724383835~hmac=483be81cb6d402e05d598a5d95b815a3f40d53a3f43bf89503fedb299de75245&w=740">
+                        </div>
+                        <p>골지 밴딩 팬츠</p>
+                        <p>&#8361; 82,000</p>
+                    </div>
+                    <div class="viewItem">
+                        <div class="viewImg">
+                            <img src="https://img.freepik.com/free-photo/vertical-shot-badass-male-with-black-leather-jacket-roof_181624-29362.jpg?t=st=1724380329~exp=1724383929~hmac=21157f0d4c842659c4e5ab6fd38efb59cc598c51661aa1d254641120d05cbdcc&w=740">
+                        </div>
+                        <p>가죽 이펙트 재켓</p>
+                        <p>&#8361; 237,000</p>
+                    </div>
+                    <div class="viewItem">
+                        <div class="viewImg">
+                            <img src="https://img.freepik.com/free-photo/male-dancer-posing-sneakers-suit-without-shirt_23-2148417931.jpg?t=st=1724380380~exp=1724383980~hmac=3f4d94fac811c09091d90fae20d5538d79a7d0831f16431235ea8d9615474d50&w=740">
+                        </div>
+                        <p>체크 투버튼 블레이저 자켓</p>
+                        <p>&#8361; 272,000</p>
+                    </div>
+                    <div class="viewItem">
+                        <div class="viewImg">
+                            <img src="https://img.freepik.com/free-photo/fashion-hipster-male-model-posing-outdoor_158595-808.jpg?t=st=1724380635~exp=1724384235~hmac=6961e01da2f09b1e417e701fefc273eee602ab9eab4dc4986dc264e26e91ab5f&w=740">
+                        </div>
+                        <p>후드 가디건 자켓</p>
+                        <p>&#8361; 232,000</p>
+                    </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- 플로팅 버튼 : 상하 이동, 최근 본 상품 -->
+    <div class="floatBtnContainer">
+      <div class="floatBtnBox">
+        <div class="buttonBox">
+          <i class="fa-solid fa-circle-dot"></i>
+        </div>
+        <div class="btnIconWrap">
+          <div class="btnIcon viewBtn">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div class="btnIcon topBtn">
+            <i class="fa-solid fa-arrow-up"></i>
+          </div>
+          <div class="btnIcon bottomBtn">
+            <i class="fa-solid fa-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footerWrap">
+      <ul class="footerNav">
+        <li class="footerMenu">회사정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">매장안내</li>
+        <li class="bar"></li>
+        <li class="footerMenu">채용정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">고객센터</li>
+        <li class="bar"></li>
+        <li class="footerMenu">대량구매</li>
+        <li class="bar"></li>
+        <li class="footerMenu mapOpen">찾아오는 길</li>
+        <li class="bar"></li>
+        <li class="footerMenu">이용약관</li>
+        <li class="bar"></li>
+        <li class="footerMenu">콘텐츠산업진흥법</li>
+      </ul>
+      <div class="footerBtn">개인정보처리방침</div>
+      <p class="footerContent">
+        더조은코리아(주) 대표 : 전아영, 김주영, 전지훈, 최우석, 한경수<br>
+        주소 : 서울특별시 종로구 우정국로2길 21<br>
+        사업자등록번호 : 123-45-67890<br>
+        통신판매업신고번호 : 2024-서울종로-1234<br>
+        호스팅서비스사업자 : The Joeun Co., Ltd.<br>
+        고객만족센터<br>
+        TEL: 080-123-4567 FAX: 02-1234-5678 Email: thejoeun@thejoeun.co.kr
+      </p>
+      <hr>
+      <div class="footerBottom">
+        <p class="copyright">Copyright &copy; THEJOEUN Co., Ltd. All rights reserved.</p>
+        <ul class="social">
+          <li class="socialIcon">
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-square-threads"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-youtube"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-x-twitter"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="mapModal">
+      <div class="mapContainer">
+        <p>찾아오는 길</p>
+        <div class="map" id="googleMap"></div>
+        <div class="closeBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </footer>
+  <div class="scrollBarContainer">
+    <div id="scrollBar"></div>
+  </div>
+  <script src="js/default.js"></script>
+  <script src="js/productDetail.js"></script>
+  <script src="js/cookieHandler.js"></script>
+  <script src="js/lastProduct.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+
+</html>

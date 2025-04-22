@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>THEJOEUN</title>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <script src="js/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/31ff140207.js" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUCmgCdOGLjwNesBLeOWh4Kls_J9DIs4&callback=myMap" async defer></script>
+</head>
+
+<body>
+  <header class="header sub">
+    <div class="headerWrap">
+      <div class="headerInnerWrap">
+        <h1 class="logo" onclick="location.href='/'">
+          <div>
+            <p class="logoTxt">THE</p>
+            <p class="logoTxt">JOEUN</p>
+          </div>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li class="menu" onclick="location.href='product.html'">MEN</li>
+            <li class="menu" onclick="location.href='productWomen.html'">WOMEN</li>
+            <li class="menu" onclick="location.href='productKids.html'">KIDS</li>
+            <li class="menu" onclick="location.href='productBaby.html'">BABY</li>
+          </ul>
+        </nav>
+        <div class="iconWrap">
+          <div class="iconBtn" onclick="location.href='wishList.html'">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="iconBtn" onclick="location.href='cart.html'">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="cartNum">0</div>
+          </div>
+          <div class="iconBtn" onclick="location.href='login.html'">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </header>
+  <main class="main">
+    <section id="visualSlider">
+      <div class="imgContainer">
+        <div class="imgBox">
+          <img src="https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+        <div class="imgBox">
+          <img src="https://cdn.pixabay.com/photo/2016/11/29/07/16/balancing-1868051_1280.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+        <div class="imgBox">
+          <img src="https://cdn.pixabay.com/photo/2015/06/19/09/39/lonely-814631_1280.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+      </div>
+    </section>
+    <div class="mainWrap">
+      <section class="select_Section">
+        <button id="loginSelect_Btn">Login</button>
+        <button id="signupSelect_Btn">Sign up</button>
+      </section>
+      <section class="login_Section">
+        <form class="loginInfo_Form" action="#">
+          <div class="idContainer">
+            <input type="text" name="login_ID" id="login_ID" placeholder="아이디">
+          </div>
+          <div class="pwContainer">
+            <input type="password" name="login_PWD" id="login_PWD" placeholder="비밀번호">
+            <i id="passwordEye" class="fa-solid fa-eye-slash"></i>
+          </div>
+        </form>
+        <div class="forget_Section">
+          <button class="forgetID_Btn">아이디찾기</button>
+          <div></div>
+          <button class="forgetPWD_Btn">비밀번호찾기</button>
+        </div>
+        <button class="login_Btn">로그인</button>
+      </section>
+      <div class="hor_Bar"></div>
+      <section class="oauthLogin_Section">
+        <div class="oauth_Google"><img src="images/icons/google.svg" alt="구글" />
+          <p>구글 로그인</p>
+        </div>
+        <div class="oauth_Apple"><img src="images/icons/apple.svg" alt="애플">
+          <p>애플 로그인</p>
+        </div>
+        <div class="oauth_Naver"><img src="images/icons/naver.svg" alt="네이버">
+          <p>네이버 로그인</p>
+        </div>
+        <div class="oauth_Kakao"><img src="images/icons/kakao.svg" alt="카카오">
+          <p>카카오 로그인</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footerWrap">
+      <ul class="footerNav">
+        <li class="footerMenu">회사정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">매장안내</li>
+        <li class="bar"></li>
+        <li class="footerMenu">채용정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">고객센터</li>
+        <li class="bar"></li>
+        <li class="footerMenu">대량구매</li>
+        <li class="bar"></li>
+        <li class="footerMenu mapOpen">찾아오는 길</li>
+        <li class="bar"></li>
+        <li class="footerMenu">이용약관</li>
+        <li class="bar"></li>
+        <li class="footerMenu">콘텐츠산업진흥법</li>
+      </ul>
+      <div class="footerBtn">개인정보처리방침</div>
+      <p class="footerContent">
+        더조은코리아(주) 대표 : 전아영, 김주영, 전지훈, 최우석, 한경수<br>
+        주소 : 서울특별시 종로구 우정국로2길 21<br>
+        사업자등록번호 : 123-45-67890<br>
+        통신판매업신고번호 : 2024-서울종로-1234<br>
+        호스팅서비스사업자 : The Joeun Co., Ltd.<br>
+        고객만족센터<br>
+        TEL: 080-123-4567 FAX: 02-1234-5678 Email: thejoeun@thejoeun.co.kr
+      </p>
+      <hr>
+      <div class="footerBottom">
+        <p class="copyright">Copyright &copy; THEJOEUN Co., Ltd. All rights reserved.</p>
+        <ul class="social">
+          <li class="socialIcon">
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-square-threads"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-youtube"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-x-twitter"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="mapModal">
+      <div class="mapContainer">
+        <p>찾아오는 길</p>
+        <div class="map" id="googleMap"></div>
+        <div class="closeBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </footer>
+  <div class="scrollBarContainer">
+    <div id="scrollBar"></div>
+  </div>
+  <script src="js/default.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/imgSlider.js"></script>
+  <script src="js/cookieHandler.js"></script>
+</body>
+
+</html>

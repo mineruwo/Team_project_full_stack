@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <title>THEJOEUN</title>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css/cart.css">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <script src="js/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/31ff140207.js" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUCmgCdOGLjwNesBLeOWh4Kls_J9DIs4&callback=myMap" async defer></script>
+</head>
+
+<body>
+  <header class="header sub">
+    <div class="headerWrap">
+      <div class="headerInnerWrap">
+        <h1 class="logo" onclick="location.href='/'">
+          <div>
+            <p class="logoTxt">THE</p>
+            <p class="logoTxt">JOEUN</p>
+          </div>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li class="menu" onclick="location.href='product.html'">MEN</li>
+            <li class="menu" onclick="location.href='productWomen.html'">WOMEN</li>
+            <li class="menu" onclick="location.href='productKids.html'">KIDS</li>
+            <li class="menu" onclick="location.href='productBaby.html'">BABY</li>
+          </ul>
+        </nav>
+        <div class="iconWrap">
+          <div class="iconBtn" onclick="location.href='wishList.html'">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="iconBtn" onclick="location.href='cart.html'">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="cartNum">0</div>
+          </div>
+          <div class="iconBtn" onclick="location.href='login.html'">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="mainWrap">
+      <h2>장바구니</h2>
+      <div class="bar"></div>
+      <div id="cartList"></div>
+    </div>
+    
+    <div id="recentView">
+      <p>최근 본 상품</p>
+      <div class="viewContainer">
+        <div class="viewScroll"></div>
+      </div>
+    </div>
+    <!-- 플로팅 버튼 : 상하 이동, 최근 본 상품 -->
+    <div class="floatBtnContainer">
+      <div class="floatBtnBox">
+        <div class="buttonBox">
+          <i class="fa-solid fa-circle-dot"></i>
+        </div>
+        <div class="btnIconWrap">
+          <div class="btnIcon viewBtn">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div class="btnIcon topBtn">
+            <i class="fa-solid fa-arrow-up"></i>
+          </div>
+          <div class="btnIcon bottomBtn">
+            <i class="fa-solid fa-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footerWrap">
+      <ul class="footerNav">
+        <li class="footerMenu">회사정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">매장안내</li>
+        <li class="bar"></li>
+        <li class="footerMenu">채용정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">고객센터</li>
+        <li class="bar"></li>
+        <li class="footerMenu">대량구매</li>
+        <li class="bar"></li>
+        <li class="footerMenu mapOpen">찾아오는 길</li>
+        <li class="bar"></li>
+        <li class="footerMenu">이용약관</li>
+        <li class="bar"></li>
+        <li class="footerMenu">콘텐츠산업진흥법</li>
+      </ul>
+      <div class="footerBtn">개인정보처리방침</div>
+      <p class="footerContent">
+        더조은코리아(주) 대표 : 전아영, 김주영, 전지훈, 최우석, 한경수<br>
+        주소 : 서울특별시 종로구 우정국로2길 21<br>
+        사업자등록번호 : 123-45-67890<br>
+        통신판매업신고번호 : 2024-서울종로-1234<br>
+        호스팅서비스사업자 : The Joeun Co., Ltd.<br>
+        고객만족센터<br>
+        TEL: 080-123-4567 FAX: 02-1234-5678 Email: thejoeun@thejoeun.co.kr
+      </p>
+      <hr>
+      <div class="footerBottom">
+        <p class="copyright">Copyright &copy; THEJOEUN Co., Ltd. All rights reserved.</p>
+        <ul class="social">
+          <li class="socialIcon">
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-square-threads"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-youtube"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-x-twitter"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="mapModal">
+      <div class="mapContainer">
+          <p>찾아오는 길</p>
+          <div class="map" id="googleMap"></div>
+          <div class="closeBtn">
+              <i class="fa-solid fa-xmark"></i>
+          </div>
+      </div>
+      <div class="bg"></div>
+  </div>
+  </footer>
+  <div class="scrollBarContainer">
+    <div id="scrollBar"></div>
+  </div>
+  <script src="js/default.js"></script>
+  <script src="js/imgSlider.js"></script>
+  <script src="js/lastProduct.js"></script>
+  <script src="js/cookieHandler.js"></script>
+  <script src="js/cart_main.js"></script>
+  <script src="js/cart.js"></script>
+</body>

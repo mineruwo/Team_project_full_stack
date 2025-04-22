@@ -1,0 +1,295 @@
+@charset "utf-8";
+/* 모바일 and 태블릿 */
+@media all and (max-width:1023.9px) {
+  .oauthLogin_Section {
+    margin: 3rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .oauthLogin_Section .hor_Bar {
+    margin: 0 auto;
+    width: 85%;
+    height: 2px;
+    color: #fff;
+    background-color: var(--color-lightblack);
+  }
+
+  .oauthLogin_Section div {
+    margin: 0 auto;
+    width: 70%;
+    height: 6rem;
+    min-width: 245px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .oauthLogin_Section img {
+    position: absolute;
+    left: 3.5rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .oauthLogin_Section .oauth_Google {
+    background-color: #fff;
+    border: 1px solid var(--color-lightblack);
+  }
+
+  .oauthLogin_Section .oauth_Apple {
+    background-color: var(--color-lightblack);
+    border: none;
+    color: #fff;
+  }
+
+  .oauthLogin_Section .oauth_Naver {
+    background-color: #03CF5D;
+    border: none;
+    color: #fff;
+  }
+
+  .oauthLogin_Section .oauth_Kakao {
+    background-color: #FFF300;
+    border: none;
+  }
+}
+
+/* 데스크탑 */
+@media all and (min-width:1024px) {
+  .oauthLogin_Section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 3em 0;
+  }
+
+  .oauthLogin_Section>div {
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-size: 2.6rem;
+    cursor: pointer;
+  }
+
+  .oauthLogin_Section img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .oauthLogin_Section div p {
+    display: none;
+  }
+
+  .oauthLogin_Section .oauth_Google {
+    background-color: #fff;
+    border: 1px solid var(--color-lightblack);
+  }
+
+  .oauthLogin_Section .oauth_Apple {
+    background-color: var(--color-lightblack);
+    border: none;
+    color: #fff;
+  }
+
+  .oauthLogin_Section .oauth_Naver {
+    background-color: #03CF5D;
+    border: none;
+    color: #fff;
+  }
+
+  .oauthLogin_Section .oauth_Kakao {
+    background-color: #FFF300;
+    border: none;
+  }
+}
+
+/* 공통 */
+.main {
+  padding-top: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.mainWrap {
+  width: 100%;
+  max-width: 50rem;
+  padding: 10rem 0 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.select_Section {
+  width: 80%;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 450px;
+}
+
+.select_Section button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 500;
+  border: 1px solid rgba(0,0,0,0);
+}
+
+.select_Section #loginSelect_Btn {
+  border: 1px solid var(--color-lightblack);
+  border-bottom: none;
+}
+
+.select_Section #signupSelect_Btn {
+  color: #aaa;
+  border-bottom: 1px solid var(--color-lightblack);
+}
+
+.select_Section #signupSelect_Btn:hover {
+  color: var(--color-lightblack);
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.login_Section .forget_Section {
+  margin-bottom: 3rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login_Section .forget_Section button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 2em;
+  text-align: center;
+}
+
+.login_Section .forget_Section button:hover {
+  text-decoration: underline;
+}
+
+.login_Section .forget_Section>div {
+  width: 1px;
+  height: 100%;
+  border-radius: 1px;
+  background-color: #707070;
+}
+
+.login_Section .forget_Section .forgetID_Btn {
+  color: #707070;
+}
+
+.login_Section .forget_Section .forgetPWD_Btn {
+  color: #22C4EB;
+}
+
+.hor_Bar {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.login_Section {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.login_Section .loginInfo_Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.login_Section .loginInfo_Form .idContainer,
+.login_Section .loginInfo_Form .pwContainer {
+  height: 4rem;
+  width: 30rem;
+  border: 1px solid var(--color-lightblack);
+  overflow: hidden;
+}
+
+.login_Section .loginInfo_Form input {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.login_Section .loginInfo_Form .idContainer input {
+  padding: 0 0.8em;
+}
+
+.login_Section .loginInfo_Form .pwContainer {
+  display: flex;
+  align-items: center;
+}
+
+.login_Section .loginInfo_Form .pwContainer input {
+  padding: 0 0 0 0.8em;
+}
+
+.login_Section .loginInfo_Form .pwContainer #passwordEye {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.login_Section .loginInfo_Form .pwContainer #passwordEye:hover {
+  color: var(--color-lightblack);
+}
+
+.login_Section .login_Btn {
+  margin-bottom: 5rem;
+  width: 30rem;
+  height: 6rem;
+  border: transparent;
+  border-radius: 25px;
+  background-color: var(--color-main);
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.login_Section .login_Btn:hover {
+  background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05));
+}

@@ -1,0 +1,6 @@
+
+onload = ()=>{
+  loadingCart();
+  removeCart();
+  downloadRecent();
+}

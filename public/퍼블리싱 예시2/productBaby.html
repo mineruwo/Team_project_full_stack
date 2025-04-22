@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <title>THEJOEUN</title>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css/product.css">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <script src="js/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/31ff140207.js" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUCmgCdOGLjwNesBLeOWh4Kls_J9DIs4&callback=myMap" async defer></script>
+</head>
+
+<body>
+  <header class="header sub">
+    <div class="headerWrap">
+      <div class="headerInnerWrap">
+        <h1 class="logo" onclick="location.href='/'">
+          <div>
+            <p class="logoTxt">THE</p>
+            <p class="logoTxt">JOEUN</p>
+          </div>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li class="menu" onclick="location.href='product.html'">MEN</li>
+            <li class="menu" onclick="location.href='productWomen.html'">WOMEN</li>
+            <li class="menu" onclick="location.href='productKids.html'">KIDS</li>
+            <li class="menu" onclick="location.href='productBaby.html'">BABY</li>
+          </ul>
+        </nav>
+        <div class="iconWrap">
+          <div class="iconBtn" onclick="location.href='wishList.html'">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="iconBtn" onclick="location.href='cart.html'">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="cartNum">0</div>
+          </div>
+          <div class="iconBtn" onclick="location.href='login.html'">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </header> <!--header 영역 끝-->
+  <!--main 영역 시작-->
+  <main class="main">
+    <section id="visualSlider">
+      <div class="imgContainer">
+        <div class="imgBox">
+          <img src="images/p_images/baby-slide-01.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+        <div class="imgBox">
+          <img src="images/p_images/baby-slide-02.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+        <div class="imgBox">
+          <img src="images/p_images/baby-slide-03.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+      </div>
+    </section>
+    <div class="mainWrap">
+      <section class="productWrap">
+        <!--1번째 제품-->
+        <div class="product"> <!--제품 클릭시 디테일페이지로 이동 삽입-->
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/cute-little-girl-holding-pinecone_23-2148329744.jpg?t=st=1725522159~exp=1725525759~hmac=dcee19c8b40056ddc05b17991ff2ebabb39a0e57029ddcc8911a4262b6af1415&w=740" id="topImg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>짜임 니트 원피스</p>
+            <p class="price">&#8361; 29,000</p>
+          </div>
+        </div>
+        <!--2번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/cute-little-boy-beach_624325-3998.jpg?t=st=1725522424~exp=1725526024~hmac=9309621aff0a69a8de651a68ed49590a4e312b7073f8058aba0abd43aa420837&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>포켓 멜빵 반바지</p>
+            <p class="price">&#8361; 39,000</p>
+          </div>
+        </div>
+        <!--3번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/happy-baby-posing_1328-3219.jpg?t=st=1725522435~exp=1725526035~hmac=d2e0a288426d3a410332b559ed3f8b2057a709f19c5d592cb4befbc6d2c02105&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>프릴 점프 슈트</p>
+            <p class="price">&#8361; 46,000</p>
+          </div>
+        </div>
+        <!--4번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/top-view-baby-with-stuffed-toy_23-2150573695.jpg?t=st=1725522500~exp=1725526100~hmac=31cf549c9a7338510dee2b5ad2cfe29d9b33b41d4a2357abcbdc323ae70d817d&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>집업 상하복</p>
+            <p class="price">&#8361; 32,000</p>
+          </div>
+        </div>
+        <!--5번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/top-view-cute-caucasian-baby-boy-basket-surrounded-by-flowers_181624-43611.jpg?t=st=1725522533~exp=1725526133~hmac=06ebc75141900bbfc80a0dfc061d2990cb3e3827c8fa42dc1435f9fc434f4b87&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>BEAR 상하복</p>
+            <p class="price">&#8361; 25,000</p>
+          </div>
+        </div>
+        <!--6번째 제품 -->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/top-view-smiley-baby-laying-bed_23-2149453504.jpg?t=st=1725522557~exp=1725526157~hmac=02f933ce9d557781c0fb31c39fd93664795097a4cab8f7b6a191584718761b14&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>포인트 원피스</p>
+            <p class="price">&#8361; 28,000</p>
+          </div>
+        </div>
+        <!--7번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/small-cute-baby-child-home_624325-918.jpg?t=st=1725522544~exp=1725526144~hmac=2722ae8da1b57fb5faed9f91344f58d47a2c4f2499e51229bbfb28f411661e21&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>자수 포인트 바디 슈트</p>
+            <p class="price">&#8361; 38,000</p>
+          </div>
+        </div>
+        <!--8번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/cute-baby-with-stuffed-animal_23-2150573641.jpg?t=st=1725522609~exp=1725526209~hmac=94402f9752feb10a0ff91361fc17ebc6ed4b387bb38bbcb8ec919f251ba5f6b7&w=1380">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>스트라이프 헤어 밴드</p>
+            <p class="price">&#8361; 19,000</p>
+          </div>
+        </div>
+        <!--9번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/happy-smiling-newborn-baby-stylish-wear_624325-1531.jpg?t=st=1725522643~exp=1725526243~hmac=e1382836d9b68a3a2153670b7f484aa9560871518901cf99c074012a46107e64&w=1380">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>도트 패턴 헤어 밴드</p>
+            <p class="price">&#8361; 14,000</p>
+          </div>
+        </div>
+        <!--10번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/faceless-female-holding-infant-daughter-hand-while-baby-learning-go-family-playing-forest_176532-14466.jpg?t=st=1725522674~exp=1725526274~hmac=088d414b8cf4191688423c34e2e71762e9c9c734d5d1ca1bcb7e35e9301655a1&w=1380">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>츄리닝 후드 슈트</p>
+            <p class="price">&#8361; 52,000</p>
+          </div>
+        </div>
+        <!--11번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/cute-little-baby-indoor_624325-1099.jpg?t=st=1725522700~exp=1725526300~hmac=54ce3783ceaa7f630afc3bb9beb1c70600b436cd5b1078fba98c08c2ef501e3e&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>플라워 쉬폰 원피스</p>
+            <p class="price">&#8361; 49,000</p>
+          </div>
+        </div>
+        <!--12번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/close-up-child-resting-after-breast-feeding_23-2149402332.jpg?t=st=1725522724~exp=1725526324~hmac=d288e22b4fd2d79cef5b961bf6919696d5f91e42e2deb10252487dcd2c18207c&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>민소매 슈트</p>
+            <p class="price">&#8361; 29,000</p>
+          </div>
+        </div>
+        <!--13번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/little-boy_1157-7193.jpg?t=st=1725522740~exp=1725526340~hmac=b91c375d338bc856110f6c65d27a84b236f7c82b5eee9584316a85eb76fd934c&w=1380">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>체크 패턴 셔츠 자켓</p>
+            <p class="price">&#8361; 59,000</p>
+          </div>
+        </div>
+        <!--14번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/baby-sleeps-fluffy-white-pillow_8353-872.jpg?t=st=1725522781~exp=1725526381~hmac=f0d7d590b7f047a0dbaa534af92a2dc3724747f633ca4757c6559f7b1cf7b70f&w=996">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>짜임 소매 슈트</p>
+            <p class="price">&#8361; 32,000</p>
+          </div>
+        </div>
+        <!--15번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/little-girl-happy-her-mom-s-hands_8353-9306.jpg?t=st=1725522814~exp=1725526414~hmac=a685f5022162866bbabd297adfd55dcacb00fca7f54e08b5bc40292ff0f3064e&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>단가라 슈트</p>
+            <p class="price">&#8361; 28,000</p>
+          </div>
+        </div>
+        <!--16번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/top-view-cute-baby-with-stuffed-animal_23-2150573675.jpg?t=st=1725522968~exp=1725526568~hmac=5966b9483b65a1478f264454c5f35dff4d6802049ab86a3b89fd84553b214445&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>단추 니트 슈트</p>
+            <p class="price">&#8361; 45,000</p>
+          </div>
+        </div>
+        <!--17번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/funny-kid-isolated-white_144627-5304.jpg?t=st=1725523013~exp=1725526613~hmac=dd4a2ce7bcbdd67ac7334d3a6f14548aaf18111b67df8d15064d54c9b80b2b5d&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>문양 옆라인 슈트</p>
+            <p class="price">&#8361; 27,000</p>
+          </div>
+        </div>
+        <!--18번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/top-view-baby-with-stuffed-toy_23-2150573693.jpg?t=st=1725523081~exp=1725526681~hmac=87741fcc8169f1273aaf817f862975690aafa6f57ba6e503b865ba4ca452bf00&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>린넨 프릴 슈트</p>
+            <p class="price">&#8361; 31,000</p>
+          </div>
+        </div>
+        <!--19번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/happy-baby-playing_1328-3250.jpg?t=st=1725523128~exp=1725526728~hmac=7e0b6047be479786d0e45db837847cda821dda4c16644ef6d13c624705221d09&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>꽈배기 니트</p>
+            <p class="price">&#8361; 27,000</p>
+          </div>
+        </div>
+        <!--20번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/little-boy-hat-sitting-nest-eating-easter-egg_8353-6192.jpg?t=st=1725523160~exp=1725526760~hmac=0764403f3dc9318bfcf15e032a19dddbfe394af29a443877e90125039aed7b4c&w=1380">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>라인 포인트 밀짚 모자</p>
+            <p class="price">&#8361; 22,000</p>
+          </div>
+        </div>
+        <!--21번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/portrait-cute-sweet-baby-walking-outside-parents-holding-their-satisfied-child-by-hands-while-it-walking-happy-smiling-infant-white-sweater-green-pants-white-sneakers-doing-steps_132075-12322.jpg?t=st=1725523199~exp=1725526799~hmac=1eb79d90238f6d974e3bc8a2b066f93d65a2e2dc338b29952806056d45355ce5&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>프린팅 후드 티셔츠</p>
+            <p class="price">&#8361; 32,000</p>
+          </div>
+        </div>
+        <!--22번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/newborn-baby-girl-sleeping-blue-sheets-home_1139-1647.jpg?t=st=1725523231~exp=1725526831~hmac=86c879c817c7fc5d745f26f986da93df80fcac465660a5412caf529277f21d5a&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>카라넥 슈트</p>
+            <p class="price">&#8361; 22,000</p>
+          </div>
+        </div>
+        <!--23번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/little-kid-with-cute-big-eyes-lying-pink-blanket-ground-sweet-lovely-child-with-big-eyes-looking-camera-stylish-infant-total-black-clothes-hat-with-gold-heart-leaning-hands_132075-12329.jpg?t=st=1725524954~exp=1725528554~hmac=93405fc2654f18756995efade9334df1d5fd7fafcbc0c359588ec9bd719f6de2&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>LOVE 슈트</p>
+            <p class="price">&#8361; 37,000</p>
+          </div>
+        </div>
+        <!--24번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/busy-little-girl-jeans-jumpers-stands-before-tall-white-chair_8353-944.jpg?t=st=1725525001~exp=1725528601~hmac=d2d218aab690848132168fb16ac54f422e1e82cbfca40c12f1b51e4235515fa3&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>청 멜빵바지</p>
+            <p class="price">&#8361; 36,000</p>
+          </div>
+        </div>
+        <!--25번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/little-boy-blue-suit-lies-pink-toys-floor_8353-307.jpg?t=st=1725525039~exp=1725528639~hmac=f342272803784eabecdcb3754814de4d20196b5229a304bee782a97f7c7b009a&w=1380">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>스웨이드 조끼</p>
+            <p class="price">&#8361; 31,000</p>
+          </div>
+        </div>
+        <!--26번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/handsome-little-girl-with-short-fair-hair-pretty-smile-white-dress-sits-grass-park-summer-smiles_132075-10421.jpg?t=st=1725525107~exp=1725528707~hmac=958d03ca2504c75ce84c47d8aca25171a1a73c906951de7e6daa4547e104d3f2&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>퍼피 프린팅 티셔츠</p>
+            <p class="price">&#8361; 22,000</p>
+          </div>
+        </div>
+        <!--27번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/mom-playing-with-her-son-with-toys-warm-clean-floor_1304-5642.jpg?t=st=1725525166~exp=1725528766~hmac=05d795c01162a38b231d539c989987706b795b0aa1a64cc75282fd803534af3b&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>베어 스웨이드 슈트</p>
+            <p class="price">&#8361; 48,000</p>
+          </div>
+        </div>
+        <!--28번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/boy-with-gift-box_1157-7365.jpg?t=st=1725525220~exp=1725528820~hmac=f7cfba62bfe068c05e69ef949fd6fad13b0da27ed6547ef64fc5d60a83eeb24d&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>스페이스 니트</p>
+            <p class="price">&#8361; 29,000</p>
+          </div>
+        </div>
+        <!--29번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/full-shot-adorable-toddler_23-2148337094.jpg?t=st=1725525256~exp=1725528856~hmac=eb0f565c10bd8cf2c0134fab8401fd54a11a203cab8686207021fd5de89b179c&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>원포켓 차이나넥 셔츠</p>
+            <p class="price">&#8361; 34,000</p>
+          </div>
+        </div>
+        <!--30번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/child-pajama_146671-13727.jpg?t=st=1725525678~exp=1725529278~hmac=65263f9e7e1489f70c0ac2314b3be6b539afa877079e38e59d0151709d27df17&w=1380">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>패턴 헨리넥 내복</p>
+            <p class="price">&#8361; 21,000</p>
+          </div>
+        </div>
+        <!--31번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/charming-little-girl-plays-with-doll_8353-5275.jpg?t=st=1725525813~exp=1725529413~hmac=9a5e3c88937297afd48eb9133e5aee1d7d99a8fc9f4ef0facd567ee5f228880c&w=1380">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>단가라 라운드 조끼</p>
+            <p class="price">&#8361; 26,000</p>
+          </div>
+        </div>
+        <!--32번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/full-shot-cute-baby-blanket-outdoors_23-2148262563.jpg?t=st=1725526265~exp=1725529865~hmac=d0061f1abbdca357aff1a2d675db484266cce8055b01f205967ccbc98675d245&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>도트 패턴 라운드 티셔츠</p>
+            <p class="price">&#8361; 22,000</p>
+          </div>
+        </div>
+        <!--33번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/full-lenght-portrait-trendy-toddler-with-red-bow-standing-living-room-decorated-christmas_132075-6437.jpg?t=st=1725525938~exp=1725529538~hmac=8ec4f0c91e627fb79585d62d0c5305ec9b0481e662ec2ba0ac26e59a4cd2d267&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>스쿨 상하복 세트</p>
+            <p class="price">&#8361; 69,000</p>
+          </div>
+        </div>
+        <!--34번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/little-girl-dress-teddy-bear_1153-1947.jpg?t=st=1725526044~exp=1725529644~hmac=f3f40b16570bb61260e5f3c69f6a5643b4a2e848d6fe3ace458173b348e861ca&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>민소매 프릴 원피스</p>
+            <p class="price">&#8361; 26,000</p>
+          </div>
+        </div>
+        <!--35번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/baby-crawling_53876-97830.jpg?t=st=1725526188~exp=1725529788~hmac=ff2d157e3aaa0afdfb35b932c7e5c37e40bde1e6536fcae0c7a93aa432046752&w=1380"
+              id="bottomImg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>넥받침 반팔 슈트</p>
+            <p class="price">&#8361; 32,000</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="recentView">
+      <p>최근 본 상품</p>
+      <div class="viewContainer">
+        <div class="viewScroll"></div>
+      </div>
+    </div>
+    <!-- 플로팅 버튼 : 상하 이동, 최근 본 상품 -->
+    <div class="floatBtnContainer">
+      <div class="floatBtnBox">
+        <div class="buttonBox">
+          <i class="fa-solid fa-circle-dot"></i>
+        </div>
+        <div class="btnIconWrap">
+          <div class="btnIcon viewBtn">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div class="btnIcon topBtn">
+            <i class="fa-solid fa-arrow-up"></i>
+          </div>
+          <div class="btnIcon bottomBtn">
+            <i class="fa-solid fa-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main> <!--main 영역 끝-->
+  <!--footer 영역 시작-->
+  <footer class="footer">
+    <div class="footerWrap">
+      <ul class="footerNav">
+        <li class="footerMenu">회사정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">매장안내</li>
+        <li class="bar"></li>
+        <li class="footerMenu">채용정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">고객센터</li>
+        <li class="bar"></li>
+        <li class="footerMenu">대량구매</li>
+        <li class="bar"></li>
+        <li class="footerMenu mapOpen">찾아오는 길</li>
+        <li class="bar"></li>
+        <li class="footerMenu">이용약관</li>
+        <li class="bar"></li>
+        <li class="footerMenu">콘텐츠산업진흥법</li>
+      </ul>
+      <div class="footerBtn">개인정보처리방침</div>
+      <p class="footerContent">
+        더조은코리아(주) 대표 : 전아영, 김주영, 전지훈, 최우석, 한경수<br>
+        주소 : 서울특별시 종로구 우정국로2길 21<br>
+        사업자등록번호 : 123-45-67890<br>
+        통신판매업신고번호 : 2024-서울종로-1234<br>
+        호스팅서비스사업자 : The Joeun Co., Ltd.<br>
+        고객만족센터<br>
+        TEL: 080-123-4567 FAX: 02-1234-5678 Email: thejoeun@thejoeun.co.kr
+      </p>
+      <hr>
+      <div class="footerBottom">
+        <p class="copyright">Copyright &copy; THEJOEUN Co., Ltd. All rights reserved.</p>
+        <ul class="social">
+          <li class="socialIcon">
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-square-threads"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-youtube"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-x-twitter"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="mapModal">
+      <div class="mapContainer">
+        <p>찾아오는 길</p>
+        <div class="map" id="googleMap"></div>
+        <div class="closeBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </footer>
+  <div class="scrollBarContainer">
+    <div id="scrollBar"></div>
+  </div>
+  <script src="js/default.js"></script>
+  <script src="js/imgSlider.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/lastProduct.js"></script>
+  <script>
+    const products = document.querySelectorAll(".productImg > img");
+
+    for (let cyc in products) {
+      if (cyc == products.length) break;
+      products[cyc].addEventListener("click", () => {
+        location.href = "productDetailBaby.html";
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+@charset "utf-8";
+
+@media all and (max-width:1023.9px) {
+  .userTermWrap {
+    padding: 5rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .userTermWrap {
+    padding: 5rem 3rem;
+    box-shadow: 0 0 10px #ccc;
+  }
+}
+
+.main {
+  padding-top: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.mainWrap {
+  width: 100%;
+  max-width: 50rem;
+  padding: 10rem 0 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.select_Section {
+  width: 80%;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 450px;
+}
+
+.select_Section button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 500;
+  border: 1px solid rgba(0,0,0,0);
+}
+
+.select_Section #loginSelect_Btn {
+  color: #aaa;
+  border-bottom: 1px solid var(--color-lightblack);
+}
+
+.select_Section #loginSelect_Btn:hover {
+  color: var(--color-lightblack);
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.select_Section #signupSelect_Btn {
+  border: 1px solid var(--color-lightblack);
+  border-bottom: none;
+}
+
+.userData_Section {
+  width: 100%;
+  min-width: 30rem;
+  margin: 5rem 0;
+}
+
+.userDataInput {
+  padding: 0 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+  gap: 3rem;
+}
+
+.userDataInput .userDataRow {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userDataInput .userDataRow label {
+  width: 7.6rem;
+  min-width: fit-content;
+  white-space: pre-wrap;
+  text-align: left;
+  font-weight: 500;
+}
+
+.userDataInput :not(.userDataRow:nth-child(3)) {
+  font-size: 1.3rem;
+}
+
+.userDataInput .userDataRow .inputWrap {
+  width: calc(100% - 8.6rem);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.userDataInput .userDataRow .ID_Check {
+  cursor: pointer;
+}
+
+.userDataInput .userDataRow .ID_Check:hover {
+  text-decoration: underline;
+}
+
+.userDataInput .userDataRow input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.userDataInput .userDataRow:not(:nth-child(n+2):nth-child(-n+3)) input,
+.userDataInput .userDataRow:nth-child(n+2):nth-child(-n+3) .inputWrap {
+  height: 100%;
+  border-bottom: 1px solid var(--color-lightblack);
+}
+
+.userDataInput .userDataRow:not(:nth-child(n+2):nth-child(-n+3)) input {
+  padding: 1em 1.2em;
+}
+
+.userDataInput .userDataRow:nth-child(n+2):nth-child(-n+3) input {
+  padding: 1em 0 1em 1.2em;
+}
+
+.userDataInput .userDataRow:not(:nth-child(n+2):nth-child(-n+3)) input:focus,
+.userDataInput .userDataRow:nth-child(n+2):nth-child(-n+3) .inputWrap.focus {
+  background-color: rgba(0,0,0,0.03);
+}
+
+.userDataInput .userDataRow:nth-child(n+2):nth-child(-n+3) .inputWrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userDataInput .userDataRow .passwordEyeWrap {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 1.6rem;
+}
+
+.userDataInput .userDataRow .passwordEyeWrap:hover {
+  color: var(--color-lightblack);
+}
+
+.userDataInput .valMsg {
+  position: absolute;
+  top: calc(100% + 0.3rem);
+  font-weight: 600;
+}
+
+.userDataInput .valMsg[class*="false"] {
+  color: var(--color-red);
+}
+
+.userDataInput .valMsg[class*="success"] {
+  color: var(--color-blue);
+}
+
+.userDataInput .userDataRow button,
+.userDataInput .userDataRow select {
+  height: fit-content;
+  padding: 0.3em 0.5em;
+  white-space: nowrap;
+}
+
+.userDataInput .userDataRow select {
+  outline: none;
+}
+
+.userData_Section + .hor_Bar {
+  margin: 0 auto;
+  width: 80%;
+  height: 2px;
+  background-color: var(--color-lightblack);
+}
+
+.userTerm_Section {
+  width: 100%;
+  margin: 0 2rem;
+}
+
+.userTermWrap {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  margin-top: 8rem;
+}
+
+.userTerm_Section .userTermWrap>p:first-child {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid var(--color-lightblack);
+}
+
+.userTerm_Section .termWrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userTerm_Section .termWrap,
+.userTerm_Section .textareaWrap {
+  padding: 2.5rem 0;
+}
+
+.userTerm_Section .termWrap,
+.userTerm_Section .textareaWrap:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.userTerm_Section .termWrap input[type="checkbox"] + label,
+.userTerm_Section .textareaWrap .textareaTop input[type="checkbox"] + label {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.userTerm_Section .termWrap input[type="checkbox"]:checked + label,
+.userTerm_Section .textareaWrap .textareaTop input[type="checkbox"]:checked + label {
+  border: 1px solid var(--color-blue);
+  background-color: var(--color-blue);
+}
+
+.userTerm_Section .textareaWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.userTerm_Section .textareaWrap .red {
+  color: var(--color-red);
+}
+
+.userTerm_Section .textareaWrap .textareaTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userTerm_Section .textareaWrap .termTextarea {
+  height: 14rem;
+  white-space: pre-line;
+  padding: 1rem 1.2rem;
+  outline: none;
+  resize: none;
+  border: 1px solid #ccc;
+}
+
+.submitWrap {
+  margin: 5rem 0;
+  width: calc(100% - 4rem);
+  max-width: 90rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.submitWrap button {
+  height: 5rem;
+  padding: 0 4rem;
+  border: 1px solid var(--color-lightblack);
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.submitWrap button:hover {
+  background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.03));
+}

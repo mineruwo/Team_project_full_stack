@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <title>THEJOEUN</title>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css/product.css">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <script src="js/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/31ff140207.js" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUCmgCdOGLjwNesBLeOWh4Kls_J9DIs4&callback=myMap" async defer></script>
+</head>
+
+<body>
+  <header class="header sub">
+    <div class="headerWrap">
+      <div class="headerInnerWrap">
+        <h1 class="logo" onclick="location.href='/'">
+          <div>
+            <p class="logoTxt">THE</p>
+            <p class="logoTxt">JOEUN</p>
+          </div>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li class="menu" onclick="location.href='product.html'">MEN</li>
+            <li class="menu" onclick="location.href='productWomen.html'">WOMEN</li>
+            <li class="menu" onclick="location.href='productKids.html'">KIDS</li>
+            <li class="menu" onclick="location.href='productBaby.html'">BABY</li>
+          </ul>
+        </nav>
+        <div class="iconWrap">
+          <div class="iconBtn" onclick="location.href='wishList.html'">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="iconBtn" onclick="location.href='cart.html'">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="cartNum">0</div>
+          </div>
+          <div class="iconBtn" onclick="location.href='login.html'">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </header> <!--header 영역 끝-->
+  <!--main 영역 시작-->
+  <main class="main">
+    <section id="visualSlider">
+      <div class="imgContainer">
+        <div class="imgBox">
+          <img src="images/p_images/kids-slide-01.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+        <div class="imgBox">
+          <img src="images/p_images/kids-slide-02.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+        <div class="imgBox">
+          <img src="images/p_images/kids-slide-03.jpg">
+          <p class="typo">THEJOEUN</p>
+        </div>
+      </div>
+    </section>
+    <div class="mainWrap">
+      <section class="productWrap">
+        <!--1번째 제품-->
+        <div class="product"> <!--제품 클릭시 디테일페이지로 이동 삽입-->
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/asian-girl-posing_23-2149396537.jpg?t=st=1725521166~exp=1725524766~hmac=a096657256020d14d46dfdceafb6ad52d40da30e4f47d314b15bcc1cd2575d78&w=740" id="topImg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>애플 패턴 오버핏 셔츠</p>
+            <p class="price">&#8361; 32,000</p>
+          </div>
+        </div>
+        <!--2번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/full-length-portrait-cute-little-girl-hat_171337-13768.jpg?t=st=1725520239~exp=1725523839~hmac=67ea28c62fd23c991badfc3570402a60c8cc2500be4f4c2750ec6551eaa51527&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>쉬폰 플레어 스커트</p>
+            <p class="price">&#8361; 29,000</p>
+          </div>
+        </div>
+        <!--3번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/full-shot-girl-posing-chair-with-hat_23-2149067105.jpg?t=st=1725520249~exp=1725523849~hmac=37c3996c056a0adc9e46fe53f53fa9d8356a7951df88cfe6c94489bfc7aa864e&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>꽈배기 짜임 롱 가디건</p>
+            <p class="price">&#8361; 36,000</p>
+          </div>
+        </div>
+        <!--4번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/front-view-modern-boy-with-skateboard_23-2148423255.jpg?t=st=1725520266~exp=1725523866~hmac=e59994dfd3b64bc8ec7276c2ce5b67cd85fef5f86915581b918397419b62bd76&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>기본 카라 셔츠</p>
+            <p class="price">&#8361; 32,000</p>
+          </div>
+        </div>
+        <!--5번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/little-fashionista-colored-background-mom-s-shoes_169016-3672.jpg?t=st=1725520306~exp=1725523906~hmac=0bee16bcf6f45016f9f87d28605bed7d38cad05ad8675ecce62ae3d317f6a662&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>칼라 패턴 민소매 원피스</p>
+            <p class="price">&#8361; 45,000</p>
+          </div>
+        </div>
+        <!--6번째 제품 -->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/funny-little-girl-is-fashionista-shoes-mother_169016-3670.jpg?t=st=1725520324~exp=1725523924~hmac=e32e206353ad9317264a5f6037bfab49c33386036f6f63a128a6953f8b0acb64&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>체리 자수 포인트 반바지</p>
+            <p class="price">&#8361; 28,000</p>
+          </div>
+        </div>
+        <!--7번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/medium-shot-cute-modern-boy_23-2148423126.jpg?t=st=1725520347~exp=1725523947~hmac=45073f315477870f09667db6f4ce2692d73209b994b1ef451b33d81ed4870d26&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>라운드 원포켓 반팔 티셔츠</p>
+            <p class="price">&#8361; 19,000</p>
+          </div>
+        </div>
+        <!--8번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/cute-girl-chair-holding-hat-head_23-2148070390.jpg?t=st=1725520362~exp=1725523962~hmac=6199e878bc8762963f0fef397455c863a556f4a61b077016a66f4517bee0a943&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>체크 패턴 셔츠</p>
+            <p class="price">&#8361; 33,000</p>
+          </div>
+        </div>
+        <!--9번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/full-body-asian-girl-dress_53876-98501.jpg?t=st=1725520379~exp=1725523979~hmac=4505e9c828a9118127480c66f6605279edc3c406eff01b18071c62b5c7f38c40&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>라운드 민소매 원피스</p>
+            <p class="price">&#8361; 31,000</p>
+          </div>
+        </div>
+        <!--10번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/front-view-modern-boy-with-skateboard_23-2148423259.jpg?t=st=1725520413~exp=1725524013~hmac=f3e0ed81d82ce524d99166af680ccbc3b1fa6d30dcbf6f19df01ca8159e1cce1&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>프리미엄 카라 셔츠</p>
+            <p class="price">&#8361; 35,000</p>
+          </div>
+        </div>
+        <!--11번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/little-female-model-posing-school-s-uniform-with-backpack-white-wall_155003-35563.jpg?t=st=1725520459~exp=1725524059~hmac=c43cd1816dda788f3080e16fc02beaaeb38709b571eb593437b7c182c6f2da7a&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>숏 항공 점퍼</p>
+            <p class="price">&#8361; 39,000</p>
+          </div>
+        </div>
+        <!--12번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/full-shot-modern-boy-with-skateboard_23-2148423116.jpg?t=st=1725521188~exp=1725524788~hmac=72fa5dcafa9452ce86a8f416221b07bf797737594210ba0c755b051c57525021&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>롱 후드 티셔츠</p>
+            <p class="price">&#8361; 42,000</p>
+          </div>
+        </div>
+        <!--13번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/cute-girl-big-glasses-is-posing-photographer-dark-photo-studio_613910-13002.jpg?t=st=1725521211~exp=1725524811~hmac=1d55b2854ef89309694e2ec3ab5a107fe3bf55d8a12ad8bd539349072342ea10&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>비즈 포인트 멜빵반바지</p>
+            <p class="price">&#8361; 49,000</p>
+          </div>
+        </div>
+        <!--14번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/full-shot-girl-holding-backpack_23-2149067118.jpg?t=st=1725520219~exp=1725523819~hmac=d8fe7d423925e46806abbae2accf04f29be735840e03d7f0671b94df35426054&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>허리 밴딩 반바지</p>
+            <p class="price">&#8361; 28,000</p>
+          </div>
+        </div>
+        <!--15번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/girl-with-happy-expression_23-2147982495.jpg?t=st=1725521266~exp=1725524866~hmac=43535ee935151b2b8e7baaa107a0f5db9265f743014a67accbf769d04a5948f7&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>스트라이프 카라넥 원피스 </p>
+            <p class="price">&#8361; 36,000</p>
+          </div>
+        </div>
+        <!--16번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/portrait-happy-young-girl_23-2149185144.jpg?t=st=1725521278~exp=1725524878~hmac=6982f63ab256e42269932039b4efbe5f02e8b93e8678cfd402df1a292154ff42&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>복고풍 청 자켓</p>
+            <p class="price">&#8361; 47,000</p>
+          </div>
+        </div>
+        <!--17번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/girl-with-joystick-posing-camera_23-2148301611.jpg?t=st=1725522067~exp=1725525667~hmac=923ac9d3d50ea380b0257897336a4ece132f969ebaa7b14b28ee4ff751651a87&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>숄더 프릴 카라넥 미디 원피스</p>
+            <p class="price">&#8361; 31,000</p>
+          </div>
+        </div>
+        <!--18번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/portrait-boy-with-face-painted_23-2148843670.jpg?t=st=1725521368~exp=1725524968~hmac=b1488ea792b835497b1dc34fd3e70b3423526ad7bf4036fd163fc0d4f1d71acf&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>투톤 가을 셔츠</p>
+            <p class="price">&#8361; 31,000</p>
+          </div>
+        </div>
+        <!--19번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/little-girl-posing-with-spring-flowers_23-2148442621.jpg?t=st=1725521416~exp=1725525016~hmac=61613b9dc5992e0f13a55b40eb281ef993f335325fac00b521a04c2fc9bcabfc&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>카라 포인트 조끼</p>
+            <p class="price">&#8361; 27,000</p>
+          </div>
+        </div>
+        <!--20번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/full-shot-smiley-girl-posing-with-hat_23-2149853319.jpg?t=st=1725521434~exp=1725525034~hmac=57aadeeb7ee23df1fc718c1bac39dbd3725529bd6c4426336334217b79f87cb1&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>꽈배기 짜임 니트</p>
+            <p class="price">&#8361; 32,000</p>
+          </div>
+        </div>
+        <!--21번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/medium-shot-girl-with-sunglasses_23-2148905705.jpg?t=st=1725521445~exp=1725525045~hmac=2b8e2aae58bb4bd28e85ae90aa0d5248a1c251d941dad4f2609c33da87e38612&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>레터링 크롭 티셔츠</p>
+            <p class="price">&#8361; 27,000</p>
+          </div>
+        </div>
+        <!--22번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/medium-shot-trendy-girl-posing_23-2149067066.jpg?t=st=1725587959~exp=1725591559~hmac=985eddb1c4e0064fc1b40693a0050c864d47a7f1c79a48fef7cc2dd30d80d6b3&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>크롭 민소매 티셔츠</p>
+            <p class="price">&#8361; 21,000</p>
+          </div>
+        </div>
+        <!--23번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/full-shot-girl-wearing-sunglasses_23-2149037222.jpg?t=st=1725521632~exp=1725525232~hmac=5165674e68314766cc205667b83e82f5f4fb0278068e0d6a4e369da896bfad5c&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>단추 포인트 A라인 스커트</p>
+            <p class="price">&#8361; 23,000</p>
+          </div>
+        </div>
+        <!--24번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/young-serious-thoughtful-teen-girl-doubt-concept_155003-9807.jpg?t=st=1725588104~exp=1725591704~hmac=c6780eaaa5022771dd4f3d467532c2dda1d739dcd7c7b8cbad7639c447894b9d&w=1380">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>반업 넥 라운드 티셔츠</p>
+            <p class="price">&#8361; 24,000</p>
+          </div>
+        </div>
+        <!--25번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/stylish-young-teen-girl_155003-2511.jpg?t=st=1725521698~exp=1725525298~hmac=61bdfcccf5f80734d31666cdf9fca1af758f7addb74e760979416077e691d939&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>오버핏 체크 셔츠</p>
+            <p class="price">&#8361; 32,000</p>
+          </div>
+        </div>
+        <!--26번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/portrait-teenage-girl-holding-her-skirt_23-2149334603.jpg?t=st=1725521730~exp=1725525330~hmac=a6493d13fd52f8a1cae57a72bee8eb1012e4fb423f1194c242a4834a9ea2f787&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>주름 미니 스커트</p>
+            <p class="price">&#8361; 32,000</p>
+          </div>
+        </div>
+        <!--27번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/asian-girl-doing-heart-sign-with-her-hands_23-2149396562.jpg?t=st=1725589150~exp=1725592750~hmac=d4c451420f5ac583886aad6a1d9aead69845d101456b39fde74f598392ca022a&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>투톤 포인트 반팔 티셔츠</p>
+            <p class="price">&#8361; 23,000</p>
+          </div>
+        </div>
+        <!--28번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/full-shot-girl-skateboard_23-2148268046.jpg?t=st=1725589222~exp=1725592822~hmac=b6800f1538736090a2a33ed2c94fa069aa7a296447791e651cfbe004658595ab&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>데님 멜빵 반바지</p>
+            <p class="price">&#8361; 39,000</p>
+          </div>
+        </div>
+        <!--29번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/close-up-cute-child-portrait_23-2149153293.jpg?t=st=1725521770~exp=1725525370~hmac=57fe52000e315c966321dd5fd6f4713b2da9a972a2d9d88a93847af092300765&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>투포켓 아우터 셔츠</p>
+            <p class="price">&#8361; 41,000</p>
+          </div>
+        </div>
+        <!--30번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/smiling-boy-standing-front-concrete-wall-showing-thumbs-up_23-2148186379.jpg?t=st=1725521838~exp=1725525438~hmac=e66dad6da5061f3c7d7d548c7e2f9c60d96cf3b73b564b019a1e51e2e0afb3f8&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>베이직 반팔 라운드 티셔츠</p>
+            <p class="price">&#8361; 22,000</p>
+          </div>
+        </div>
+        <!--31번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img
+              src="https://img.freepik.com/free-photo/girl-white-t-shirt-brown-jacket-winter-fashion-shoot_53876-104329.jpg?t=st=1725521909~exp=1725525509~hmac=4035d34cdf3da9a014b06e62f0a7b06f04055df79b0cf88a061cbbe45e51c510&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>루즈핏 트러커 자켓</p>
+            <p class="price">&#8361; 42,000</p>
+          </div>
+        </div>
+        <!--32번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/full-shot-kid-with-sunglasses_23-2149067155.jpg?t=st=1725521933~exp=1725525533~hmac=16aa87ccc472506f7ca4b7f55f0f149b8ef9632a8cb779537e8924c085acf468&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>레인보우 바람막이 자켓</p>
+            <p class="price">&#8361; 37,000</p>
+          </div>
+        </div>
+        <!--33번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/portrait-cute-boy-yellow-t-shirt-black-background-posing-camera_78492-3830.jpg?t=st=1725521950~exp=1725525550~hmac=b5171b4d6803a4d963d51763b8ba227f1944cec9199dd1ba0649f9fc58b8a47a&w=740">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>베이직 카라 티셔츠</p>
+            <p class="price">&#8361; 27,000</p>
+          </div>
+        </div>
+        <!--34번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/little-funny-boy-with-red-curly-hair-freckles-holding-hands-together-feeling-guilty_176420-15519.jpg?t=st=1725521967~exp=1725525567~hmac=768f75d938a5deb248da5a660a2b155fea0c32ce4041f1e1d1bde5321fddcf4f&w=1380">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>투포켓 라인 셔츠</p>
+            <p class="price">&#8361; 28,000</p>
+          </div>
+        </div>
+        <!--35번째 제품-->
+        <div class="product">
+          <div class="productImg">
+            <img src="https://img.freepik.com/free-photo/full-shot-smiley-kid-holding-jumping-rope_23-2148866146.jpg?t=st=1725522033~exp=1725525633~hmac=95d1f450ee2bbf0e0a6c6e8e2fb7227d5561c23b0069e4d5b36be64b06da86e1&w=740"
+              id="bottomImg">
+            <div class="bg"></div>
+            <div class="productIcon">
+              <div class="wishWrap">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <div class="productText">
+            <p>18수 라운드 반팔 티셔츠</p>
+            <p class="price">&#8361; 27,000</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="recentView">
+      <p>최근 본 상품</p>
+      <div class="viewContainer">
+        <div class="viewScroll"></div>
+      </div>
+    </div>
+    <!-- 플로팅 버튼 : 상하 이동, 최근 본 상품 -->
+    <div class="floatBtnContainer">
+      <div class="floatBtnBox">
+        <div class="buttonBox">
+          <i class="fa-solid fa-circle-dot"></i>
+        </div>
+        <div class="btnIconWrap">
+          <div class="btnIcon viewBtn">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div class="btnIcon topBtn">
+            <i class="fa-solid fa-arrow-up"></i>
+          </div>
+          <div class="btnIcon bottomBtn">
+            <i class="fa-solid fa-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main> <!--main 영역 끝-->
+  <!--footer 영역 시작-->
+  <footer class="footer">
+    <div class="footerWrap">
+      <ul class="footerNav">
+        <li class="footerMenu">회사정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">매장안내</li>
+        <li class="bar"></li>
+        <li class="footerMenu">채용정보</li>
+        <li class="bar"></li>
+        <li class="footerMenu">고객센터</li>
+        <li class="bar"></li>
+        <li class="footerMenu">대량구매</li>
+        <li class="bar"></li>
+        <li class="footerMenu mapOpen">찾아오는 길</li>
+        <li class="bar"></li>
+        <li class="footerMenu">이용약관</li>
+        <li class="bar"></li>
+        <li class="footerMenu">콘텐츠산업진흥법</li>
+      </ul>
+      <div class="footerBtn">개인정보처리방침</div>
+      <p class="footerContent">
+        더조은코리아(주) 대표 : 전아영, 김주영, 전지훈, 최우석, 한경수<br>
+        주소 : 서울특별시 종로구 우정국로2길 21<br>
+        사업자등록번호 : 123-45-67890<br>
+        통신판매업신고번호 : 2024-서울종로-1234<br>
+        호스팅서비스사업자 : The Joeun Co., Ltd.<br>
+        고객만족센터<br>
+        TEL: 080-123-4567 FAX: 02-1234-5678 Email: thejoeun@thejoeun.co.kr
+      </p>
+      <hr>
+      <div class="footerBottom">
+        <p class="copyright">Copyright &copy; THEJOEUN Co., Ltd. All rights reserved.</p>
+        <ul class="social">
+          <li class="socialIcon">
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-square-threads"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-youtube"></i>
+          </li>
+          <li class="socialIcon">
+            <i class="fa-brands fa-x-twitter"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="mapModal">
+      <div class="mapContainer">
+        <p>찾아오는 길</p>
+        <div class="map" id="googleMap"></div>
+        <div class="closeBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </footer>
+  <div class="scrollBarContainer">
+    <div id="scrollBar"></div>
+  </div>
+  <script src="js/default.js"></script>
+  <script src="js/imgSlider.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/lastProduct.js"></script>
+  <script>
+    const products = document.querySelectorAll(".productImg > img");
+
+    for (let cyc in products) {
+      if (cyc == products.length) break;
+      products[cyc].addEventListener("click", () => {
+        location.href = "productDetailKids.html";
+      });
+    }
+  </script>
+</body>
+
+</html>
