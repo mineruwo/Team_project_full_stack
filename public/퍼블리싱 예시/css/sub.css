@@ -1,0 +1,21 @@
+.subWrap {
+  margin: 50px auto;
+  max-width: 1050px;
+}
+
+.titleWrap {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.bar {
+  background-color: var(--color-main);
+  width: 4px;
+  height: 0.8em;
+}
+
+.title {
+  font-weight: 500;
+}

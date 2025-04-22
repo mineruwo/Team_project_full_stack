@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1"
+    />
+    <title>CSS 예시</title>
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="headerWrap">
+        <div class="headerLeft">
+          <div class="logo">Logo</div>
+          <nav class="nav">
+            <ul>
+              <li class="menu">Home</li>
+              <li class="menu">Sub</li>
+              <li class="menu">Gallery</li>
+              <li class="menu">Help</li>
+            </ul>
+          </nav>
+          <div class="searchBar">
+            <input type="text" placeholder="검색어를 입력하세요" />
+            <button type="button" class="searhBtn">
+              <img src="images/search.svg" />
+            <button>
+          </div>
+        </div>
+        <div class="headerRight">
+          <button type="button">로그인</button>
+          <button type="button">회원가입</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <object class="page" data="main.html" type="text/html">
+        <!-- 웹 브라우저가 object를 지원하지 않거나 data property의 값이 가리키는 파일이 존재하지 않을 경우 표시되는 대체 콘텐츠 -->
+        <div class="errorPage">
+          <img src="images/error404.svg" />
+          <p>해당 페이지를 찾을 수 없습니다.</p>
+        </div>
+      </object>
+    </main>
+    <script>
+      
+      // 헤더 메뉴에서 현재 페이지를 인식하여, 
+      // 현재 페이지와 일치하는 메뉴 항목에 "active" 클래스를 추가합니다.
+      const pageObject = document.querySelector(".page");
+      const menuItems = document.querySelectorAll(".nav .menu");
+
+      const pageMap = {
+        "Home": "main.html",
+        "Sub": "sub.html",
+      };
+
+      const currentPage = pageObject.getAttribute("data");
+      const activeMenu = Object.keys(pageMap).find(
+        (key) => pageMap[key] === currentPage
+      );
+
+      if (activeMenu) {
+        menuItems.forEach((menuItem) => {
+          if (menuItem.textContent.trim() === activeMenu) {
+            menuItem.classList.add("active");
+          }
+        });
+      }
+
+      // 메뉴 클릭 시 <object> 태그의 data 속성 변경
+      menuItems.forEach((menuItem) => {
+        menuItem.addEventListener("click", () => {
+          const menuText = menuItem.textContent.trim();
+          const newPage = pageMap[menuText];
+          if (newPage) {
+            pageObject.setAttribute("data", newPage);
+
+            // 모든 메뉴에서 "active" 클래스 제거 후 클릭된 메뉴에 추가
+            menuItems.forEach((item) => item.classList.remove("active"));
+            menuItem.classList.add("active");
+          }
+        });
+      });
+
+
+      // 검색창 테두리 스타일 변경:
+      // 검색 입력 필드에 포커스가 있을 때 "active" 클래스를 추가하여 테두리를 강조하고,
+      // 포커스가 해제되면 "active" 클래스를 제거하여 기본 상태로 복원합니다.
+      const searchInput = document.querySelector(".searchBar input");
+      const searchBar = document.querySelector(".searchBar");
+
+      searchInput.addEventListener("focus", () =>
+        searchBar.classList.add("active")
+      );
+      searchInput.addEventListener("blur", () =>
+        searchBar.classList.remove("active")
+      );
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+body {
+  /* 푸터가 화면 하단에 위치하도록 설정 */
+  min-height: 100vh;
+  user-select: none; /* 텍스트가 선택되지 않게 설정 */
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+}
+
+/* header 시작 */
+header {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
+  background-color: white;
+  z-index: 10;
+}
+
+.headerWrap {
+  display: flex; /* 자손 요소를 기본 가로 정렬 (flex-direction: row) */
+  justify-content: space-between; /* 컨테이너 내 항목을 양 끝에 배치 */
+  align-items: center; /* 컨테이너 내 항목을 세로 중앙 정렬 */
+  margin: 0 auto; /* 이 요소를 중앙 정렬 */
+  max-width: 1050px;
+  height: 80px;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 20px; /* 정렬 간격 */
+  align-items: center; /* 자손 요소를 세로 중앙 정렬 */
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 28px;
+  padding: 0.3em; /* 현재 요소의 폰트 크기가 1em으로 취급됨 */
+  cursor: pointer;
+  color: var(--color-main);
+}
+
+.logo:hover {
+  color: var(--color-dark-main);
+}
+
+.nav ul {
+  display: flex;
+  gap: 16px;
+}
+
+.menu {
+  padding: 0.2em;
+  cursor: pointer;
+  position: relative; /* 부모 요소를 기준으로 자식 요소의 위치를 설정 가능하게 함 */
+}
+
+.menu::after {
+  /* 메뉴 항목 뒤에 장식 추가 */
+  content: "";
+  display: block;
+  position: absolute; /* 부모(.menu)를 기준으로 위치를 설정 */
+  top: 100%; /* 부모 요소의 아래쪽에 위치 */
+  left: 50%; /* 부모 요소의 가로 중앙에 위치 */
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-main);
+  /* 
+    transform: 요소에 2D 또는 3D 변환 효과를 적용.
+    translateX(-50%): 요소를 가로로 자기 자신의 -50% 이동해 중앙 정렬.
+    scaleX(0): 요소의 가로 크기를 0으로 축소해 숨김.
+  */
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.3s ease; /* 애니메이션 효과 */
+}
+
+.menu:not(.active):hover::after, /* .menu 요소에 active 클래스가 없을 때, hover 상태에서 ::after 가상 요소 */
+.menu.active::after {
+  transform: translateX(-50%) scaleX(1); /* 호버 시 장식 표시, 좌우로 늘어나게 */
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-gray);
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 1em;
+  transition: border-color 0.2s;
+}
+
+/* searchBar 외에 active 클래스를 추가로 가진 요소. 스크립트로 하위 input이 선택될 시 active 클래스가 추가됨. */
+.searchBar.active {
+  border-color: var(--color-main);
+}
+
+.searchBar input {
+  padding: 0.5em 0;
+  outline: none; /* input 선택시 생기는 외곽선 제거, 접근성을 고려해 대체 표시를 제공해야 함 */
+}
+
+.searchBar input::placeholder {
+  color: var(--color-dark-gray); /* placeholder 색상 설정 */
+}
+
+.headerRight {
+  display: flex;
+  gap: 0.7em;
+  align-items: center; /* 이걸 쓰지 않으면 하위 요소의 높이가 최대가 됨 */
+  font-size: 12px;
+}
+
+.headerRight button {
+  padding: 0.2em;
+}
+/* header 끝 */
+
+/* main 시작 */
+main {
+  flex: 1; /* 남은 공간을 채움 */
+  display: flex; /* 자식 요소를 flex 컨테이너로 설정 */
+  flex-direction: column; /* 세로 정렬 */
+}
+
+main .page {
+  flex: 1; /* 부모(main)의 flex-grow를 상속받아 높이를 채움 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorPage {
+  max-width: 1050px; /* 최대 너비 제한 */
+  width: 100%;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorPage img {
+  max-width: 500px; /* 이미지 최대 너비 제한 */
+}
+
+.errorPage p {
+  font-size: 20px;
+  color: var(--color-dark-gray);
+}
+/* main 끝 */
