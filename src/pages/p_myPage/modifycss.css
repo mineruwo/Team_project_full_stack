@@ -1,5 +1,5 @@
 .innerDiv {
-    height: 800px;
+    height: 880px;
 }
 
 .innerDivWrap {
@@ -10,15 +10,56 @@
     gap: 15px;
 }
 
-.titleDiv
+.titleRectDiv
 {
     width: 670px;
     height: 100px;
-    background-color: blanchedalmond;
+    align-self: center;
+}
+
+.titleText
+{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 100px;
 }
 
 .userInfoDiv
 {
-    width: 630px;
+    width: 590px;
     height: 730px;
+    background-color: #5e5e5e;
+    align-self: center;
+    border-radius: 30px;
 }
+
+.userInfoTopInfoDiv
+{
+    width: inherit;
+    height: 160px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 30px 50px 110px 18px;
+}
+
+.userInfoModifyTopInfoDiv
+{
+    width: inherit;
+    height: 55px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 8px 50px 8px 50px;
+    display: felx;
+    justify-content: space-between;
+}
+
+.modifyButton
+{
+    font-size: 15px;
+    height: 38px;
+    margin-right: 30px;
+    background-color: lightgrey;
+    color: black;
+}
+
