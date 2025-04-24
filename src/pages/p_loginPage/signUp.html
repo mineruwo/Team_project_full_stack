@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/signUp.js"></script>
+</head>
+
+<body>
+    <header>
+        header영역
+    </header>
+    <main>
+        <form class="signup">
+            <div class="signupWrap">
+                <div class="selectBtn">
+                    <button id="loginBtn">로그인</button>
+                    <button id="signupBtn">회원가입</button>
+                </div>
+
+                <div class="panel formPanel">
+                    <div class="up_input">
+                        <label for="up_inputId">아이디</label>
+                        <input type="text" name="up_inputId" id="up_inputId" placeholder="아이디 입력 (6 ~ 20자)">
+                        <p class="errId"></p>
+                    </div>
+
+                    <div class="up_input">
+                        <label for="up_inputPw">비밀번호</label>
+                        <input type="password" name="up_inputPw" id="up_inputPw"
+                            placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함, 8~16 자)">
+                        <p class="errPw"></p>
+                    </div>
+
+                    <div class="up_input">
+                        <label for="up_inputPwChk">비밀번호 확인</label>
+                        <input type="password" name="up_inputPwChk" id="up_inputPwChk" placeholder="비밀번호 재입력">
+                        <p class="errIdChk"></p>
+                    </div>
+
+                    <div class="up_input">
+                        <label for="up_inputName">이름</label>
+                        <input type="text" name="up_inputName" id="up_inputName" placeholder="이름을 입력해주세요">
+                        <p class="errName"></p>
+                    </div>
+
+                    <div class="up_input">
+                        <label for="up_inputTell">전화번호</label>
+                        <div class="tellWrap">
+                            <select name="brandSel" id="brandSel">
+                                <option value="">통신사 선택</option>
+                                <option value="KT">SKT</option>
+                                <option value="SKT">KT</option>
+                                <option value="LG">LG U+</option>
+                                <option value="AL">알뜰폰</option>
+                            </select>
+                            <input type="tel" name="up_inputTell" id="up_inputTell"
+                                placeholder="휴대폰 번호 입력 ('-'' 제외, 11~12자리 입력)">
+                        </div>
+                        <p class="errTell"></p>
+                    </div>
+
+                    <div class="up_input">
+                        <label for="up_inputEmail">이메일</label>
+                        <div class="emailWrap">
+                            <input type="text" name="up_inputEmail" id="up_inputEmail" placeholder="이메일 주소 입력">
+                            <p>@</p>
+                            <select name="emailSel" id="emailSel">
+                                <option value="">직접입력</option>
+                                <option value="@naver.com">naver.com</option>
+                                <option value="@gmail.com">gmail.com</option>
+                                <option value="@hanmail.net">hanmail.net</option>
+                            </select>
+                        </div>
+                        <p class="errEmail"></p>
+                    </div>
+
+                    <div class="up_input">
+                        <label for="birth-year">생년월일</label>
+                        <div class="birthWrap">
+                            <select class="birthSel" id="birth-year">
+                                <option disabled selected>출생 연도</option>
+                            </select>
+                            <select class="birthSel" id="birth-month">
+                                <option disabled selected>월</option>
+                            </select>
+                            <select class="birthSel" id="birth-day">
+                                <option disabled selected>일</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="up_button">
+                        <button type="submit" class="btn btn_up">회원가입</button>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn_sns">SNS 가입</button>
+                    </div>
+
+                    <div class="social">
+                        <div class="social_naver">
+                            <img src="image/icons/naver.svg" alt="naver">
+                        </div>
+                        <div class="social_kakao">
+                            <img src="image/icons/kakao.svg" alt="kakao">
+                        </div>
+                        <div class="social_google">
+                            <img src="image/icons/google.svg" alt="google">
+                        </div>
+                        <div class="social_apple">
+                            <img src="image/icons/apple.svg" alt="apple">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        footer 영역
+    </footer>
+
+</body>
+
+</html>

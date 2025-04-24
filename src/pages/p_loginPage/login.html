@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+</head>
+
+<body>
+    <header>
+        header영역
+    </header>
+    <main>
+        <section>
+            <form class="signIn">
+                <div class="panel formPanel">
+                    <h2>{heading}</h2>
+
+                    <div class="login_input">
+                        <input type="text" name="login_input" id="login_inputId" placeholder="아이디를 입력하세요">
+                    </div>
+
+                    <div class="login_input">
+                        <input type="password" name="login_input" id="login_inputPw" placeholder="비밀번호를 입력하세요">
+                    </div>
+
+                    <div class="login_find">
+                        <a href="">아이디 찾기</a>
+                        <a href="">비밀번호 찾기</a>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="btn btn_login">로그인</button>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn_sns">SNS 로그인</button>
+                    </div>
+
+                    <div class="social">                
+                        <div class="social_naver">
+                            <img src="image/icons/naver.svg" alt="naver">
+                        </div>
+                        <div class="social_kakao">
+                            <img src="image/icons/kakao.svg" alt="kakao">
+                        </div>
+                        <div class="social_google">
+                            <img src="image/icons/google.svg" alt="google">
+                        </div>
+                        <div class="social_apple">
+                            <img src="image/icons/apple.svg" alt="apple">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel actionPanel">
+                    <h2>{heading}</h2>
+                    <p>{paragraph}</p>
+                    <button onClick="">{button}</button>
+                </div>
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        footer 영역
+    </footer>   
+
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+header {
+    width: 1200px;
+    height: 70px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    height: 100%;
+    /* background-image: url(../image/cat.jpg); */
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 100px 0;
+    width: fit-content;
+}
+
+.signupWrap {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.selectBtn {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.selectBtn button {
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#loginBtn {
+    color: #aaa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#signupBtn {
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 100%;
+    justify-content: start;
+    padding-bottom: 20px;
+}
+
+.up_input {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 0px 10px;
+    height: 90px;
+    width: 450px;
+}
+
+.tellWrap {
+    display: flex;
+    flex-direction: row;
+}
+
+#brandSel {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.emailWrap {
+    display: flex;
+    flex-direction: row;
+}
+
+#emailSel {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.birthWrap {
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    justify-content: center;
+}
+
+.birthSel {
+    font-size: 14px;
+    width: 120px;
+    height: 30px;
+    margin: 10px;
+}
+
+label {
+    min-width: fit-content;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.panel input {
+    width: 430px;
+    height: fit-content;
+    padding: 10px 10px;
+    background: whitesmoke;
+    border: none;
+    border-radius: 20px;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.panel p {
+    margin: 0px;
+    padding: 10px 10px 10px 10px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.panel div a {
+    margin: 0 0;
+    width: 70px;
+    height: 20px;
+    padding: 0 10px;
+    background: whitesmoke;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.panel form input::placeholder {
+    opacity: 0.8;
+}
+
+.panel button {
+    background: none;
+    border: 1px solid currentColor;
+    border-radius: 50px;
+    padding: 0 40px;
+    margin: 10px 0px 10px 0px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.1rem;
+    width: 300px;
+    height: 50px;
+}
+
+.up_button {
+    margin: 0 0 20px 0;
+}
+
+.panel a,
+.panel button {
+    color: inherit;
+    font-family: inherit;
+}
+
+.panel a {
+    text-decoration: none;
+    margin: 1rem 1rem;
+}
+
+/* style the anchor links nesting the social platforms in a circle */
+.panel .Social a {
+    display: inline-block;
+    font-weight: 900;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+}
+
+.panel>a {
+    position: relative;
+}
+
+.social {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+.social div {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-size: 40px;
+}
+
+.social img {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+}
+
+.social_naver {
+    background-color: #03CF5D;
+    border: none;
+    color: #fff;
+}
+
+.social_kakao {
+    background-color: #FFF300;
+    border: none;
+}
+
+.social_google {
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.social_apple {
+    background-color: black;
+    border: none;
+    color: #fff;
+}
+
+footer {
+    width: 1200px;
+    height: 90px;
+}
