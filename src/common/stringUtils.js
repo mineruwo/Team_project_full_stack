@@ -1,10 +1,10 @@
 function nameEncrypt(name) {
     //문자열 예외 처리 문자열이 아닐 경우 빈값 리턴
 
-    if (typeof name !== 'string') return "";
+    if (!isString(name)) return "";
 
     let returnName = "";
-    let splName = name.split();
+    let splName = name.split('');
     let splfirst = splName[0];
 
     //이름이 2글자일 경우 체크해서 리턴
@@ -28,7 +28,7 @@ function nameEncrypt(name) {
 
 function birthEncrypt(birthDay) {
     let checkDay = ""
-    if (typeof birthDay !== 'string') {
+    if (!isString(birthDay)) {
         checkDay = birthDay.toString();
     }
     else {
@@ -39,14 +39,12 @@ function birthEncrypt(birthDay) {
     let returnBir = "";
     try {
         let year = checkDay.slice(0, 4);
-        let month = checkDay.slice(5, 6);
-        let day = checkDay.slice(7, 8);
 
-        let splyear = year.split();
+        let splyear = year.split('');
         splyear.pop();
-        splyear.push("X");
+        splyear.push("*");
 
-        returnBir = `${splyear.join()}.XX.XX`;
+        returnBir = `${splyear.join('')}.**.**`;
     }
     catch {
         console.log("올바르지 않은 값이 입력되었습니다.");
@@ -58,7 +56,7 @@ function birthEncrypt(birthDay) {
 
 function phoneNumEncrypt(number) {
     let checkNumber = "";
-    if (typeof number !== 'string') {
+    if (!isString(number)) {
         checkNumber = number.toString();
     }
     else {
@@ -69,8 +67,8 @@ function phoneNumEncrypt(number) {
     checkNumber = checkNumber.replace("-", "");
     try {
         let frontNum = checkNumber.substring(0, 3);
-        let midNum = checkNumber.slice(4, checkNumber.length == 11 ? 7 : 6);
-        let lastNum = checkNumber.slice(checkNumber.length == 11 ? 8 : 7, checkNumber.length);
+        let midNum = checkNumber.slice(3, checkNumber.length == 11 ? 7 : 6);
+        let lastNum = checkNumber.slice(checkNumber.length == 11 ? 7 : 6, checkNumber.length);
 
         returnNum = `010-${midNum[0]}${midNum.length == 4 ? "***" : "**"}-${lastNum[0]}***`;
     }
@@ -86,28 +84,33 @@ function phoneNumEncrypt(number) {
 
 function emailAddrEncrypt(mailAddr) {
 
-    if (typeof mailAddr !== 'string') return "";
+    if (!isString(mailAddr)) return "";
 
     let sepIndex = mailAddr.indexOf("@");
     if (sepIndex === -1) return "";
     let mailId = mailAddr.substring(0, sepIndex);
 
+    console.log(mailId);
+
     let hostIndex = mailAddr.indexOf(".", sepIndex + 1);
     if (hostIndex === -1) return "";
     let host = mailAddr.substring(sepIndex + 1, hostIndex);
 
+    console.log(host);
     let domain = mailAddr.substring(hostIndex + 1, mailAddr.length);
 
     let idEncrypt = `${mailId[0]}`;
 
-    for (let i = 1; i < mailId.length - 2; i++);
+    console.log(mailId.length);
+    
+    for (let i = 1; i < mailId.length; i++)
     {
         idEncrypt += "*";
     }
 
     let hostEncrypt = `${host[0]}`;
 
-    for (let i = 1; i < host.length - 2; i++);
+    for (let i = 1; i < host.length; i++)
     {
         hostEncrypt += "*";
     }
@@ -115,22 +118,32 @@ function emailAddrEncrypt(mailAddr) {
 
     let domainEncrypt = `${domain[0]}`;
 
-    for (let i = 1; i < domain.length - 2; i++);
+    for (let i = 1; i < domain.length; i++)
     {
         domainEncrypt += "*";
     }
 
+    return `${idEncrypt}@${hostEncrypt}.${domainEncrypt}`
 }
 
 function addrEncrypt(addr) {
 
-    if (typeof addr !== 'string') return "";
+    if (!isString(addr)) return "";
 
     let showFirst = addr.substring(0, 5);
 
+    
+    
     for (let i = 5; i < addr.length; i++) {
         showFirst += "*";
     }
-
+    
+    console.log(showFirst);
+    
     return showFirst;
+}
+
+function isString(value)
+{
+    return typeof value === 'string';
 }

@@ -1,5 +1,6 @@
 .innerDiv {
     height: 800px;
+    display: flex;
 }
 
 .innerDivWrap {
@@ -70,4 +71,17 @@
 {
     font-size: 23px;
     font-weight: bold;
+}
+
+.transitionDiv
+{
+    background-color: gray;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0px;
+    z-index: 100;
+    transition: 500ms;
 }
