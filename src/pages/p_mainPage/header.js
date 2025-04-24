@@ -29,84 +29,75 @@ function imgSlider() {
     setInterval(showNextImage, 5500);
 }
 
-// 슬라이더 넘기기 
-function moveSlider() {
-    const slides = document.querySelectorAll(".imgBox");
-    const prevButton = document.querySelector(".prevSlide");
-    const nextButton = document.querySelector(".nextSlide");
+
+// 슬라이더 함수 
+// (넘기고 싶은 아이템/좌 버튼/우 버튼) 
+/*
+function createSlider({ itemSelector, prevButtonSelector, nextButtonSelector }) {
+    const items = document.querySelectorAll(itemSelector);
+    const prevButton = document.querySelector(prevButtonSelector);
+    const nextButton = document.querySelector(nextButtonSelector);
 
     let currentIndex = 0;
 
-    // 처음 슬라이드 보이게
-    slides[currentIndex].classList.add('visible');
+    if (items.length === 0) return;
 
-    // 슬라이드 보여주는 함수
-    function showSlide(index) {
-        slides.forEach(slide => {
-            slide.classList.remove('visible');
-            slide.classList.remove('hiding');
+    // 첫 번째 항목 보이게
+    items[currentIndex].classList.add('visible');
+
+    function showItem(index) {
+        items.forEach(item => {
+            item.classList.remove('visible');
+            item.classList.remove('hiding');
         });
 
-        slides[index].classList.add('visible');
+        items[index].classList.add('visible');
     }
 
-    // 다음 슬라이드
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
+    function nextItem() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showItem(currentIndex);
     }
 
-    // 이전 슬라이드
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
+    function prevItem() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        showItem(currentIndex);
     }
 
-    nextButton.addEventListener("click", nextSlide);
-    prevButton.addEventListener("click", prevSlide);
+    nextButton?.addEventListener("click", nextItem);
+    prevButton?.addEventListener("click", prevItem);
+}
+*/
 
+// 이미지 스크롤
+function scrollImg({ itemSelector, prevButtonSelector, nextButtonSelector }) {
+    const scroll = document.querySelector(itemSelector);
+    const prevBtn = document.querySelector(prevButtonSelector);
+    const nextBtn = document.querySelector(nextButtonSelector);
+
+    const scrollAmount = 600;
+
+    prevBtn.addEventListener("click", () => {
+        scroll.scrollLeft -= scrollAmount;
+    });
+
+    nextBtn.addEventListener("click", () => {
+        scroll.scrollLeft += scrollAmount;
+    });
 }
 
-// Article 넘기기
-function moveArticle() {
-    const articles = document.querySelectorAll(".bigArticleBox");
-    console.log(articles);
-    const prevButton = document.querySelector(".prevArticle");
-    const nextButton = document.querySelector(".nextArticle");
-
-    let currentIndex = 0;
-
-    // 처음 슬라이드 보이게
-    articles[currentIndex].classList.add('visible');
-
-    // 슬라이드 보여주는 함수
-    function showArticle(index) {
-        articles.forEach(article => {
-            article.classList.remove('visible');
-            article.classList.remove('hiding');
-        });
-
-        articles[index].classList.add('visible');
-    }
-
-    // 다음 슬라이드
-    function nextArticle() {
-        currentIndex = (currentIndex + 1) % articles.length;
-        showArticle(currentIndex);
-    }
-
-    // 이전 슬라이드
-    function prevArticle() {
-        currentIndex = (currentIndex - 1 + articles.length) % articles.length;
-        showArticle(currentIndex);
-    }
-
-    nextButton.addEventListener("click", nextArticle);
-    prevButton.addEventListener("click", prevArticle);
-
-}
 
 // 호출
-document.addEventListener("DOMContentLoaded", imgSlider);
-document.addEventListener("DOMContentLoaded", moveSlider);
-document.addEventListener("DOMContentLoaded", moveArticle);
+document.addEventListener("DOMContentLoaded", () => {
+    scrollImg({
+        itemSelector: ".bigArticleScroll",
+        prevButtonSelector: ".prevBigArticle",
+        nextButtonSelector: ".nextBigArticle"
+    });
+
+    scrollImg({
+        itemSelector: ".smallArticleScroll",
+        prevButtonSelector: ".prevSmallArticle",
+        nextButtonSelector: ".nextSmallArticle"
+    });
+});

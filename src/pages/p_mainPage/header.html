@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="/src/pages/p_mainPage/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="/src/pages/p_mainPage/header.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
 
 </head>
 
@@ -70,203 +75,200 @@
     </div>
 
     <!-- 슬라이드 -->
-    <div class="visualSlider">
-        <div class="imgContainer">
-            <div class="imgBox">
-                <a href="/src/pages/p_mainPage/testPage.html">
-                    <img src="/src/pages/p_mainPage/2.jpg">
-                </a>
+    <div id="visualSlider" class="carousel slide">
+        <div class="carousel-inner" id="imgContainer">
+            <div class="carousel-item active" id="imgBox">
+                <img src="/src/pages/p_mainPage/2.jpg" class="d-block w-100">
             </div>
-            <div class="imgBox">
-                <a href="/src/pages/p_mainPage/testPage.html">
-                    <img src="/src/pages/p_mainPage/3.jpg">
-                </a>
+            <div class="carousel-item" id="imgBox">
+                <img src="/src/pages/p_mainPage/3.jpg" class="d-block w-100">
             </div>
-            <div class="imgBox">
-                <a href="/src/pages/p_mainPage/testPage.html">
-                    <img src="/src/pages/p_mainPage/4.jpg">
-                </a>
-            </div>
-            <!-- 화살표 버튼 -->
-            <div class="slideButton">
-                <button type="button" class="prevSlide"></button>
-                <button type="button" class="nextSlide"></button>
+            <div class="carousel-item" id="imgBox">
+                <img src="/src/pages/p_mainPage/4.jpg" class="d-block w-100">
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#visualSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#visualSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
     <!-- 갤러리 -->
     <section class="products">
-        <div class="articleContainer">
-            <div class="bigArticleBox">
-                <article class="bigArticle">
-                    <a href="#">
-                        <div>
-                            <img src="/src/pages/p_mainPage/1_1.jpg">
-                        </div>
-                        <div class="mt-2"><b>리얼가죽무스탕</b></div>
-                        <div class="text-secondary"><del>87,000원</del></div>
-                        <div>55,000원</div>
-                    </a>
-                </article>
-                <article class="bigArticle">
-                    <a href="#">
-                        <div>
-                            <img src="/src/pages/p_mainPage/1_2.jpg">
-                        </div>
-                        <div class="mt-2"><b>[1+1] 기본 버튼 반팔티</b></div>
-                        <div class="text-secondary"><del>15,000원</del></div>
-                        <div>7,000원</div>
-                    </a>
-                </article>    
-            </div>
-            <div class="bigArticleBox">
-                <article class="bigArticle">
-                    <a href="#">
-                        <div>
-                            <img src="/src/pages/p_mainPage/1_3.jpg">
-                        </div>
-                        <div class="mt-2"><b>리얼가죽무스탕</b></div>
-                        <div class="text-secondary"><del>87,000원</del></div>
-                        <div>55,000원</div>
-                    </a>
-                </article>
-                <article class="bigArticle">
-                    <a href="#">
-                        <div>
-                            <img src="/src/pages/p_mainPage/1_4.jpg">
-                        </div>
-                        <div class="mt-2"><b>[1+1] 기본 버튼 반팔티</b></div>
-                        <div class="text-secondary"><del>15,000원</del></div>
-                        <div>7,000원</div>
-                    </a>
-                </article>    
-            </div>
-            <div class="bigArticleBox">
-                <article class="bigArticle">
-                    <a href="#">
-                        <div>
-                            <img src="/src/pages/p_mainPage/1_5.jpg">
-                        </div>
-                        <div class="mt-2"><b>리얼가죽무스탕</b></div>
-                        <div class="text-secondary"><del>87,000원</del></div>
-                        <div>55,000원</div>
-                    </a>
-                </article>
-                <article class="bigArticle">
-                    <a href="#">
-                        <div>
-                            <img src="/src/pages/p_mainPage/1_6.jpg">
-                        </div>
-                        <div class="mt-2"><b>[1+1] 기본 버튼 반팔티</b></div>
-                        <div class="text-secondary"><del>15,000원</del></div>
-                        <div>7,000원</div>
-                    </a>
-                </article>    
+        <!-- 큰 사진 시작 -->
+        <div class="bigArticleContainer">
+            <div class="bigArticleScroll">
+                <div class="bigArticleBox">
+                    <article class="bigArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_1.jpg">
+                            </div>
+                            <div class="mt-2"><b>리얼가죽무스탕</b></div>
+                            <div class="text-secondary"><del>87,000원</del></div>
+                            <div>55,000원</div>
+                        </a>
+                    </article>
+                    <article class="bigArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_2.jpg">
+                            </div>
+                            <div class="mt-2"><b>[1+1] 기본 버튼 반팔티</b></div>
+                            <div class="text-secondary"><del>15,000원</del></div>
+                            <div>7,000원</div>
+                        </a>
+                    </article>
+                    <article class="bigArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_3.jpg">
+                            </div>
+                            <div class="mt-2"><b>리얼가죽무스탕</b></div>
+                            <div class="text-secondary"><del>87,000원</del></div>
+                            <div>55,000원</div>
+                        </a>
+                    </article>
+                    <article class="bigArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_4.jpg">
+                            </div>
+                            <div class="mt-2"><b>[1+1] 기본 버튼 반팔티</b></div>
+                            <div class="text-secondary"><del>15,000원</del></div>
+                            <div>7,000원</div>
+                        </a>
+                    </article>
+                    <article class="bigArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_5.jpg">
+                            </div>
+                            <div class="mt-2"><b>리얼가죽무스탕</b></div>
+                            <div class="text-secondary"><del>87,000원</del></div>
+                            <div>55,000원</div>
+                        </a>
+                    </article>
+                    <article class="bigArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_6.jpg">
+                            </div>
+                            <div class="mt-2"><b>[1+1] 기본 버튼 반팔티</b></div>
+                            <div class="text-secondary"><del>15,000원</del></div>
+                            <div>7,000원</div>
+                        </a>
+                    </article>
+                </div>
             </div>
             <!-- 화살표 버튼 -->
             <div class="slideArticle">
-                <button type="button" class="prevArticle"></button>
-                <button type="button" class="nextArticle"></button>
+                <button type="button" class="prevBigArticle"></button>
+                <button type="button" class="nextBigArticle"></button>
+            </div>
+
+        </div>
+        <!-- 큰 사진 끝 -->
+
+        <!-- 작은 사진 시작 -->
+        <div class="smallArticleContainer">
+            <!-- 작은 사진 한 슬라이드 시작 -->
+            <div class="smallArticleScroll">
+                <div class="smallArticleBox">
+                    <article class="smallArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_3.jpg">
+                            </div>
+                            <div class="mt-2"><b>정장 스타일 무지 조끼</b></div>
+                            <div class="text-secondary"><del>45,000원</del></div>
+                            <div>40,000원</div>
+                        </a>
+                    </article>
+                    <article class="smallArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_4.jpg">
+                            </div>
+                            <div class="mt-2"><b>스키니핏 씨블루 정장 자켓</b></div>
+                            <div class="text-secondary"><del>53,000원</del></div>
+                            <div>45,000원</div>
+                        </a>
+                    </article>
+                    <article class="smallArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_5.jpg">
+                            </div>
+                            <div class="mt-2"><b>프리미엄 올라운드 데님셔츠</b></div>
+                            <div class="text-secondary"><del>33,000원</del></div>
+                            <div>30,000원</div>
+                        </a>
+                    </article>
+                    <article class="smallArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_6.jpg">
+                            </div>
+                            <div class="mt-2"><b>프리미엄 올라운드 데님셔츠</b></div>
+                            <div class="text-secondary"><del>33,000원</del></div>
+                            <div>30,000원</div>
+                        </a>
+                    </article>
+                    <article class="smallArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_1.jpg">
+                            </div>
+                            <div class="mt-2"><b>정장 스타일 무지 조끼</b></div>
+                            <div class="text-secondary"><del>45,000원</del></div>
+                            <div>40,000원</div>
+                        </a>
+                    </article>
+                    <article class="smallArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_2.jpg">
+                            </div>
+                            <div class="mt-2"><b>스키니핏 씨블루 정장 자켓</b></div>
+                            <div class="text-secondary"><del>53,000원</del></div>
+                            <div>45,000원</div>
+                        </a>
+                    </article>
+                    <article class="smallArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_3.jpg">
+                            </div>
+                            <div class="mt-2"><b>프리미엄 올라운드 데님셔츠</b></div>
+                            <div class="text-secondary"><del>33,000원</del></div>
+                            <div>30,000원</div>
+                        </a>
+                    </article>
+                    <article class="smallArticle">
+                        <a href="#">
+                            <div>
+                                <img src="/src/pages/p_mainPage/1_4.jpg">
+                            </div>
+                            <div class="mt-2"><b>프리미엄 올라운드 데님셔츠</b></div>
+                            <div class="text-secondary"><del>33,000원</del></div>
+                            <div>30,000원</div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 화살표 버튼 -->
+            <div class="slideArticle">
+                <button type="button" class="prevSmallArticle"></button>
+                <button type="button" class="nextSmallArticle"></button>
             </div>
         </div>
-        
-
-        <div class="smallArticleBox">
-            <article class="smallArticle">
-                <a href="#">
-                    <div>
-                        <img src="/src/pages/p_mainPage/1_3.jpg">
-                    </div>
-                    <div class="mt-2"><b>정장 스타일 무지 조끼</b></div>
-                    <div class="text-secondary"><del>45,000원</del></div>
-                    <div>40,000원</div>
-                </a>
-            </article>
-
-            <article class="smallArticle">
-                <a href="#">
-                    <div>
-                        <img src="/src/pages/p_mainPage/1_4.jpg">
-                    </div>
-                    <div class="mt-2"><b>스키니핏 씨블루 정장 자켓</b></div>
-                    <div class="text-secondary"><del>53,000원</del></div>
-                    <div>45,000원</div>
-                </a>
-            </article>
-
-            <article class="smallArticle">
-                <a href="#">
-                    <div>
-                        <img src="/src/pages/p_mainPage/1_5.jpg">
-                    </div>
-                    <div class="mt-2"><b>프리미엄 올라운드 데님셔츠</b></div>
-                    <div class="text-secondary"><del>33,000원</del></div>
-                    <div>30,000원</div>
-                </a>
-
-            </article>
-
-            <article class="smallArticle">
-                <a href="#">
-                    <div>
-                        <img src="/src/pages/p_mainPage/1_6.jpg">
-                    </div>
-                    <div class="mt-2"><b>프리미엄 올라운드 데님셔츠</b></div>
-                    <div class="text-secondary"><del>33,000원</del></div>
-                    <div>30,000원</div>
-                </a>
-            </article>
-        </div>
-
-        <div class="smallArticleBox">
-            <article class="smallArticle">
-                <a href="#">
-                    <div>
-                        <img src="/src/pages/p_mainPage/1_3.jpg">
-                    </div>
-                    <div class="mt-2"><b>정장 스타일 무지 조끼</b></div>
-                    <div class="text-secondary"><del>45,000원</del></div>
-                    <div>40,000원</div>
-                </a>
-            </article>
-
-            <article class="smallArticle">
-                <a href="#">
-                    <div>
-                        <img src="/src/pages/p_mainPage/1_4.jpg">
-                    </div>
-                    <div class="mt-2"><b>스키니핏 씨블루 정장 자켓</b></div>
-                    <div class="text-secondary"><del>53,000원</del></div>
-                    <div>45,000원</div>
-                </a>
-            </article>
-
-            <article class="smallArticle">
-                <a href="#">
-                    <div>
-                        <img src="/src/pages/p_mainPage/1_5.jpg">
-                    </div>
-                    <div class="mt-2"><b>프리미엄 올라운드 데님셔츠</b></div>
-                    <div class="text-secondary"><del>33,000원</del></div>
-                    <div>30,000원</div>
-                </a>
-
-            </article>
-
-            <article class="smallArticle">
-                <a href="#">
-                    <div>
-                        <img src="/src/pages/p_mainPage/1_6.jpg">
-                    </div>
-                    <div class="mt-2"><b>프리미엄 올라운드 데님셔츠</b></div>
-                    <div class="text-secondary"><del>33,000원</del></div>
-                    <div>30,000원</div>
-                </a>
-            </article>
-        </div>
-        
-
+        <!-- 작은 사진 끝 -->
     </section>
 
 </body>
