@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/featur/product_detail/product_detail.css">
+    <script src="product_detail.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header>header 영역</header>
+        <div class="main-layout">
+
+            <div class="sub-layout">
+                <div class="product-images">
+                    <div class="thumbnail-list">
+                        <img src="/featur/product_detail/img/fashion-2309519_640.jpg" alt="썸네일 1"
+                            data-main-image="/featur/product_detail/img/fashion-2309519_640.jpg" class="active">
+                        <img src="/featur/product_detail/img/woman-4390055_1280.jpg" alt="썸네일 2"
+                            data-main-image="/featur/product_detail/img/woman-4390055_1280.jpg">
+                        <img src="/featur/product_detail/img/woman-6771288_1280.jpg" alt="썸네일 3"
+                            data-main-image="/featur/product_detail/img/woman-6771288_1280.jpg">
+                    </div>
+                    <div class="main-image-viewer">
+                        <img src="/featur/product_detail/img/fashion-2309519_640.jpg" alt="메인 이미지 1" id="mainImage">
+                    </div>
+
+                </div>
+                <div class="tab-menu">
+                    <ul class="tabs">
+                      <li class="tab active" data-tab="info">정보</li>
+                      <li class="tab" data-tab="size">사이즈</li>
+                      <li class="tab" data-tab="recommend">추천</li>
+                      <li class="tab" data-tab="review">스냅·후기</li>
+                      <li class="tab" data-tab="qna">문의</li>
+                    </ul>
+                  </div>
+                  
+                  <!-- 콘텐츠 영역 -->
+                  <div class="tab-content" id="info"><img class="inforImg" src="/featur/product_detail/img/제품정보.png"></div>
+                  <div class="tab-content" id="size" style="display:none;"><img class="sizeImg" src="/featur/product_detail/img/제목 없음.png"></div>
+                  <div class="tab-content" id="recommend" style="display:none;"> 
+                    <div class="sugItem"></div>
+                    <div class="sugItem"></div>
+                    <div class="sugItem"></div>
+                    <div class="sugItem"></div>
+                  </div>
+                  <div class="tab-content" id="review" style="display:none;">후기 내용</div>
+                  <div class="tab-content" id="qna" style="display:none;"> 문의 내용</div>
+                <!-- 이미지 + size-inf + 설명 + 후기 등 -->
+            </div>
+
+
+
+            <div class="product-sidebar">
+                <div class="brand-info">
+                    <span>브랜드</span>
+                    <button class="likeBtn">❤️<span id="likeCount">0</span> </button>
+                </div>
+
+                <h2 class="product-name">상품 명</h2>
+                <p class="category">카테고리</p>
+
+
+                <div class="price">
+                    <del>가격</del>
+
+                </div>
+
+                <div class="coupon-box">
+                    <p></p>
+                </div>
+
+                <div class="point-box">
+                    <p></p>
+                    <p></p>
+                </div>
+
+                <select class="option-select">
+                    <option>컬러 선택</option>
+                    <option>카키</option>
+                    <option>네이비</option>
+                </select>
+
+                <select class="option-select">
+                    <option>사이즈 선택</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <div class="action-buttons">
+                    <button class="wishlist">❤️<span id="countLike">0</span></button>
+                    <button class="cart-btn">장바구니</button>
+                    <button class="buy-btn">구매하기</button>
+                </div>
+
+                <div class="payment-benefit">
+                    <p><strong>배송일자 :</strong> 도착확률 99%</p>
+                    <p><strong>배송 예정일 :</strong> 결제 2일 이내 출고</p>
+                </div>
+
+            </div>
+            
+        </div>
+        <footer>footer 영역</footer>
+    </div>
+
+</body>
+
+</html>
