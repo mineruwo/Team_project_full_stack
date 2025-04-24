@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .product-grid {
+      display: grid;
+      grid-template-columns: 150px 1fr 250px;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "thumbnail main-image product-info"
+        "thumbnail tab-nav     product-info";
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .thumbnail {
+      grid-area: thumbnail;
+      background-color: #f5f5f5;
+    }
+
+    .main-image {
+      grid-area: main-image;
+      background-color: #e0e0e0;
+      height: 300px;
+    }
+
+    .tab-nav {
+      grid-area: tab-nav;
+      background-color: #d0f0ff;
+      padding: 10px;
+    }
+
+    .product-info {
+      grid-area: product-info;
+      background-color: #fafafa;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="product-grid">
+    <div class="thumbnail">썸네일</div>
+    <div class="main-image">메인 이미지</div>
+    <div class="tab-nav">탭 영역</div>
+    <div class="product-info">상품 정보</div>
+  </div>
+</body>
+
+</html>
