@@ -13,11 +13,68 @@
     <link rel="stylesheet" href="/src/pages/p_mainPage/test.css">
     <script src="/src/pages/p_mainPage/test.js"></script>
 
+    <style>
+        .thumb {
+            width: 80%;
+            height: 360px;
+            overflow: hidden;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        a .thumb:hover {
+            opacity: 0.7;
+        }
+
+        .thumb .heart {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+            color: #383838;
+            transition: color 0.3s;
+        }
+
+        .thumb .heart.active {
+            color: red;
+            /*  눌렀을 때 빨간색 */
+        }
+    </style>
+</head>
 </head>
 
 <body>
-    <h1>TEST PAGE</h1>
+    <article>
+        <a href="#">
+            <div class="thumb">
+                <img src="/src/pages/p_mainPage/1_1.jpg" />
+                <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
+            </div>
+            <div class="info">
+                <b>리얼가죽 무스탕</b>
+                <div><del>87,000원</del></div>
+                <div class="price">55,000원</div>
+            </div>
+        </a>
+        <script>
+            // 모든 .heart 요소에 대해 이벤트 설정
+            document.addEventListener("DOMContentLoaded", function () {
+                const hearts = document.querySelectorAll(".heart");
 
+                hearts.forEach(function (heart) {
+                    heart.addEventListener("click", function () {
+                        heart.classList.toggle("active"); // class 추가/제거
+                        heart.innerHTML = heart.classList.contains("active") ? "&#10084;" : "&#9825;";
+                        // ♥ (활성화) vs ♡ (비활성화)
+                    });
+                });
+            });
+        </script>
+
+</html>
 </body>
 
 </html>
