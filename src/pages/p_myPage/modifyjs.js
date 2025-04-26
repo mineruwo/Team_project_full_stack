@@ -1,17 +1,13 @@
 $(document).ready(() => {
-
     let transEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
     $("#transitionPage").on(transEnd, () => {
-        $("#transitionPage").css(
-            {
-                "display": "none"
-            }
-        )
+     
     });
 
     $("#transitionPage").css(
         {
-            "left": "100%"
+            "left": "100%",
+            "transition": "500ms"
         }
     )
 
@@ -29,9 +25,6 @@ $(document).ready(() => {
     const nickModal = document.getElementById('nickNameChange');
     if (nickModal) {
         nickModal.addEventListener('show.bs.modal', event => {
-            // Button that triggered the modal
-            console.log("modal");
-            // Update the modal's content.
 
         });
     }
@@ -49,5 +42,23 @@ $(document).ready(() => {
         $("#nickname").text(`${modalBodyInput[0].value} 님`);
         $("#nickNameChange").modal('hide');
     })
+})
+
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function() {
+
+    let transEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
+
+    $("#transitionPage").on(transEnd, () => {
+        this.history.back();
+    });
+
+    $("#transitionPage").css(
+        {
+            "display": "block",
+            "left": "0%",
+            "transition" : "500ms"
+        }
+    );
 });
 

@@ -64,7 +64,7 @@ function phoneNumEncrypt(number) {
     }
 
     let returnNum = "";
-    checkNumber = checkNumber.replace("-", "");
+    checkNumber = checkNumber.replaceAll("-", "");
     try {
         let frontNum = checkNumber.substring(0, 3);
         let midNum = checkNumber.slice(3, checkNumber.length == 11 ? 7 : 6);

@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>마이페이지</title>
+    <title>마이페이지 > 주문 내역</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../../common/default.css" rel="stylesheet" />
-    <link rel="stylesheet" href="mypagecss.css">
+    <link rel="stylesheet" href="orderListcss.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
@@ -21,9 +21,8 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="myPageJS.js"></script>
-    <script src="../../common/localStorage.js"></script>
-    </head>
+    <script src = "orderListjs.js"></script>
+</head>
 
 <body>
     <!-- Navigation-->
@@ -63,40 +62,34 @@
     <!-- Header-->
     <div class="innerDiv">
         <div class="innerDivWrap">
-            <div class="userInfoDiv">
-                <div class="userPhoto">
-                    <img src="../../image/testimage2.jpg" class="img-fluid rounded" alt="...">
+            <div class="titleRectDiv">
+                <span class="titleText">주문 내역 확인</span>
+            </div>
+
+            <div class="scrollerDiv">
+                <div class="scrollerMask overflow-y-auto" id="orderList">
+                    <!-- <div class="scrollerItemHeader">
+                        <span>2025-04-24</span>
+                    </div> -->
+
+                    <!-- <div class="scrollerItem ">
+                        <div class="itemImage">
+                            <img src="../../image/testimage2.jpg" class="img-fluid rounded" alt="...">
+                        </div>
+                        <div class="itemDetail">
+                            <div class="itemDetailTitle">여기는 상품명이에요.</div>
+                            <div class="itemDetailDesc">여기는 상품 설명이구요.</div>
+                            <div class="itemDetailOption">여기는 옵션이랍니다.</div>
+                        </div>
+                    </div> -->
                 </div>
-
-                <div class="userProfile">
-                    <span class="name">OOO 님</span>
-
-                    <button type="button" class="btn btn-secondary modify" id="modify">정보 수정</button>
-                </div>
             </div>
-
-            <div class="linkDiv" id="orderList">
-                <span class="linkName"> 주문 내역 ></span>
-            </div>
-
-            <div class="linkDiv" id="refundList">
-                <span class="linkName"> 환불 취소 내역 ></span>
-            </div>
-
-            <div class="linkDiv" id="customCenter">
-                <span class="linkName"> 1:1 고객 상담 문의 ></span>
-            </div>
-
-            <div class="linkDiv" id="notice">
-                <span class="linkName"> 공지 사항 ></span>
-            </div>
-
-            <div class="transitionDiv" id="transitionPage">
         </div>
     </div>
 
-
+    <div class="transitionDiv" id="transitionPage">
     </div>
+    
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container">
