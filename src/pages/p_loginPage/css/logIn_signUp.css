@@ -1,0 +1,231 @@
+/* login css 시작 */
+header {
+    width: 1200px;
+    height: 70px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    height: 100%;
+}
+
+.loginWrap {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.selectBtn {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.selectBtn button {
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#in_loginBtn {
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#in_signupBtn {
+    color: #aaa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#up_loginBtn {
+    color: #aaa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#up_signupBtn {
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 100%;
+    justify-content: start;
+    padding-bottom: 20px;
+}
+
+.inputWrap {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 0px 10px;
+    height: 90px;
+    width: 450px;
+}
+
+label {
+    min-width: fit-content;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.panel input {
+    width: 430px;
+    height: fit-content;
+    padding: 10px 10px;
+    background: whitesmoke;
+    border: none;
+    border-radius: 20px;
+    color: inherit;
+    font-family: inherit;
+    font-size: 12px;
+    border: 2px solid black;
+}
+
+#inputIdDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+#checkBtn {
+    margin: 0 0 0 10px;
+    width : 70px;
+    padding: 0;
+}
+
+.panel p {
+    margin: 0px;
+    padding: 5px 10px 10px 10px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.panel div a {
+    margin: 0 0;
+    width: 70px;
+    height: 20px;
+    padding: 0 10px;
+    background: whitesmoke;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.panel button {
+    background: none;
+    border: 1px solid currentColor;
+    border-radius: 50px;
+    padding: 0 40px;
+    margin: 10px 0px 10px 0px;
+    font-size: 12px;
+    letter-spacing: 0.1rem;
+    width: 400px;
+    height: 50px;
+}
+
+.submit_button {
+    margin: 0 0 20px 0;
+}
+
+.social {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+.social div {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+}
+
+.social_google{
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.social div a {
+    padding: 0;
+    width: 0;
+    height: 0;
+}
+
+.social img {
+    justify-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+footer {
+    width: 1200px;
+    height: 90px;
+}
+
+/* login css end */
+
+/* signup css start */
+.signupWrap {
+    height: auto;
+    display: none;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.tellWrap {
+    display: flex;
+    flex-direction: row;
+}
+
+#brandSel {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.emailWrap {
+    display: flex;
+    flex-direction: row;
+}
+
+#emailSel {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.birthWrap {
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    justify-content: center;
+}
+
+.birthSel {
+    font-size: 14px;
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+}
+
+/* signup css end */
