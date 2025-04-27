@@ -246,3 +246,8 @@ button
     z-index: 100;
     
 }
+
+.addbutton
+{
+    float: right;
+}
