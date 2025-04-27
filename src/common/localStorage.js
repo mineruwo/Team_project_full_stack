@@ -130,9 +130,7 @@ function loginUser(id, pw) {
         return createResponseMessage(false, "비밀번호가 다릅니다.", 501);
     }
 
-    let userRaw = JSON.stringify(userID);
-
-    window.localStorage.setItem('currentLogin', userRaw);
+    window.localStorage.setItem('currentLogin', userID);
 
     return createResponseMessage(true, "로그인 되었습니다.", 200);
 }
@@ -156,27 +154,56 @@ function removeUser(removeUserId) {
 //#endregion
 
 //#region Cart & Product Area
-function addCart() {
+function showCartList() {
+    let list = getCartList();
 
+    return list;
 }
 
-function removeCart() {
+function getCartList() {
+    let cartList = window.localStorage.getItem("cartList");
 
+    if (cartList == null) {
+        window.localStorage.setItem("cartList", []);
+        cartList = window.localStorage.getItem("cartList");
+    }
+
+    return cartList;
+}
+
+function addCartItem(index) {
+    let cartList = getCartList();
+
+    cartList.push(index);
+
+    window.localStorage.setItem("cartList", cartList);
+}
+
+function removeCartItem(productIndex) {
+    let cartList = getCartList();
+
+    cartList.forEach((element, index) => {
+        if (element == productIndex) {
+            jsonData.userList.splice(index, 1);
+        }
+    });
+
+    window.localStorage.setItem("cartList", cartList);
 }
 
 function removeAllCart() {
-
+    window.localStorage.setItem("cartList", []);
 }
 
 async function getProductInfo(index) {
-    let productList =  await getProductList();
+    let productList = await getProductList();
 
     console.log(productList.productList);
 
-    let productInfo = productList.productList.find(element=>element.index == index);
+    let productInfo = productList.productList.find(element => element.index == index);
 
     console.log(productInfo);
-}   
+}
 
 async function getProductList() {
     let readJson = await fetch("../../json/productList.json");
@@ -187,20 +214,86 @@ async function getProductList() {
 //#endregion
 
 //#region User Info Modity
-function modifyNickname() {
+function modifyNickname(modifyNickname) {
+    let currentLoginUser = currentLoginInfo();
 
+    let jsonData = getUserList();
+
+    let findUserIndex = jsonData.userList.indexOf(currentLoginUser);
+
+    if (findUserIndex == -1) {
+        console.log("해당 유저를 찾을 수 없습니다.");
+        return;
+    }
+    currentLoginUser.nickname = modifyNickname;
+
+    jsonData.userList[findUserIndex] = currentLoginUser;
+
+    let rawData = JSON.stringify(jsonData);
+
+    window.localStorage.setItem('userList', rawData);
 }
 
-function modifyUserInfo() {
+function modifyUserInfo(name, birthday, phonenumber, email) {
+    let currentLoginUser = currentLoginInfo();
 
+    let jsonData = getUserList();
+
+    let findUserIndex = jsonData.userList.indexOf(currentLoginUser);
+
+    if (findUserIndex == -1) {
+        console.log("해당 유저를 찾을 수 없습니다.");
+        return;
+    }
+
+    if (name != "") {
+        currentLoginUser.name = name;
+    }
+
+    if (birthday != "") {
+        currentLoginUser.birthday = birthday;
+    }
+
+    if (phonenumber != "") {
+        currentLoginUser.phonenumber = phonenumber;
+    }
+
+    if (email != "") {
+        currentLoginUser.email = email;
+    }
+
+    jsonData.userList[findUserIndex] = currentLoginUser;
+
+    let rawData = JSON.stringify(jsonData);
+
+    window.localStorage.setItem('userList', rawData);
 }
 
 function modifyProfilePhoto() {
 
 }
 
-function modifyAddress() {
+function modifyAddress(address) {
+    let currentLoginUser = currentLoginInfo();
 
+    let jsonData = getUserList();
+
+    let findUserIndex = jsonData.userList.indexOf(currentLoginUser);
+
+    if (findUserIndex == -1) {
+        console.log("해당 유저를 찾을 수 없습니다.");
+        return;
+    }
+
+    if (address != "") {
+        currentLoginUser.address = address;
+    }
+
+    jsonData.userList[findUserIndex] = currentLoginUser;
+
+    let rawData = JSON.stringify(jsonData);
+
+    window.localStorage.setItem('userList', rawData);
 }
 
 //#endregion
