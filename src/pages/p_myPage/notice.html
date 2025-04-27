@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>마이페이지 > 공지 사항</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../../common/default.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="noticecss.css">
+    <!-- css 수정 필요 -->
+    <script src="../../common/localStorage.js"></script>
+    <script src="noticeJS.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#!">Start Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">All Products</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Cart
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <div class="innerDiv">
+        <div class="innerDivWrap">
+            <div class="titleRectDiv">
+                <span class="titleText">공지 사항</span>
+            </div>
+
+            <div class="accordion accordion-flush noticeDiv " id="noticeAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed noticeButton" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#notice1" aria-expanded="false" aria-controls="notice1">
+                            스토어 이용약관 개정 안내
+                        </button>
+                    </h2>
+                    <div id="notice1" class="accordion-collapse collapse"
+                        data-bs-parent="#noticeAccordion">
+                        <div class="accordion-body noticeItem">
+                            <span style="color:#000000;">안녕하세요. 주식회사 무신사입니다.<br>
+                                &nbsp;<br>
+                                무신사스토어를 이용해 주시는 회원분들께 감사드리며, 무신사스토어 서비스 이용약관이 개정될 예정이므로 사전 안내 드립니다.<br>
+                                <br>
+                                <strong>■ 적용시기:</strong> 2025년 5월 22일<br>
+                                <br>
+                                <strong>■ 주요 개정 내용&nbsp;</strong><br>
+                                &nbsp; 1) 5년 미이용 시 탈퇴 처리 조항 신설<br>
+                                &nbsp; 2) 휴면 제도 폐지에 따른 명칭 변경<br>
+                                <br>
+                                <strong>■ 개정 약관</strong><br>
+                                &nbsp;<img alt="" height="787"
+                                    src="//image.musinsa.com/images/shop_notice/2025041511082800000096706.png"
+                                    width="570"><br>
+                                <br>
+                                2025년 5월 21일까지 동의 또는 거부의 의사를 표시하지 않으실 경우 본 개정 약관에 동의하는 것으로 간주합니다.&nbsp;<br>
+                                <br>
+                                주식회사 무신사는 더 나은 서비스 제공을 위해 항상 최선을 다하겠습니다.<br>
+                                앞으로도 지속적인 서비스 이용과 관심 부탁드립니다.<br>
+                                <br>
+                                감사합니다.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed noticeButton" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#notice2" aria-expanded="false" aria-controls="notice2">
+                            산불 피해로 인한 일부 지역 배송 제한 안내
+                        </button>
+                    </h2>
+                    <div id="notice2" class="accordion-collapse collapse"
+                        data-bs-parent="#noticeAccordion">
+                        <div class="accordion-body noticeItem">
+                            <span style="font-size:12px;">안녕하세요. 무신사입니다.<br>
+                                <br>
+                                경북 지역 산불 피해로 인해 일부 지역에 배송이 제한되어 안내 말씀드립니다.&nbsp;<br>
+                                <br>
+                                배송 제한 기간은 산불 진화 상황에 따라 다를 수 있으며,&nbsp;<br>
+                                산불 진화 및 피해 복구 후 배송이 재개될 것으로 예상됩니다.&nbsp;<br>
+                                <br>
+                                부득이하게 배송이 어려운 점 양해 부탁드리며, 배송 불가 지역은 아래 정보를 확인 부탁드립니다.<br>
+                                <br>
+                                <strong>■ 배송 불가 지역</strong><br>
+                                - 의성군: 안평면, 단촌면, 점곡면, 사곡면, 옥산면, 신평면, 안사면, 안계면<br>
+                                - 울산시 울주군 온양읍 온화리 일대 (200번지~1,300번지)<br>
+                                - 안동시: 일직면, 남후면, 길안면, 임하면, 임동면, 남선면, 풍천면, 도산면, 예안면, 녹전면<br>
+                                - 청송군: 전 지역<br>
+                                - 영양군: 입암면<br>
+                                - 영덕군: 영덕읍, 강구면, 남정면, 달산면, 지품면, 축산면, 영해면, 병곡면, 창수면<br>
+                                - 하동군: 옥종면 월횡리, 안계리, 종화리, 두양리, 위태리, 궁항리&nbsp;<br>
+                                <br>
+                                감사합니다.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed noticeButton" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#notice3" aria-expanded="false"
+                            aria-controls="notice3">
+                            개인정보처리방침 개정 내용 사전 안내(3/31 시행)
+                        </button>
+                    </h2>
+                    <div id="notice3" class="accordion-collapse collapse"
+                        data-bs-parent="#noticeAccordion">
+                        <div class="accordion-body noticeItem">
+                            <div class="box-detail" style="display: block;"><span style="color:#000000;"><span
+                                        style="font-size:12px;">안녕하세요. 무신사 스토어(이하, 무신사)입니다.<br>
+                                        3/31(월)부터 '개인정보처리방침'이 일부 변경될 예정입니다.<br>
+                                        무신사는 회원님의 개인정보를 안전하게 활용하고 보호하기 위한 노력과 관련 법규 준수에 최선을 다하고 있습니다.<br>
+                                        <br>
+                                        <strong>■ 주요 개정 내용<br>
+                                            1.1 회원</strong></span></span>
+                                <ul>
+                                    <li><span style="color:#000000;"><span style="font-size:12px;">&nbsp;솔드아웃 간편 로그인 서비스
+                                                관련 내용 현행화</span></span></li>
+                                </ul>
+                                <img alt=""
+                                    src="//image.musinsa.com/images/shop_notice/2025032418010700000002823.png"><br>
+                                <span style="color:#000000;"><span style="font-size:12px;"><strong>8. 개인정보 보호책임자 및 정보주체의
+                                            권익침해 구제 방법</strong></span></span>
+
+                                <ul>
+                                    <li><span style="color:#000000;"><span style="font-size:12px;">개인정보 보호책임자
+                                                변경</span></span></li>
+                                </ul>
+                                <img alt=""
+                                    src="//image.musinsa.com/images/shop_notice/2025032417501400000044244.png"><br>
+                                <span style="color:#000000;"><span style="font-size:12px;"><strong>10.1 행태정보의
+                                            처리</strong></span></span>
+
+                                <ul>
+                                    <li><span style="color:#000000;"><span style="font-size:12px;">행태정보를 수집 및 처리하려는 광고
+                                                사업자 추가</span></span></li>
+                                </ul>
+                                <span style="font-size:12px;"><span style="color:#000000;"> <img alt=""
+                                            src="//image.musinsa.com/images/shop_notice/2025032417392400000099272.png"><br>
+                                        <br>
+                                        <strong>■ 시행 일정: </strong>2025년 3월 31일(개인정보처리방침 개정 공지일: 2025년 3월
+                                        24일)</span></span><br>
+                                <br>
+                                <span style="font-size:12px;"><span style="color:#000000;">정부의 정책 및 정보보호 유관법령 또는 보안 기술의
+                                        변경에 따라 '개인정보처리방침'의 내용이 추가/수정/삭제될 경우, 공지사항을 통해 알려드리겠습니다.</span></span><br>
+                                <br>
+                                <span style="font-size:12px;"><span style="color:#000000;">감사합니다.</span><br>
+                                    <br>
+                                    <strong><span style="color:#000000;">※ 개인정보처리방침 자세히 보기: </span><a
+                                            href="https://magazine.musinsa.com/?mod=private"><span
+                                                style="color:#000000;">https://magazine.musinsa.com/?mod=private</span></a></strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed noticeButton" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#notice4" aria-expanded="false"
+                            aria-controls="notice4">
+                            10월 공휴일로 인한 배송 지연 안내
+                        </button>
+                    </h2>
+                    <div id="notice4" class="accordion-collapse collapse"
+                        data-bs-parent="#noticeAccordion">
+                        <div class="accordion-body noticeItem">
+                            <span style="font-size:12px;"><span style="color:#000000;">안녕하세요. 무신사입니다.<br>
+                                    <br>
+                                    오는 10월 1일(화) ‘국군의 날’ 임시공휴일 지정과 10월 3일(목) ‘개천절’ 공휴일, 10월 9일(수) ‘한글날’ 공휴일로 인해 일부 배송이
+                                    지연될 수 있어 안내드립니다.<br>
+                                    <br>
+                                    ■ 택배 휴무일<br>
+                                    &nbsp;1. 2024년 10월 1일(화) - 국군의 날<br>
+                                    &nbsp;2. 2024년 10월 3일(목) - 개천절<br>
+                                    &nbsp;3. 2024년 10월 9일(수) - 한글날<br>
+                                    <br>
+                                    해당 기간 동안 배송이 중단되며, 휴무일을 제외한 나머지 영업일은 정상적으로 배송될 예정입니다.<br>
+                                    다만, 휴무일의 영향으로 택배 물량이 급증할 수 있어 정상 배송일에도 일부 지역에서 배송 지연이 발생할 수 있습니다.<br>
+                                    * 정상 배송 일정은 택배사마다 다소 차이가 있을 수 있습니다.&nbsp;<br>
+                                    &nbsp;<br>
+                                    회원님의 너른 양해를 부탁드리며, 빠르게 배송될 수 있도록 최선을 다하겠습니다.<br>
+                                    <br>
+                                    감사합니다.</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="transitionDiv" id="transitionPage">
+    </div>
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

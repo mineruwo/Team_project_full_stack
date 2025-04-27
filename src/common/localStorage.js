@@ -36,7 +36,19 @@ function localStorageClearAll() {
 //#region User Area
 function currentLoginInfo() {
     let loginInfo = window.localStorage.getItem('currentLogin');
-    return loginInfo == undefined ? null : loginInfo;
+
+    if(loginInfo == undefined)
+    {
+        return null;
+    }
+
+    let info = getUserInfo(loginInfo);
+    return info;
+}
+
+function getUserInfo(rawData) {
+    let jsonData =  JSON.parse(rawData);
+    return jsonData;
 }
 
 function isLogin() {
@@ -63,6 +75,8 @@ function createUserInfoObject(id, pw, name, birthday, phonenum, email) {
         "nickname": "",
         "isDelete": "false",
         "orderList": [],
+        "refundList" : [],
+        "csList" : [], 
     }
 
     return returnObject;
@@ -88,7 +102,7 @@ function getUserList() {
     let readJson = window.localStorage.getItem('userList');
 
     if (readJson == null) {
-        let defaultUserList = '{"userList":[{"index":0,"id":"mineruwo","password":"12345aa!","phonenumber":"","birthday":"","name":"손민우","email":"","nickname":"미노","address":"","isDelete":"false","orderList":[{"orderDate":"20250424","productName":"와이드 원턱 스웨트 쇼츠 블랙","productOption":"2(XL-2XL)","companyName":"모즈모즈","currentState":"배송중","imageUrl":"../../image/itemsImage/1.webp","productindex":1},{"orderDate":"20250424","productName":"원턱 린넨 라이크 와이드 밴딩 팬츠_Oatmeal","productOption":"L","companyName":"무드인사이드","currentState":"배송중","imageUrl":"../../image/itemsImage/2.webp","productindex":2},{"orderDate":"20250424","productName":"아메리칸 시리즈 DET 반팔 티셔츠 WHITE","productOption":"XL","companyName":"웨스트 그랜드 블러바드","currentState":"배송중","imageUrl":"../../image/itemsImage/3.webp","productindex":3},{"orderDate":"20250421","productName":"빈티지 워싱 갤러리 클럽 후드 집업_블랙","productOption":"M","companyName":"레이몬트","currentState":"배송완료","imageUrl":"../../image/itemsImage/4.webp","productindex":4},{"orderDate":"20250421","productName":"CORP TEE BLACK(MG2DMMT509A)","productOption":"블랙, 3(XL)","companyName":"마하그리드","currentState":"배송완료","imageUrl":"../../image/itemsImage/5.webp","productindex":5},{"orderDate":"20250421","productName":"프론트 플랩 셔링 미니 백팩_블랙","productOption":"없음","companyName":"모즈모즈","currentState":"배송완료","imageUrl":"../../image/itemsImage/6.webp","productindex":6},{"orderDate":"20250421","productName":"와이드 원턱 스웨트 쇼츠 블랙","productOption":"2(XL-2XL)","companyName":"모즈모즈","currentState":"배송완료","imageUrl":"../../image/itemsImage/7.webp","productindex":7},{"orderDate":"20250418","productName":"[무료반품]레볼루션 7 M - 블랙:오프 누와르 / FB2207-005","productOption":"275","companyName":"나이키","currentState":"배송완료","imageUrl":"../../image/itemsImage/8.webp","productindex":8},{"orderDate":"20250418","productName":"러닝 컴프레션 레깅스 하프 타이즈","productOption":"L","companyName":"러닝라이프","currentState":"배송완료","imageUrl":"../../image/itemsImage/9.webp","productindex":9},{"orderDate":"20250418","productName":"에센셜 라운드 니트 가디건 - 5 COLOR","productOption":"그레이 , L","companyName":"수아레","currentState":"배송완료","imageUrl":"../../image/itemsImage/10.webp","productindex":10}]},{"id":"mino","password":"aaa12!","birthday":"19940913","phonenumber":"01049503013","email":"mineruwo@gmail.com","name":"미노","nickname":"","isDelete":"false","orderList":[],"index":0}]}';
+        let defaultUserList = '{userList:[]}'
         readJson = defaultUserList;
         window.localStorage.setItem('userList', defaultUserList);
     }
@@ -130,7 +144,9 @@ function loginUser(id, pw) {
         return createResponseMessage(false, "비밀번호가 다릅니다.", 501);
     }
 
-    window.localStorage.setItem('currentLogin', userID);
+    let rawData = JSON.stringify(userID);
+
+    window.localStorage.setItem('currentLogin', rawData);
 
     return createResponseMessage(true, "로그인 되었습니다.", 200);
 }
@@ -149,6 +165,11 @@ function removeUser(removeUserId) {
     console.log("remove Done after");
     console.log(jsonData);
     window.localStorage.setItem('userList', rawData);
+}
+
+function userLogout()
+{
+    window.localStorage.setItem('currentLogin', undefined);
 }
 
 //#endregion
@@ -211,6 +232,8 @@ async function getProductList() {
 
     return jsonData;
 }
+
+
 //#endregion
 
 //#region User Info Modity

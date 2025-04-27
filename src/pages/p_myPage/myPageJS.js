@@ -54,8 +54,13 @@ $(document).ready(() => {
 
 
     $("#refundList").click(() => {
-        window.location = "#";
-        alert("refund List Click to move");
+        nextLocate = "refundList.html";
+        $("#transitionPage").css(
+            {
+                "transition": "500ms",
+                "left": "0%",
+            }
+        )
     });
 
     $("#customCenter").click(() => {
@@ -64,8 +69,13 @@ $(document).ready(() => {
     });
 
     $("#notice").click(() => {
-        window.location = "#";
-        alert("notice List Click to move");
+        nextLocate = "notice.html";
+        $("#transitionPage").css(
+            {
+                "transition": "500ms",
+                "left": "0%",
+            }
+        )
     });
 
 })

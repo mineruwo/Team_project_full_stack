@@ -1,7 +1,7 @@
 $(document).ready(() => {
     let transEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
     $("#transitionPage").on(transEnd, () => {
-    
+
     });
 
     $("#transitionPage").css(
@@ -11,13 +11,36 @@ $(document).ready(() => {
         }
     )
 
-    fetch("../../json/orderList.json")
-        .then((response) => response.json())
-        .then((jsonData) => {
-            let orderList = jsonData.orderList;
+    let currnentUser = currentLoginInfo();
 
-            createOrderList(orderList, false);
-        });
+    let refundList = currnentUser.refundList;
+
+    if(refundList == null || refundList == undefined)
+    {
+        refundList = [
+                {
+                    "orderDate": "20250424",
+                    "productName": "와이드 원턱 스웨트 쇼츠 블랙",
+                    "productOption": "2(XL-2XL)",
+                    "companyName": "모즈모즈",
+                    "currentState": "환불 완료",
+                    "imageUrl": "../../image/itemsImage/1.webp",
+                    "productindex": 1
+                },
+                {
+                    "orderDate": "20250424",
+                    "productName": "원턱 린넨 라이크 와이드 밴딩 팬츠_Oatmeal",
+                    "productOption": "L",
+                    "companyName": "무드인사이드",
+                    "currentState": "환불 신청 중",
+                    "imageUrl": "../../image/itemsImage/2.webp",
+                    "productindex": 2
+                }
+        ]
+    }
+
+    console.log(refundList);
+    createOrderList(refundList, false);
 })
 
 
@@ -25,6 +48,8 @@ $(document).ready(() => {
 function createOrderList(orderList, isDatSort) {
     const scrollerPnode = document.querySelector("#orderList");// 스크롤 생성 시 사용할 mask 객체
     let createdDate = "";
+
+    console.log(orderList);
 
     for (let i = 0; i < orderList.length; i++) {
         if (isDatSort && createdDate != orderList[i].orderDate) {
@@ -65,7 +90,7 @@ function createProductItem(parentNode, product) {
     itemCompanyDiv.classList.add("itemDetailDesc");
 
     let itemOptionDiv = document.createElement("div");
-    itemOptionDiv.innerHTML = `${product.productOption}`;
+    itemOptionDiv.innerHTML = `${product.currentState}`;
     itemOptionDiv.classList.add("itemDetailOption");
 
     itemDetailDiv.append(itemTitleDiv);
@@ -79,7 +104,7 @@ function createProductItem(parentNode, product) {
 }
 
 history.pushState(null, null, document.URL);
-window.addEventListener('popstate', function() {
+window.addEventListener('popstate', function () {
 
     let transEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
 
@@ -91,7 +116,7 @@ window.addEventListener('popstate', function() {
         {
             "display": "block",
             "left": "0%",
-            "transition" : "500ms"
+            "transition": "500ms"
         }
     );
 });
