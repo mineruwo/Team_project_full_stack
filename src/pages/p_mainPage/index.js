@@ -29,46 +29,6 @@ function imgSlider() {
     setInterval(showNextImage, 5500);
 }
 
-
-// 슬라이더 함수 
-// (넘기고 싶은 아이템/좌 버튼/우 버튼) 
-/*
-function createSlider({ itemSelector, prevButtonSelector, nextButtonSelector }) {
-    const items = document.querySelectorAll(itemSelector);
-    const prevButton = document.querySelector(prevButtonSelector);
-    const nextButton = document.querySelector(nextButtonSelector);
-
-    let currentIndex = 0;
-
-    if (items.length === 0) return;
-
-    // 첫 번째 항목 보이게
-    items[currentIndex].classList.add('visible');
-
-    function showItem(index) {
-        items.forEach(item => {
-            item.classList.remove('visible');
-            item.classList.remove('hiding');
-        });
-
-        items[index].classList.add('visible');
-    }
-
-    function nextItem() {
-        currentIndex = (currentIndex + 1) % items.length;
-        showItem(currentIndex);
-    }
-
-    function prevItem() {
-        currentIndex = (currentIndex - 1 + items.length) % items.length;
-        showItem(currentIndex);
-    }
-
-    nextButton?.addEventListener("click", nextItem);
-    prevButton?.addEventListener("click", prevItem);
-}
-*/
-
 // 이미지 스크롤
 function scrollImg({ itemSelector, prevButtonSelector, nextButtonSelector }) {
     const scrollItems = document.querySelectorAll(itemSelector);
@@ -95,6 +55,7 @@ function scrollImg({ itemSelector, prevButtonSelector, nextButtonSelector }) {
     });
 }
 
+// 페이지 로드
 function loadGallery(galleryId) {
     const contentArea = document.getElementById('mainContent');
 
@@ -121,7 +82,31 @@ function loadGallery(galleryId) {
                 nextButtonSelector: ".nextSmallArticle"
             });
 
-            heart(); 
+            heart();
+
+            // 페이지에 따라 다른 gallery 사진
+            switch (galleryId) {
+                case 'galleryCoat.html':
+                    applyProductInfo(1);
+                    break;
+                case 'galleryJacket.html':
+                    applyProductInfo(2);
+                    break;
+                case 'galleryJeans.html':
+                    applyProductInfo(3);
+                    break;
+                case 'galleryShirts.html':
+                    applyProductInfo(4);
+                    break;
+                case 'gallerySlacks.html':
+                    applyProductInfo(5);
+                    break;
+                case 'galleryTshirts.html':
+                    applyProductInfo(6);
+                    break;
+                default:
+                    applyProductInfo(1);
+            }
         })
         .catch(error => {
             console.error('Error loading gallery:', error);
@@ -129,7 +114,7 @@ function loadGallery(galleryId) {
         });
 }
 
-// 좋아요 함수
+// 좋아요
 function heart() {
     const hearts = document.querySelectorAll(".heart");
 
@@ -145,24 +130,51 @@ function heart() {
     });
 }
 
+// json 상품정보 연동 
+async function applyProductInfo(num) {
+    let productList = await getProductList();
+    let bigArticles = document.querySelectorAll('.bigArticle');
+    let smallArticles = document.querySelectorAll('.smallArticle');
 
-// 아이템 정보(info) 바꾸는 함수 ??
-function changeInfo() {
-    const infos = document.querySelectorAll(".info");
+    // big article
+    bigArticles.forEach((article, idx) => {
+        // productList 26 ~ 44 큰 사진
+        let product = productList.productList[((idx+1)*num) % 18 + 26];
+        if (!product) return;
 
-    infos.forEach(info => {
-        // 상품명 변경
-        const title = info.querySelector("b");
-        if (title) title.textContent = "새로운 상품명";
+        let imgElement = article.querySelector('.thumb img');
+        if (imgElement) {
+            imgElement.src = product.imageUrl;
+        }
 
-        // 원래 가격 변경
-        const originalPrice = info.querySelector("del");
-        if (originalPrice) originalPrice.textContent = "99,000원";
-
-        // 할인가 변경
-        const salePrice = info.querySelector(".price");
-        if (salePrice) salePrice.textContent = "66,000원";
+        let infoElement = article.querySelector('.info');
+        if (infoElement) {
+            infoElement.querySelector('b').textContent = product.productName;
+            infoElement.querySelector('del').textContent = product.oldPrice;
+            infoElement.querySelector('.price').textContent = product.price;
+        }
     });
+
+    // small article
+    smallArticles.forEach((article, idx) => {
+        // productList 0~ 25 작은 사진
+        let product = productList.productList[((idx+1)*num) % 25];
+        if (!product) return;
+
+        let imgElement = article.querySelector('.thumb img');
+        if (imgElement) {
+            imgElement.src = product.imageUrl;
+        }
+
+        let infoElement = article.querySelector('.info');
+        if (infoElement) {
+            infoElement.querySelector('b').textContent = product.productName;
+            infoElement.querySelector('del').textContent = product.oldPrice;
+            infoElement.querySelector('.price').textContent = product.price;
+        }
+    
+    });
+
 }
 
 // 호출
