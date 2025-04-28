@@ -64,8 +64,13 @@ $(document).ready(() => {
     });
 
     $("#customCenter").click(() => {
-        window.location = "#";
-        alert("customCenter List Click to move");
+        nextLocate = "customerCenter.html";
+        $("#transitionPage").css(
+            {
+                "transition": "500ms",
+                "left": "0%",
+            }
+        )
     });
 
     $("#notice").click(() => {
@@ -78,6 +83,12 @@ $(document).ready(() => {
         )
     });
 
+    $("#PInfomodify").click(() => {
+        let option = 'width = 440px, height=100px, left =50px, top = 100px, menubar = no';
+        let userModify = window.open('modifyInfo.html', user.textContent, option);
+
+        console.log(userModify);
+    });
 })
 
 function showTransitionDiv() {
@@ -96,8 +107,7 @@ function hideTransitionLeft() {
     );
 }
 
-function addTransitionEvent()
-{
+function addTransitionEvent() {
     let transEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
 
     $("#transitionPage").on(transEnd, () => {

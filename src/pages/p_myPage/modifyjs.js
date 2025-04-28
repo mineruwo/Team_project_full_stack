@@ -32,7 +32,7 @@ $(document).ready(() => {
 
     $("#nickform").submit((evnet) => {
         evnet.preventDefault();
-    })
+    });
 
 
     $("#nickSave").on('click', function () {
@@ -41,7 +41,14 @@ $(document).ready(() => {
         console.log(modalBodyInput[0].value);
         $("#nickname").text(`${modalBodyInput[0].value} 님`);
         $("#nickNameChange").modal('hide');
-    })
+    });
+
+    $("#PInfomodify").click(() => {
+        let option = 'width = 440px, height=600px, left =50px, top = 100px, menubar = no';
+        let userModify = window.open('modifyInfo.html', userInfoTable.textContent, option);
+
+        console.log(userModify);
+    });
 })
 
 history.pushState(null, null, document.URL);
