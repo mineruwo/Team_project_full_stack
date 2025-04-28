@@ -5,15 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/src/common/reset.css">
-    <link rel="stylesheet" href="/src/pages/p_mainPage/index.css">
+    <link rel="stylesheet" href="/src/pages/p_main/reset.css">
+    <link rel="stylesheet" href="../p_main/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="/src/pages/p_mainPage/index.js"></script>
+    <script src="/src/pages/p_main/index.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <style>
+        body {
+            /* header 70 menu 48? */
+            padding-top: 125px;
+        }
+
+        .heart:hover {
+            color: red;
+            transform: scale(1.2);
+            transition: all 0.3s ease;
+        }
+
+        .top-banner {
+            width: 100%;
+            background-color: #3d4c5d;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        
+    </style>
+
 
 </head>
 
@@ -22,7 +46,7 @@
     <header>
         <div class="headerWrap">
             <!-- 헤더 왼쪽 -->
-            <div class="headerLeft" onclick="location.href='/src/pages/p_mainPage/index.html'">LOGO</div>
+            <div class="headerLeft" onclick="location.href='../p_main/index.html'">LOGO</div>
             <!-- 헤더 오른쪽 -->
             <div class="headerRight">
                 <div class="iconWrap">
@@ -66,6 +90,10 @@
         </nav>
     </div>
     </div>
+    <div class="top-banner">
+        지금 가입하면 10% 할인 쿠폰 증정
+    </div>
+
 
     <main id="mainContent">
         <!-- 슬라이드 -->
@@ -73,31 +101,31 @@
             <div class="carousel-inner" id="imgContainer">
                 <div class="carousel-item active" id="imgBox">
                     <div class="d-flex justify-content-center">
-                        <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                            <img src="/src/pages/p_mainPage/imgs/b19.jpg" class="d-block w-45">
+                        <a href="../../image/imgs/5.jpg" class="d-block w-45">
+                            <img src="../../image/imgs/b1.webp" class="d-block w-45">
                         </a>
                         <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                            <img src="/src/pages/p_mainPage/imgs/b15.jpg" class="d-block w-45">
-                        </a>
-                    </div>
-                </div>
-                <div class="carousel-item" id="imgBox">
-                    <div class="d-flex justify-content-center">
-                        <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                            <img src="/src/pages/p_mainPage/imgs/b12.jpg" class="d-block w-45">
-                        </a>
-                        <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                            <img src="/src/pages/p_mainPage/imgs/b8.webp" class="d-block w-45">
+                            <img src="../../image/imgs/b14.jpg" class="d-block w-45">
                         </a>
                     </div>
                 </div>
                 <div class="carousel-item" id="imgBox">
                     <div class="d-flex justify-content-center">
                         <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                            <img src="/src/pages/p_mainPage/imgs/b4.jpg" class="d-block w-45">
+                            <img src="../../image/imgs/b5.jpg" class="d-block w-45">
                         </a>
                         <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                            <img src="/src/pages/p_mainPage/imgs/b12.jpg" class="d-block w-45">
+                            <img src="../../image/imgs/b6.jpg" class="d-block w-45">
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item" id="imgBox">
+                    <div class="d-flex justify-content-center">
+                        <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
+                            <img src="../../image/imgs/b17.jpg" class="d-block w-45">
+                        </a>
+                        <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
+                            <img src="../../image/imgs/b12.jpg" class="d-block w-45">
                         </a>
                     </div>
                 </div>
@@ -112,21 +140,11 @@
             </button>
         </div>
         
-        
-            <button class="carousel-control-prev" type="button" data-bs-target="#visualSlider" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#visualSlider" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
 
         <!-- 갤러리 -->
         <div class="product-summary">
             <h4>NEW ARRIVAL</h4>
-            <h6>오늘의 신상</h6>          
+            <h6>오늘의 신상</h6>
         </div>
         <section class="products">
             <!-- 큰 사진 시작 -->
@@ -136,7 +154,7 @@
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/b1.webp">
+                                    <img src="../../image/imgs/5.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -150,7 +168,7 @@
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/b2.jpeg">
+                                    <img src="../../image/imgs/b5.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -163,7 +181,7 @@
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/b3.jpg">
+                                    <img src="../../image/imgs/b8.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -176,7 +194,7 @@
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/b19.jpg">
+                                    <img src="/src/image/imgs/b14.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -189,7 +207,7 @@
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/b2.jpeg">
+                                    <img src="../../image/imgs/b4.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -202,7 +220,7 @@
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/b3.jpg">
+                                    <img src="../../image/imgs/b13.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -230,7 +248,7 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/1.jpg">
+                                    <img src="../../image/imgs/b1.webp">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -244,7 +262,7 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/2.jpg">
+                                    <img src="../../image/imgs/10.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -258,7 +276,7 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/3.jpg">
+                                    <img src="../../image/imgs/14.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -272,7 +290,7 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/4.jpg">
+                                    <img src="../../image/imgs/17.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -286,7 +304,7 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/1.jpg">
+                                    <img src="../../image/imgs/14.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -299,7 +317,7 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/2.jpg">
+                                    <img src="../../image/imgs/10.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -312,7 +330,7 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/3.jpg">
+                                    <img src="../../image/imgs/17.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
@@ -325,7 +343,7 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="/src/pages/p_mainPage/imgs/4.jpg">
+                                    <img src="../../image/imgs/20.avif">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
