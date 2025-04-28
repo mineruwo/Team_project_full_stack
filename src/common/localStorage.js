@@ -114,7 +114,7 @@ function idDupCheck(id) {
         return createResponseMessage(false, "중복된 값이 존재합니다.", 500);
     }
 
-    return createResponseMessage(true, "가입 완료", 200);
+    return createResponseMessage(true, "아이디 사용이 가능합니다.", 200);
 }
 
 function loginUser(id, pw) {
@@ -149,6 +149,16 @@ function removeUser(removeUserId) {
     console.log("remove Done after");
     console.log(jsonData);
     window.localStorage.setItem('userList', rawData);
+}
+function removeAllUser()
+{
+    let empty = {
+        userList : []
+    };
+
+    let rawdata = JSON.stringify(empty);
+
+    window.localStorage.setItem('userList', rawdata);
 }
 
 //#endregion
