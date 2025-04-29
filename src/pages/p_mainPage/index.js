@@ -84,6 +84,12 @@ function loadGallery(galleryId) {
 
             heart();
 
+            // 새 페이지에 슬라이드 적용
+            new bootstrap.Carousel(document.querySelector('#visualSlider'), {
+                interval: 3000,
+                ride: 'carousel'
+              });
+
             // 페이지에 따라 다른 gallery 사진
             switch (galleryId) {
                 case 'galleryCoat.html':
@@ -138,9 +144,13 @@ async function applyProductInfo(num) {
 
     // big article
     bigArticles.forEach((article, idx) => {
-        // productList 26 ~ 44 큰 사진
-        let product = productList.productList[((idx+1)*num) % 18 + 26];
+        // productList 48 ~ 83 큰 사진
+        let product = productList.productList[(num-1) * 6 + idx + 48];
+        console.log((num-1) * 6 + idx + 48);
         if (!product) return;
+
+        console.log(idx);
+        console.log((num-1) * 6 + idx + 48);
 
         let imgElement = article.querySelector('.thumb img');
         if (imgElement) {
@@ -157,8 +167,8 @@ async function applyProductInfo(num) {
 
     // small article
     smallArticles.forEach((article, idx) => {
-        // productList 0~ 25 작은 사진
-        let product = productList.productList[((idx+1)*num) % 25];
+        // productList 0~ 47 작은 사진
+        let product = productList.productList[(num-1) * 8 + idx];
         if (!product) return;
 
         let imgElement = article.querySelector('.thumb img');

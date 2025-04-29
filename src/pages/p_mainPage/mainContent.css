@@ -2,48 +2,54 @@
 body {
     padding-top: 125px;
 }
+
+/* banner */
+.top-banner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background-color: #3d4c5d;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
 /* 슬라이더 */
 #visualSlider {
-    width: 1200px;
-    height: 400px;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
     margin: 0 auto;
-    background-color:#dddbdb;
+    background-color:#e4e4e4;
+    border-radius: 8px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 #imgContainer {
+    display: flex;
+    
     width: 100%;
-    height: 100%;
-}
-
-#imgBox {
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    height: 400px;
 }
 
 #imgBox img {
     width: 100%;
     height: 100%;
+    border-radius: 8px;
 }
 
 .d-flex {
+    width: 100%;
     height: 100%;
 }
-.w-45 {
-    width: 50%;
-    object-fit: cover;
-}
 
-.carousel-item {
-    padding: 20px 0;
-}
-
-.carousel-item a img {
+.d-block {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
+    height: 100%;
 }
+
 
 /* 갤러리 */
 .product-summary {
@@ -61,9 +67,6 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
-.products article {
-    font-family: 'Noto Sans KR', sans-serif;
-}
 
 .products article a {
     display: block;
@@ -74,12 +77,9 @@ body {
     text-align: center;
 }
 
-.thumb:hover {
-    opacity: 0.7;
-}
-
 .thumb{
     position: relative;
+    overflow: hidden;
 }
 
 .thumb img {
@@ -99,9 +99,14 @@ body {
     transition: color 0.3s;
 }
 
+.heart:hover {
+    color: red;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
 .heart.active {
     color: red;
-    /*  눌렀을 때 빨간색 */
 }
 
 /* 상품 */
@@ -128,8 +133,9 @@ body {
 
 .info .price {
     font-weight: bold;
-    font-size: 16px;
-    margin-top: 2px;
+    font-size: 18px;
+    margin-top: 5px;
+    color: #e44d5c;
 }
 
 /* 큰 사진 */
@@ -157,15 +163,26 @@ body {
     width: 1200px;
     height: 100%;
     display: flex;
-    
 }
 
 .bigArticle {
     position: relative;
-    width: 500px;
+    width: 480px;
     height: 400px;
     background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
+
+ .bigArticle:hover { 
+    transform: translateY(-5px);
+} 
+
+.bigArticle:hover img { 
+    opacity: 0.85;
+    transform: scale(1.05);
+} 
 
 .bigArticle img {
     width: 480px;
@@ -195,16 +212,28 @@ body {
 
 
 .smallArticleBox {
-    width: 1200px;
+    width: 100%;
     height: 100%;
     display: flex;
 }
 
 .smallArticle {
+    background-color: white;
     width: 290px;
     height: 400px;
-    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
+
+.smallArticle:hover {
+    transform: translateY(-5px);
+}
+
+.smallArticle:hover img { 
+    opacity: 0.85;
+    transform: scale(1.05);
+} 
 
 .smallArticle img {
     width: 270px;
@@ -219,13 +248,14 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid transparent;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
     cursor: pointer;
     z-index: 5;
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease;
+
 }
 
 .bigArticleContainer:hover .prevBigArticle,
@@ -243,6 +273,12 @@ body {
     right: 5%;
     transform: translate(50%, -50%);
 }
+
+.prevBigArticle:hover,
+.nextBigArticle:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 
 .prevBigArticle::after,
 .nextBigArticle::after {
@@ -273,8 +309,8 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid transparent;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
     cursor: pointer;
     z-index: 5;
     visibility: hidden;
@@ -296,6 +332,10 @@ body {
 .nextSmallArticle {
     right: 5%;
     transform: translate(50%, -50%);
+}
+.prevSmallArticle:hover,
+.nextSmallArticle:hover {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .prevSmallArticle::after,
