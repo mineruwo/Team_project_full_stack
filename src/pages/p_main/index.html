@@ -35,6 +35,40 @@
             font-size: 0.9rem;
         }
 
+        /* 로그인/로그아웃 리스트 항목 스타일 */
+        .login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            /* 기본 리스트 스타일 제거 */
+        }
+
+        .login li {
+            background-color: transparent;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .login li:hover {
+            color: #989898;
+            /* 호버 시 텍스트 색상 */
+            transform: scale(1.1);
+            /* 호버 시 살짝 확대 */
+        }
+
+        .login a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         
     </style>
 
@@ -57,9 +91,19 @@
                     <div class="iconBtn" onclick="location.href='./testPage.html'">
                         <i class="fa-solid fa-user" aria-hidden="true"></i>
                     </div>
+                    <ul class="login">
+                        <!-- 로그인 버튼 -->
+                        <li id="loginButton" onclick="login()">로그인</li>
+
+                        <!-- 로그아웃 버튼 -->
+                        <li id="logoutButton" onclick="logout()" style="display: none;">로그아웃</li>
+                    </ul>
+
                 </div>
             </div>
         </div>
+
+
     </header>
     <!-- 메뉴 -->
     <div class="menuWrap">
@@ -139,7 +183,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        
+
 
         <!-- 갤러리 -->
         <div class="product-summary">
@@ -366,6 +410,8 @@
         </section>
     </main>
 
+
+    
 
 </body>
 
