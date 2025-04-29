@@ -1,3 +1,9 @@
+body
+{
+    overflow-y: scroll;
+}
+
+
 .fullscreen{
     width: 1200px;
     height: 100%;

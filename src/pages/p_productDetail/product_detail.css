@@ -1,6 +1,11 @@
 @charset "utf-8";
 
 /* 페이지 전체 구조 */
+html {
+    overflow-y: scroll;
+    /* 무조건 수직 스크롤바를 표시 (필요 없으면 비활성화된 상태로 존재) */
+}
+
 header {
     width: 1200px;
     height: 90px;
@@ -11,7 +16,7 @@ header {
     width: 1200px;
     height: 100%;
     display: flex;
-    position: relative;
+    
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -24,7 +29,8 @@ header {
     height: 100%;
     display: flex;
     justify-content: flex-start;
-
+    flex-direction: row;
+    align-items: flex-start; /* 추가 */
 }
 
 .sub-layout {
@@ -32,7 +38,8 @@ header {
     display: flex;
     justify-content: left;
     flex-direction: column;
-
+    box-sizing: border-box;
+    overflow: hidden; /
 }
 
 .content-area {
@@ -248,7 +255,8 @@ header {
     color: black;
     border-bottom: 3px solid black;
 }
-.inforImg{
+
+.inforImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -269,11 +277,11 @@ header {
     /* 항목 사이 간격 */
     justify-content: flex-start;
     /* 왼쪽부터 정렬 (center나 space-between도 가능) */
-    
+
     /* 세로 정렬 */
 }
 
-.sugItem{
+.sugItem {
     width: 150px;
     height: 100px;
     background-color: #f2f2f2;
@@ -283,8 +291,74 @@ header {
     align-items: center;
 }
 
+
+
 footer {
     width: 1200px;
     height: 70px;
     justify-content: center;
+}
+
+
+.smallArticleContainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.smallArticleScroll {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.smallArticleScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.smallArticleBox {
+  display: flex;
+  width: max-content;
+  min-width: 100%;
+  height: 100%;
+}
+
+.smallArticle {
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  margin-right: 10px;
+  border: 1px #999;
+}
+
+.smallArticle img {
+  width: 230px;
+  height: 250px;
+}
+
+.prevSmallArticle,
+.nextSmallArticle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.prevSmallArticle {
+  left: 10px;
+}
+
+.nextSmallArticle {
+  right: 10px;
 }
