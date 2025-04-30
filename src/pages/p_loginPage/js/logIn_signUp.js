@@ -1,4 +1,5 @@
 $(document).ready(() => {
+    // 로그인, 회원가입 체인지 버튼
     $("#in_signupBtn").on({
         click: () => {
             $(".loginWrap").css(
@@ -8,7 +9,7 @@ $(document).ready(() => {
                 "display", "flex"
             );
         }
-    })
+    });
 
     $("#up_loginBtn").on({
         click: () => {
@@ -19,50 +20,73 @@ $(document).ready(() => {
                 "display", "none"
             );
         }
-    })
+    });
 
+    // 로그인 submit 버튼
     $(".btn_in").click(function () {
-
         let message;
         if ($(".in_input").val() == "") {
-            alert('공백입니다.')
+            alert('정보를 입력하세요.')
             return false;
         }
         else
         {
             message = loginUser($("#in_inputId").val(), $("#in_inputPw").val());
-
         }
-
-        if(message.isSuccess)
-        {
-            console.log("성공");
-            return true;
-        }
-
-        console.log(message.responseCode);
 
         switch(message.responseCode)
         {
             case 500: 
+                $(".in_errId").text(message.resMessage).css("color", "red");
                 break;
+                
             case 501:
+                $(".in_errId").empty();
+                $(".in_errPw").text(message.resMessage).css("color", "red");
                 break;
-        }
-        alert(message.resMessage);
 
-        // else if(loginId){
-        //     let loginId = loginUser($("#in_inputId").val());
-        //     $(".in_errId").text(loginId.resMessage).css("color", "red");
-        // }
-        // else if(loginPw){
-        //     let loginPw = loginUser($("#in_inputId").val());
-        //     $(".in_errPw").text(loginPw.resMessage).css("color", "red");
-        // }
-        
+            case 200:
+                $("#in_inputId").val("");
+                alert(message.resMessage);
+                location.href = "../p_mainPage/index.html";
+        };
+    }); 
+
+    // 아이디 비밀번호 찾기 버튼
+    $("#find").click(function () {
+        let option = 'width = 460px, height = 630px, menubar=1';
+        window.open('find.html', ($("#in_inputPw").textcontent), option);
     });
+
+    // 아이디 비밀번호 찾기 체인지 버튼
+    $(document).ready(() => {
+        // 아이디 비밀번호 찾기 체인지 버튼
+        $("#id_findPwBtn").on({
+            click: () => {
+                $(".findIdWrap").css(
+                    "display", "none"
+                );
+                $(".findPwWrap").css(
+                    "display", "flex"
+                );
+            }
+        });
+    
+        $("#pw_findIdBtn").on({
+            click: () => {
+                $(".findIdWrap").css(
+                    "display", "flex"
+                );
+                $(".findPwWrap").css(
+                    "display", "none"
+                );
+            }
+        })
+    });
+    
 });
 
+// 아이디 중복 체크 버튼
 $("#checkBtn").click(function () {
     let message = idDupCheck($("#up_inputId").val());
     if (message.isSuccess) {
@@ -75,22 +99,16 @@ $("#checkBtn").click(function () {
         $("#up_inputId").val("");
         $("#up_inputId").focus();
     }
-})
+}); 
 
-    
-
-
-
+// 회원가입 유효성 검사
 $(function () {
     let checkId = RegExp(/^[a-zA-Z0-9]{6,20}$/);
     let checkPw = RegExp(/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[~!@#$%^&*()_+])[A-Za-z\d~!@#$%^&*()_+]{8,16}$/);
     let checkName = RegExp(/^([가-힣]|[A-Z]|[a-z]){2,10}$/);
     let checkPhone = RegExp(/^[0-9+]{11,12}$/);
-    // 전화번호 정규식: /^\d{3}-\d{3,4}-\d{4}$/
-    // 핸드폰번호 정규식: /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/
 
     let checkEmail = RegExp(/^([a-zA-Z0-9._%+-]{2,})$/);
-    // +@[a-zA-Z0-9.-]+\.[a-zA-Z]
 
     function checkForm() {
         // id validation
@@ -217,28 +235,29 @@ $(function () {
 
         function createYearMonth() {
 
-            let cYear = moment().year()
+            let createYear = moment().year();
 
             $("#birthYear").append($("<option>").text("선택").attr("value", "선택"));
 
-            for (y = cYear; y >= cYear - 100; y--) {
-                $("#birthYear").append($("<option>").val(y).text(y + "년"));
+            for (let year = createYear; year >= createYear - 100; year--) {
+                $("#birthYear").append($("<option>").val(year).text(year + "년"));
             }
 
             $("#birthMonth").append($("<option>").text("선택").attr("value", "선택"));
 
             for (let month = 1; month <= 12; month++) {
-                let mValue = month < 10 ? "0" + month: month;
-                $("#birthMonth").append($("<option>").val(mValue).text(mValue + "월"));
+                let monthValue = month < 10 ? "0" + month: month;
+                $("#birthMonth").append($("<option>").val(monthValue).text(monthValue + "월"));
             }
 
             $("#birthDay").append($("<option>").text("선택").attr("value", "선택"));
-            for (day = 1; day <= 31; day++) {
+            for (let day = 1; day <= 31; day++) {
                 let dayValue = day < 10 ? "0" + day: day;
                 $("#birthDay").append($("<option>").val(dayValue).text(dayValue + "일"));
             }
         }
 
+        // birth select option 생성 함수
         function createDate() {
 
             let year = $("#birthYear").val();
@@ -251,7 +270,7 @@ $(function () {
             $("#birthDay option").remove();
 
             $("#birthDay").append($("<option>").text("선택").attr("value", "선택"));
-            for (day = 1; day <= endDay; day++) {
+            for (let day = 1; day <= endDay; day++) {
                 let dayValue = day < 10 ? "0" + day: day;
                 $("#birthDay").append($("<option>").val(dayValue).text(dayValue + "일"));
             }
@@ -259,10 +278,10 @@ $(function () {
 
         $("#birthYear, #birthMonth").change(createDate);
 
-        // 버튼 클릭시
+        // 회원가입 submit 버튼
         $('.btn_up').click(function () {
             if ($(".up_input").val() == "") {
-                alert('공백입니다.')
+                alert('정보를 입력하세요.')
                 return false;
             }
             else if ($("#up_inputPwChk").val() == "" || $("#up_inputPw").val() != $("#up_inputPwChk").val()) {
@@ -281,53 +300,37 @@ $(function () {
                 
                 let emailNode = $("#emailSel")[0];
                 let queryEmail = document.querySelector("#emailSel");
-                let emailV = queryEmail.options[emailNode.selectedIndex].value;
+                let emailValue = queryEmail.options[emailNode.selectedIndex].value;
 
                 let yearNode = $("#birthYear")[0];
                 let queryYear = document.querySelector("#birthYear");
-                let yearV = queryYear.options[yearNode.selectedIndex].value;
+                let yearValue = queryYear.options[yearNode.selectedIndex].value;
 
-                let MonthNode = $("#birthMonth")[0];
+                let monthNode = $("#birthMonth")[0];
                 let queryMonth = document.querySelector("#birthMonth");
-                let monthV = queryMonth.options[MonthNode.selectedIndex].value;
+                let monthValue = queryMonth.options[monthNode.selectedIndex].value;
 
                 let dayNode = $("#birthDay")[0];
                 let queryDay = document.querySelector("#birthDay");
-                let dayV = queryDay.options[dayNode.selectedIndex].value;
+                let dayValue = queryDay.options[dayNode.selectedIndex].value;
 
                 let id = $("#up_inputId").val();
                 let pw = $("#up_inputPw").val();
                 let name = $("#up_inputName").val();
-                let email = $("#up_inputEmail").val()+emailV;
-                let birthday = yearV+monthV+dayV;
+                let email = $("#up_inputEmail").val()+emailValue;
+                let birthday = yearValue+monthValue+dayValue;
 
 
 
-                alert("회원가입을 완료하였습니다! :)");
-                registerUser(id, pw, name, birthday, phonenum, email);
+                
+                let register = registerUser(id, pw, name, birthday, phonenum, email);
+                alert(register.resMessage);
                 location.reload();
-//                 alert(`아이디 : ${id}
-// 비밀번호 : ${pw}
-// 이름 : ${name}
-// 전화번호 : ${phonenum}
-// 이메일 : ${email}
-// 생년월일 : ${birthday}`);
                 return true;
             }
         });
     }
-    checkForm();
+
+
+   checkForm();
 });
-
-/* 로그인
-1. loginUse(Id, pw); true 면 submit, fulse면 아이디가 틀렸습니다, 비밀번호가 틀렸습니다. 
-2.아이디, 비밀번호 찾기
-*/ 
-
-/* sns 로그인, 회원가입
-1. 링크 연결 or 팝업창
-*/
-
-// 가능하면 비밀번호 보이기, 숨기기 시도
-
-

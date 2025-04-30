@@ -1,4 +1,4 @@
-/* login css 시작 */
+/* login 영역 시작 */
 header {
     width: 1200px;
     height: 70px;
@@ -10,6 +10,8 @@ main {
     align-items: center;
     width: 1200px;
     height: 100%;
+    background-color: lightgray;
+    padding: 20px 0 20px 0;
 }
 
 .loginWrap {
@@ -19,7 +21,6 @@ main {
     border-radius: 20px;
     overflow: hidden;
     background-color: #fff;
-    border: 1px solid black;
 }
 
 .selectBtn {
@@ -28,12 +29,16 @@ main {
     margin-bottom: 20px;
 }
 
+.selectBtn div {
+    width: 100%;
+    cursor: pointer;
+}
+
 .selectBtn button {
+    width: 100%;
     height: 80px;
     background-color: transparent;
     border: none;
-    width: 250px;
-    cursor: pointer;
     font-size: 15px;
 }
 
@@ -74,7 +79,7 @@ main {
     width: 450px;
 }
 
-label {
+.labelDiv {
     min-width: fit-content;
     text-align: left;
     font-size: 14px;
@@ -83,11 +88,10 @@ label {
 }
 
 .panel input {
-    width: 430px;
-    height: fit-content;
-    padding: 10px 10px;
+    width: 426px;
+    height: 16px;
+    padding: 10px;
     background: whitesmoke;
-    border: none;
     border-radius: 20px;
     color: inherit;
     font-family: inherit;
@@ -95,21 +99,46 @@ label {
     border: 2px solid black;
 }
 
-#inputIdDiv {
+.in_find button {
+    width : fit-content;
+    padding: 0 15px 0 15px;
+    height: 30px;
+    background: none;
+    border-radius: 50px;
+    font-size: 12px;
+    border: 1px solid currentColor;
+}
+
+.containInput {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containInput div {
+    width: 75%;
+}
+
+.containInput input {
+    width: 100%;
 }
 
 #checkBtn {
     margin: 0 0 0 10px;
-    width : 70px;
-    padding: 0;
+    width : 80px;
+    height: 40px;
+    background: none;
+    border: 1px solid currentColor;
+    border-radius: 50px;
+    font-size: 12px;
+    letter-spacing: 2px;
 }
 
 .panel p {
     margin: 0px;
     padding: 5px 10px 10px 10px;
-    text-align: left;
     font-size: 12px;
 }
 
@@ -126,20 +155,19 @@ label {
     opacity: 0.8;
 }
 
-.panel button {
+.btn {
     background: none;
     border: 1px solid currentColor;
     border-radius: 50px;
-    padding: 0 40px;
     margin: 10px 0px 10px 0px;
     font-size: 12px;
-    letter-spacing: 0.1rem;
+    letter-spacing: 2px;
     width: 400px;
     height: 50px;
 }
 
 .submit_button {
-    margin: 0 0 20px 0;
+    margin: 10px 0 20px 0;
 }
 
 .social {
@@ -174,14 +202,9 @@ label {
     height: 50px;
 }
 
-footer {
-    width: 1200px;
-    height: 90px;
-}
+/* login 영역 끝 */
 
-/* login css end */
-
-/* signup css start */
+/* signup 영역 시작 */
 .signupWrap {
     height: auto;
     display: none;
@@ -189,17 +212,18 @@ footer {
     border-radius: 20px;
     overflow: hidden;
     background-color: #fff;
-    border: 1px solid black;
 }
 
 .tellWrap {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }
 
 #brandSel {
     font-size: 12px;
-    margin: 5px;
+    margin: 0px 15px 0px 5px;
 }
 
 .emailWrap {
@@ -212,18 +236,157 @@ footer {
     margin: 5px;
 }
 
+.emailWrap p {
+    margin: 0px;
+    padding: 10px;
+    font-size: 14px;
+}
+
 .birthWrap {
     display: flex;
     flex-direction: row;
     width: 450px;
     justify-content: center;
+    align-items: center;
 }
 
 .birthSel {
     font-size: 14px;
-    width: 150px;
+    width: 110px;
     height: 30px;
-    margin: 10px;
+    margin: 0 10px 0 10px;
 }
 
-/* signup css end */
+/* signup 영역 끝 */
+
+/* id, pw 찾기 영역 시작 */
+
+.findMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    width: 420px;
+    align-items: center;
+    padding: 10px;
+}
+
+.findIdWrap {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.findPwWrap {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.labelDiv {
+    min-width: fit-content;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.findSelBtn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+.findSelBtn button {
+    width: 188px;
+    height: 60px;
+    background: none;
+    border: none;
+}
+
+#id_findIdBtn {
+    background: none;
+}
+
+#id_findPwBtn {
+    background: lightgray;
+}
+
+#pw_findIdBtn {
+    background: lightgray;
+}
+
+#pw_findPwBtn {
+    background: none;
+}
+
+.findPanel {
+    width: 100%;
+    display: block;
+}
+
+.findInputWrap {
+    margin: 10px;
+    text-align: center;
+}
+
+.findBtn {
+    text-align: left;
+    margin: 10px 0 0 5px;
+}
+
+.findBtn button {
+    width : fit-content;
+    height: 30px;
+    background: none;
+    border-radius: 50px;
+    font-size: 12px;
+    border: 1px solid currentColor;
+}
+
+#findIdSubmit{
+    text-align: center;
+}
+
+#findPwSubmit{
+    text-align: center;
+}
+
+#findSubmit button{
+    width: 150px;
+}
+
+.find_input {
+    width: 330px;
+    height: 16px;
+    padding: 10px;
+    background: whitesmoke;
+    border-radius: 20px;
+    color: inherit;
+    font-family: inherit;
+    font-size: 12px;
+    border: 2px solid black;
+}
+
+.checkNum {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* id, pw 찾기 영역 끝 */

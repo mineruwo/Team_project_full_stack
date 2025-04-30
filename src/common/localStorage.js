@@ -111,7 +111,7 @@ function idDupCheck(id) {
     let isDuplicate = IDCheck(id);
 
     if (isDuplicate) {
-        return createResponseMessage(false, "중복된 값이 존재합니다.", 500);
+        return createResponseMessage(false, "이미 사용중인 아이디입니다.", 500);
     }
 
     return createResponseMessage(true, "아이디 사용이 가능합니다.", 200);
