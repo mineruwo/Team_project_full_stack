@@ -185,7 +185,10 @@ function getCartList() {
     let cartList = window.localStorage.getItem("cartList");
 
     if (cartList == null) {
-        window.localStorage.setItem("cartList", []);
+
+        let empty = [];
+
+        window.localStorage.setItem("cartList", JSON.stringify(empty));
         cartList = window.localStorage.getItem("cartList");
     }
 
@@ -195,6 +198,7 @@ function getCartList() {
 function addCartItem(index) {
     let cartList = getCartList();
 
+    console.log(cartList);
     cartList.push(index);
 
     window.localStorage.setItem("cartList", cartList);
@@ -219,11 +223,8 @@ function removeAllCart() {
 async function getProductInfo(index) {
     let productList = await getProductList();
 
-    console.log(productList.productList);
-
     let productInfo = productList.productList.find(element => element.index == index);
-
-    console.log(productInfo);
+    return productInfo;
 }
 
 async function getProductList() {
