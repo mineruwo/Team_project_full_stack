@@ -38,7 +38,8 @@
             flex-shrink: 0;
             position: relative;
         }
-        a .thumb:hover{
+
+        a .thumb:hover {
             opacity: 0.7;
         }
 
@@ -122,7 +123,6 @@
             margin-top: 10px;
             transition: color 0.3s;
         }
-
     </style>
 </head>
 
@@ -296,23 +296,45 @@
                 </div>
             </a>
         </article>
+        <article>
+            <a href="#">
+                <div class="thumb">
+                    <img src="../project1/imgs/12.jpg" />
+                    <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
+                </div>
+                <div class="info">
+                    <b>베이직 포멀 와이드팬츠</b>
+                    <div><del>59,000원</del></div>
+                    <div class="price">49,000원</div>
+                </div>
+            </a>
+        </article>
     </section>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-          const hearts = document.querySelectorAll(".heart");
-      
-          hearts.forEach(function (heart) {
-            heart.addEventListener("click", function (e) {
-              e.stopPropagation(); // ✅ 이벤트 버블링 방지!
-              e.preventDefault();  // ✅ 링크 기능도 방지!
-      
-              heart.classList.toggle("active");
-              heart.innerHTML = heart.classList.contains("active") ? "&#10084;" : "&#9825;";
+            const hearts = document.querySelectorAll(".heart");
+
+            hearts.forEach(function (heart) {
+                heart.addEventListener("click", function (event) {
+                    event.stopPropagation(); // ✅ 이벤트 버블링 방지!
+                    event.preventDefault();  // ✅ 링크 기능도 방지!
+
+                    heart.classList.toggle("active");
+                    heart.innerHTML = heart.classList.contains("active") ? "&#10084;" : "&#9825;";
+                });
             });
-          });
+
+            // 전체 상품 수 세기 + 출력
+            const productCount = document.querySelectorAll(".products article").length;
+            const summary = document.querySelector(".product-summary");
+            if (summary) {
+                summary.textContent = `전체 ${productCount}개`;
+            }
         });
-      </script>
+
+
+    </script>
 
 </body>
 
