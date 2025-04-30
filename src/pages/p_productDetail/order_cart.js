@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (checkbox.checked) { // 체크된 상품만 가격 더하기
         const priceElement = item.querySelector('.productPrice');
-        const price = parseFloat(priceElement.dataset.price) || 0;
+        const price = priceElement.dataset.price == 0 ? priceElement.dataset.price : 0;
         productTotal += price;
 
         // 상품별 가격 출력 대상 클래스 배열
