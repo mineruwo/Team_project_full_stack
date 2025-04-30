@@ -1,23 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     //이미지 썸네일 메인이미지 반응 스크립트 
-    const thumbnailList = document.querySelector('.thumbnail-list');
-    const mainImage = document.getElementById('mainImage');
-    const thumbnails = document.querySelectorAll('.thumbnail-list img');
+    const thumbnailList = document.querySelector('.thumbnail-list');// 썸네일 리스트 노드
+    const mainImage = document.getElementById('mainImage');//main 이미지 노드
+    const thumbnails = document.querySelectorAll('.thumbnail-list img');//썸네일 이미지 노드
 
-    thumbnailList.addEventListener('click', (event) => {
-        const target = event.target;
+    thumbnailList.addEventListener('click', (event) => {//썸네일 리스트를 클릭한다면 이벤트함수를 호출하겟다
+        const target = event.target;//이벤트가 발생하는 타겟을 target이라는 함수에 정의하겟다
 
-        if (target.tagName === 'IMG') {
-            thumbnails.forEach(thumbnail => thumbnail.classList.remove('active'));
-            target.classList.add('active');
-            const newMainImageSrc = target.dataset.mainImage;
-            mainImage.src = newMainImageSrc;
-            mainImage.alt = target.alt.replace('썸네일', '메인 이미지');
+        if (target.tagName === 'IMG') {//만약 타겟의 태그네임이 img 라면 
+            thumbnails.forEach(thumbnail => thumbnail.classList.remove('active'));//썸네일의 리스트를 돌며 active를 지운다
+            target.classList.add('active');//클릭된 썸네일 리스트에 active를 추가한다 
+            const newMainImageSrc = target.dataset.mainImage;//newmainImageSrc에 클릭된 썸네일이미지의 메인이미지 데이터를 정의한다.
+            mainImage.src = newMainImageSrc;//메인이미지의 src를 newmainImageSrc를 대입한다. 
+            mainImage.alt = target.alt.replace('썸네일', '메인 이미지');//메인이미지 alt에 클릭된 이미지의 alt를 대체한다
         }
     });
     // 사이드 바 찜버튼 활성화시 카운트 ++
-    const likeBtn = document.querySelector('.likeBtn');
+    const likeBtn = document.querySelector('.likeBtn');//likeBtn의 클래스를 가진 
     const likeCount = document.getElementById('likeCount');
 
     let count = 0;
