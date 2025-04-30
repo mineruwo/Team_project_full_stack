@@ -172,6 +172,9 @@ function userLogout()
     window.localStorage.setItem('currentLogin', undefined);
 }
 
+
+
+
 //#endregion
 
 //#region Cart & Product Area
@@ -243,7 +246,7 @@ function modifyNickname(modifyNickname) {
 
     let jsonData = getUserList();
 
-    let findUserIndex = jsonData.userList.indexOf(currentLoginUser);
+    let findUserIndex = jsonData.userList.findIndex(element=> element.index == currentLoginUser.index);
 
     if (findUserIndex == -1) {
         console.log("해당 유저를 찾을 수 없습니다.");
@@ -258,24 +261,16 @@ function modifyNickname(modifyNickname) {
     window.localStorage.setItem('userList', rawData);
 }
 
-function modifyUserInfo(name, birthday, phonenumber, email) {
+function modifyUserInfo(phonenumber, email) {
     let currentLoginUser = currentLoginInfo();
 
     let jsonData = getUserList();
 
-    let findUserIndex = jsonData.userList.indexOf(currentLoginUser);
+    let findUserIndex = jsonData.userList.findIndex(element=> element.index == currentLoginUser.index);
 
     if (findUserIndex == -1) {
         console.log("해당 유저를 찾을 수 없습니다.");
         return;
-    }
-
-    if (name != "") {
-        currentLoginUser.name = name;
-    }
-
-    if (birthday != "") {
-        currentLoginUser.birthday = birthday;
     }
 
     if (phonenumber != "") {
@@ -291,6 +286,11 @@ function modifyUserInfo(name, birthday, phonenumber, email) {
     let rawData = JSON.stringify(jsonData);
 
     window.localStorage.setItem('userList', rawData);
+
+    
+    let rawCurrentUserData = JSON.stringify(currentLoginUser);
+
+    window.localStorage.setItem('currentLogin', rawCurrentUserData);
 }
 
 function modifyProfilePhoto() {
@@ -302,7 +302,7 @@ function modifyAddress(address) {
 
     let jsonData = getUserList();
 
-    let findUserIndex = jsonData.userList.indexOf(currentLoginUser);
+    let findUserIndex = jsonData.userList.findIndex(element=> element.index == currentLoginUser.index);
 
     if (findUserIndex == -1) {
         console.log("해당 유저를 찾을 수 없습니다.");
@@ -310,6 +310,7 @@ function modifyAddress(address) {
     }
 
     if (address != "") {
+        console.log(address);
         currentLoginUser.address = address;
     }
 
@@ -318,6 +319,10 @@ function modifyAddress(address) {
     let rawData = JSON.stringify(jsonData);
 
     window.localStorage.setItem('userList', rawData);
+
+    let rawCurrentUserData = JSON.stringify(currentLoginUser);
+
+    window.localStorage.setItem('currentLogin', rawCurrentUserData);
 }
 
 //#endregion

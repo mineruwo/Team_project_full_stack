@@ -11,6 +11,7 @@ $(document).ready( async ()=>
         itemList.push(item2);
         let item3 = await getProductInfo(3);
         itemList.push(item3);
+        
         createItem(item1, listNode);
         createItem(item2, listNode);
         createItem(item3, listNode);
@@ -22,6 +23,11 @@ $(document).ready( async ()=>
             });
 
         $("#sumValue").text(`총 금액 : ${sumValue.toLocaleString()}원`);
+        
+        let currentUser = currentLoginInfo();
+
+        console.log(currentUser);
+        $("#address").text()
     });
 
     function createItem(productInfo, parentNode)

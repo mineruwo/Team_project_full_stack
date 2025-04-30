@@ -13,8 +13,10 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="../../common/stringUtils.js"></script>
     <script src="../../common/localStorage.js"></script>
-    <script src="modifyInfoJS.js"></script>
+    <script src="modifyAddressJS.js"></script>
     <title>개인 정보 수정</title>
 </head>
 
@@ -22,27 +24,17 @@
     <div class="topDiv">
         <h2>개인 정보 수정</h2>
     </div>
-    <div class="d-flex justify-content-center gap-3">
-        <input type="radio" class="btn-check" name="modifyTarget" id="modifyPhone" autocomplete="off" checked>
-        <label class="btn btn-secondary" for="modifyPhone">휴대폰 번호 수정</label>
+    <button class="btn btn-secondary" id="addressFindButton">주소 찾기</button>
 
-        <input type="radio" class="btn-check" name="modifyTarget" id="modifyEmail" autocomplete="off">
-        <label class="btn btn-secondary" for="modifyEmail">이메일 수정</label>
-    </div>
     <form class="row g-3 needs-validation" novalidate>
-        <div class="midDiv mb-3 px-3">
-            <div class="form-floating mb-3" id="phone">
-                <input type="tel" class="form-control" id="phoneNumber" placeholder="010-0000-0000" maxlength="13"
-                    >
-                <label for="phoneNumber" class="form-label">휴대폰 번호</label>
+        <div class="midDiv mb-3">
+            <input type="text" class="form-control" id="address" placeholder="서울특별시 OO구" required disabled >
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="detailAddress" placeholder="OOO동 OOO호" required>
+                <label for="detailAddress" class="form-label">상세 주소</label>
             </div>
 
-            <div class="form-floating mb-3" id="email">
-                <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
-                <label for="emailAddress" class="form-label">Email 주소</label>
-            </div>
-            <button class="px-3">수정</button>
-
+            <button id="submitButton">수정</button>
         </div>
     </form>
 
