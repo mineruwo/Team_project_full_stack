@@ -227,6 +227,9 @@ async function getProductInfo(index) {
     let productList = await getProductList();
 
     let productInfo = productList.productList.find(element => element.index == index);
+
+    console.log(productInfo);
+
     return productInfo;
 }
 
@@ -237,6 +240,24 @@ async function getProductList() {
     return jsonData;
 }
 
+function getClickItem()
+{
+   let index = window.localStorage.getItem("selectedProductIndex");
+
+   if(index === undefined)
+   {
+        console.log("선택된 아이템이 없습니다.");
+        return 0;
+    }
+
+   return index;
+}
+
+function setClickItem(index)
+{
+    window.localStorage.setItem("selectedProductIndex", index);
+    console.log(`selected => ${index} Done`);
+}
 
 //#endregion
 
