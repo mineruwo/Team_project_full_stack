@@ -5,23 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="../../common/reset.css">
-    <link rel="stylesheet" href="../p_mainPage/header.css">
-    <link rel="stylesheet" href="../p_mainPage/menu.css">
-    <link rel="stylesheet" href="../p_mainPage/mainContent.css">
+    <link rel="stylesheet" href="/src/common/reset.css">
+    <link rel="stylesheet" href="/src/pages/p_mainPage/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="/src/pages/p_mainPage/index.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="../../common/localStorage.js"></script>
-    <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
-
 
 </head>
 
@@ -30,7 +22,7 @@
     <header>
         <div class="headerWrap">
             <!-- 헤더 왼쪽 -->
-            <div class="headerLeft" onclick="location.href='../p_mainPage/index.html'">LOGO</div>
+            <div class="headerLeft" onclick="location.href='/src/pages/p_mainPage/index.html'">LOGO</div>
             <!-- 헤더 오른쪽 -->
             <div class="headerRight">
                 <div class="iconWrap">
@@ -41,9 +33,6 @@
                     <div class="iconBtn" onclick="location.href='./testPage.html'">
                         <i class="fa-solid fa-user" aria-hidden="true"></i>
                     </div>
-                    <ul class="login">
-                        <li onclick="location.href='your-link-here.html'">로그인</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -76,57 +65,53 @@
             </ul>
         </nav>
     </div>
+    </div>
 
     <main id="mainContent">
-        <!-- banner -->
-        <div class="top-banner">
-            지금 가입하면 10% 할인 쿠폰 증정
-        </div>
         <!-- 슬라이드 -->
-        <div id="visualSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-            <div class="carousel-inner" id="imgContainer">
-                <div class="carousel-item active" id="imgBox">
-                    <div class="d-flex justify-content-center">
-                        <a href="./testPage.html" class="d-block w-45">
-                            <img src="../../image/imgs/1.jpg" class="d-block w-45">
-                        </a>
-                        <a href="./testPage.html" class="d-block w-45">
-                            <img src="../../image/imgs/2.jpg" class="d-block w-45">
-                        </a>
-                    </div>
-                </div>
-                <div class="carousel-item" id="imgBox">
-                    <div class="d-flex justify-content-center">
-                        <a href="./testPage.html" class="d-block w-45">
-                            <img src="../../image/imgs/3.jpg" class="d-block w-45">
-                        </a>
-                        <a href="./testPage.html" class="d-block w-45">
-                            <img src="../../image/imgs/4.jpg" class="d-block w-45">
-                        </a>
-                    </div>
-                </div>
-                <div class="carousel-item" id="imgBox">
-                    <div class="d-flex justify-content-center">
-                        <a href="./testPage.html" class="d-block w-45">
-                            <img src="../../image/imgs/5.jpg" class="d-block w-45">
-                        </a>
-                        <a href="./testPage.html" class="d-block w-45">
-                            <img src="../../image/imgs/6.jpg" class="d-block w-45">
-                        </a>
-                    </div>
-                </div>
+<div id="visualSlider" class="carousel slide">
+    <div class="carousel-inner" id="imgContainer">
+        <div class="carousel-item active" id="imgBox">
+            <div class="d-flex justify-content-center">
+                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
+                    <img src="/src/pages/p_mainPage/imgs/b19.jpg" class="d-block w-45">
+                </a>
+                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
+                    <img src="/src/pages/p_mainPage/imgs/b15.jpg" class="d-block w-45">
+                </a>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#visualSlider" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#visualSlider" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-        
-        
+        <div class="carousel-item" id="imgBox">
+            <div class="d-flex justify-content-center">
+                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
+                    <img src="/src/pages/p_mainPage/imgs/b12.jpg" class="d-block w-45">
+                </a>
+                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
+                    <img src="/src/pages/p_mainPage/imgs/b8.webp" class="d-block w-45">
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item" id="imgBox">
+            <div class="d-flex justify-content-center">
+                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
+                    <img src="/src/pages/p_mainPage/imgs/b4.jpg" class="d-block w-45">
+                </a>
+                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
+                    <img src="/src/pages/p_mainPage/imgs/b12.jpg" class="d-block w-45">
+                </a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#visualSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#visualSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
             <button class="carousel-control-prev" type="button" data-bs-target="#visualSlider" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -140,7 +125,7 @@
         <!-- 갤러리 -->
         <div class="product-summary">
             <h4>NEW ARRIVAL</h4>
-            <h6>오늘의 신상</h6>
+            <h6>오늘의 신상</h6>          
         </div>
         <section class="products">
             <!-- 큰 사진 시작 -->
@@ -150,13 +135,13 @@
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/7.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/b1.webp">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>투포켓 트러커 자켓</b>
-                                    <div><del>80,000원</del></div>
-                                    <div class="price">65,000원</div>
+                                    <b>리얼가죽 무스탕</b>
+                                    <div><del>87,000원</del></div>
+                                    <div class="price">55,000원</div>
                                 </div>
                             </a>
                             <!-- 기본 하트 -->
@@ -164,25 +149,25 @@
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/8.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/b2.jpeg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>사파리 집업 자켓</b>
-                                    <div><del>60,000원</del></div>
-                                    <div class="price">45,000원</div>
+                                    <b>[1+1] 기본 버튼 반팔티</b>
+                                    <div><del>15,000원</del></div>
+                                    <div class="price">7,000원</div>
                                 </div>
                             </a>
                         </article>
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/9.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/b3.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>슬리브리스 코튼 탑</b>
-                                    <div><del>50,000원</del></div>
+                                    <b>정장 스타일 무지 조끼</b>
+                                    <div><del>45,000원</del></div>
                                     <div class="price">40,000원</div>
                                 </div>
                             </a>
@@ -190,39 +175,39 @@
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/10.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/b19.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>오버핏 후드티</b>
-                                    <div><del>30,000원</del></div>
-                                    <div class="price">24,000원</div>
+                                    <b>스키니핏 씨블루 정장 자켓</b>
+                                    <div><del>53,000원</del></div>
+                                    <div class="price">45,000원</div>
                                 </div>
                             </a>
                         </article>
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/11.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/b2.jpeg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>엘라스틱 조거 팬츠</b>
-                                    <div><del>45,000원</del></div>
+                                    <b>프리미엄 올라운드 데님셔츠</b>
+                                    <div><del>33,000원</del></div>
+                                    <div class="price">30,000원</div>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="bigArticle">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="/src/pages/p_mainPage/imgs/b3.jpg">
+                                    <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
+                                </div>
+                                <div class="info">
+                                    <b>프렌치 울 라운드 니트</b>
+                                    <div><del>41,000원</del></div>
                                     <div class="price">35,000원</div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="bigArticle">
-                            <a href="#">
-                                <div class="thumb">
-                                    <img src="../../image/imgs/12.jpg">
-                                    <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
-                                </div>
-                                <div class="info">
-                                    <b>데님 반팔 셔츠</b>
-                                    <div><del>55,000원</del></div>
-                                    <div class="price">42,000원</div>
                                 </div>
                             </a>
                         </article>
@@ -244,13 +229,13 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/13.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/1.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>린넨 하프 셔츠</b>
-                                    <div><del>40,000원</del></div>
-                                    <div class="price">29,000원</div>
+                                    <b>리얼가죽 무스탕</b>
+                                    <div><del>87,000원</del></div>
+                                    <div class="price">55,000원</div>
                                 </div>
                             </a>
 
@@ -258,13 +243,13 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/14.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/2.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>스트라이프 오버핏 셔츠</b>
-                                    <div><del>35,000원</del></div>
-                                    <div class="price">24,000원</div>
+                                    <b>[1+1] 기본 버튼 반팔티</b>
+                                    <div><del>15,000원</del></div>
+                                    <div class="price">7,000원</div>
                                 </div>
                             </a>
 
@@ -272,13 +257,13 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/15.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/3.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>크롭 와이드 데님</b>
+                                    <b>정장 스타일 무지 조끼</b>
                                     <div><del>45,000원</del></div>
-                                    <div class="price">33,000원</div>
+                                    <div class="price">40,000원</div>
                                 </div>
                             </a>
 
@@ -286,13 +271,13 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/16.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/4.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>슬림핏 블레이저</b>
-                                    <div><del>120,000원</del></div>
-                                    <div class="price">95,000원</div>
+                                    <b>스키니핏 씨블루 정장 자켓</b>
+                                    <div><del>53,000원</del></div>
+                                    <div class="price">45,000원</div>
                                 </div>
                             </a>
 
@@ -300,52 +285,52 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/17.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/1.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>린넨 하프 셔츠</b>
-                                    <div><del>40,000원</del></div>
-                                    <div class="price">29,000원</div>
+                                    <b>프리미엄 올라운드 데님셔츠</b>
+                                    <div><del>33,000원</del></div>
+                                    <div class="price">30,000원</div>
                                 </div>
                             </a>
                         </article>
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/18.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/2.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>스트라이프 오버핏 셔츠</b>
-                                    <div><del>35,000원</del></div>
-                                    <div class="price">24,000원</div>
+                                    <b>프렌치 울 라운드 니트</b>
+                                    <div><del>41,000원</del></div>
+                                    <div class="price">35,000원</div>
                                 </div>
                             </a>
                         </article>
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/19.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/3.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>크롭 와이드 데님</b>
-                                    <div><del>45,000원</del></div>
-                                    <div class="price">33,000원</div>
+                                    <b>카라 골지 롱원피스</b>
+                                    <div><del>67,000원</del></div>
+                                    <div class="price">59,000원</div>
                                 </div>
                             </a>
                         </article>
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-                                    <img src="../../image/imgs/20.jpg">
+                                    <img src="/src/pages/p_mainPage/imgs/4.jpg">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
                                 <div class="info">
-                                    <b>슬림핏 블레이저</b>
-                                    <div><del>120,000원</del></div>
-                                    <div class="price">95,000원</div>
+                                    <b>오버핏 워싱 트렌치코트</b>
+                                    <div><del>92,000원</del></div>
+                                    <div class="price">78,000원</div>
                                 </div>
                             </a>
                         </article>
@@ -362,47 +347,6 @@
         </section>
     </main>
 
-    <!-- footer -->
-    <footer>
-        <nav>
-            <a href='' target='_blank'>이용약관</a> |
-            <a href='' target='_blank'>이용안내</a>
-        </nav>
-
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
-
-
-            <div style="flex: 1; min-width: 250px; text-align: left;">
-                <p>
-                    <span>저주식회사 CEO</span>
-                    <span>이메일 : footer123@gmail.com</span><br>
-                    <span>Copyright 2020. cocoder. All Rights Reserved.</span><br>
-                    <span>ADD 12345 서울특별시 강남구 역삼동 123-12 </span><br>
-                    <span>CPO 푸터 </span>
-                </p>
-            </div>
-
-
-            <div style="flex: 1; min-width: 250px; text-align: center;">
-                <p><strong>CS CENTER</strong><br>
-                    1644-1111<br>
-                    CALL 09:00 ~ 17:00<br>
-                    점심시간 12:00 ~ 13:00<br>
-                    토/일/공휴일 휴무
-                </p>
-
-            </div>
-
-            <div style="flex: 1; min-width: 250px; text-align: right; padding-right: 20px;">
-                <p><strong>DELIVERY & RETURN</strong><br>
-                    교환반품주소: 서울시 역삼동 123<br>
-                    우체국<br>
-                    택배: 1588-1111
-                </p>
-            </div>
-
-        </div>
-    </footer>
 
 </body>
 
