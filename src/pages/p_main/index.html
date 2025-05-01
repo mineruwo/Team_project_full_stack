@@ -134,6 +134,56 @@
             white-space: nowrap;
             width: 100%;
         }
+
+        /* 푸터 */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            min-height: 100vh;
+            position: relative;
+            width: 100%;
+            background-color: #f2f2f2;
+        }
+
+        section {
+            padding-bottom: 105px;
+        }
+
+        footer {
+            width: 100%;
+            height: 125px;
+            bottom: 0px;
+            position: absolute;
+            border-top: 1px solid #c4c4c4;
+            padding-top: 15px;
+            color: #808080;
+            font-size: 12px;
+        }
+
+        footer a {
+            display: inline-block;
+            margin: 0 20px 10px 20px;
+            color: #3d3d3d;
+            font-size: 13px;
+        }
+
+        footer a:visited {
+            color: #808080;
+        }
+
+        footer p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        footer p span {
+            display: inline-block;
+            margin-left: 20px;
+        }
     </style>
 
 
@@ -482,9 +532,12 @@
     </div>
 
 
+    
+
+
     <!-- 최근 본 상품 스크립트 -->
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("DOMContentLoaded", () => {
             const productLinks = document.querySelectorAll(".products a");
             productLinks.forEach(link => {
                 link.addEventListener("click", () => {
@@ -525,5 +578,44 @@
     </script>
 
 </body>
+<footer>
+    <nav>
+        <a href='' target='_blank'>이용약관</a> |
+        <a href='' target='_blank'>이용안내</a>
+    </nav>
 
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+
+
+        <div style="flex: 1; min-width: 250px; text-align: left; ">
+            <p>
+                <span>저주식회사 CEO</span>
+                <span>이메일 : footer123@gmail.com</span><br />
+                <span>Copyright 2020. cocoder. All Rights Reserved.</span><br>
+                <span>ADD 12345 서울특별시 강남구 역삼동 123-12 </span><br>
+                <span>CPO 푸터 </span>
+            </p>
+        </div>
+
+
+        <div style="flex: 1; min-width: 250px; text-align: center;">
+            <p><strong>CS CENTER</strong><br>
+                1644-1111<br>
+                CALL 09:00 ~ 17:00<br>
+                점심시간 12:00 ~ 13:00<br>
+                토/일/공휴일 휴무
+            </p>
+
+        </div>
+
+        <div style="flex: 1; min-width: 250px; text-align: right; padding-right: 20px;">
+            <p><strong>DELIVERY & RETURN</strong><br>
+                교환반품주소: 서울시 역삼동 123<br>
+                우체국<br>
+                택배: 1588-1111
+            </p>
+        </div>
+
+    </div>
+</footer>
 </html>
