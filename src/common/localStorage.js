@@ -52,7 +52,11 @@ function getUserInfo(rawData) {
 }
 
 function isLogin() {
-    return window.localStorage.getItem('currentLogin') == undefined ? false : true;
+
+    let currentUser = window.localStorage.getItem('currentLogin');
+
+
+    return  currentUser == "undefined" ? false : true;
 }
 
 function registerUser(id, pw, name, birthday, phonenum, email) {
@@ -179,6 +183,10 @@ function removeAllUser()
 
 function userLogout()
 {
+
+    let currentUser = window.localStorage.getItem('currentLogin');
+
+    console.log(currentUser);
     window.localStorage.setItem('currentLogin', undefined);
 }
 

@@ -89,6 +89,17 @@ $(document).ready(() => {
 
         console.log(userModify);
     });
+
+    $("#mypage").click(() => {
+        if (!isLogin()) {
+            window.location.href = "../p_loginPage/logIn_signUp.html";
+            return;
+        }
+
+        window.location.href = "../p_myPage/myPage.html";
+    });
+
+    $(".name")[0].innerText = `${currentLoginInfo().nickname} 님`;
 })
 
 function showTransitionDiv() {
