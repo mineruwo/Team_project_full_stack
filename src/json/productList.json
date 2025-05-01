@@ -7,7 +7,8 @@
             "imageUrl": "../../image/imgs/coat1.jpg",
             "oldPrice": "49,000원",
             "price": "23,000원",
-            "index": 0
+            "index": 0,
+            "amount": 23000
         },
         {
             "productName": "롱 더블 코트",
@@ -16,7 +17,8 @@
             "imageUrl": "../../image/imgs/coat2.jpg",
             "oldPrice": "40,000원",
             "price": "36,000원",
-            "index": 1
+            "index": 1,
+            "amount": 36000
         },
         {
             "productName": "숏 패딩 코트",
@@ -25,7 +27,8 @@
             "imageUrl": "../../image/imgs/coat3.jpg",
             "oldPrice": "40,000원",
             "price": "21,000원",
-            "index": 2
+            "index": 2,
+            "amount": 21000
         },
         {
             "productName": "클래식 트렌치 코트",
@@ -34,7 +37,8 @@
             "imageUrl": "../../image/imgs/coat4.jpg",
             "oldPrice": "46,000원",
             "price": "38,000원",
-            "index": 3
+            "index": 3,
+            "amount": 38000
         },
         {
             "productName": "캐시미어 코트",
@@ -43,7 +47,8 @@
             "imageUrl": "../../image/imgs/coat5.jpg",
             "oldPrice": "69,000원",
             "price": "21,000원",
-            "index": 4
+            "index": 4,
+            "amount": 21000
         },
         {
             "productName": "벨티드 코트",
@@ -52,7 +57,8 @@
             "imageUrl": "../../image/imgs/coat6.jpg",
             "oldPrice": "48,000원",
             "price": "38,000원",
-            "index": 5
+            "index": 5,
+            "amount": 38000
         },
         {
             "productName": "하이넥 코트",
@@ -61,7 +67,8 @@
             "imageUrl": "../../image/imgs/coat7.jpg",
             "oldPrice": "48,000원",
             "price": "34,000원",
-            "index": 6
+            "index": 6,
+            "amount": 34000
         },
         {
             "productName": "버튼업 코트",
@@ -70,7 +77,8 @@
             "imageUrl": "../../image/imgs/coat8.jpg",
             "oldPrice": "40,000원",
             "price": "34,000원",
-            "index": 7
+            "index": 7,
+            "amount": 34000
         },
         {
             "productName": "라이더 자켓",
@@ -79,7 +87,8 @@
             "imageUrl": "../../image/imgs/jacket1.jpg",
             "oldPrice": "39,000원",
             "price": "23,000원",
-            "index": 8
+            "index": 8,
+            "amount": 23000
         },
         {
             "productName": "블루종 자켓",
@@ -88,7 +97,8 @@
             "imageUrl": "../../image/imgs/jacket2.jpg",
             "oldPrice": "40,000원",
             "price": "33,000원",
-            "index": 9
+            "index": 9,
+            "amount": 33000
         },
         {
             "productName": "트위드 자켓",
@@ -97,7 +107,8 @@
             "imageUrl": "../../image/imgs/jacket3.jpg",
             "oldPrice": "43,000원",
             "price": "19,000원",
-            "index": 10
+            "index": 10,
+            "amount": 19000
         },
         {
             "productName": "데님 자켓",
@@ -106,7 +117,8 @@
             "imageUrl": "../../image/imgs/jacket4.jpg",
             "oldPrice": "44,000원",
             "price": "34,000원",
-            "index": 11
+            "index": 11,
+            "amount": 34000
         },
         {
             "productName": "야상 자켓",
@@ -115,7 +127,8 @@
             "imageUrl": "../../image/imgs/jacket5.jpg",
             "oldPrice": "40,000원",
             "price": "36,000원",
-            "index": 12
+            "index": 12,
+            "amount": 36000
         },
         {
             "productName": "레더 자켓",
@@ -124,7 +137,8 @@
             "imageUrl": "../../image/imgs/jacket6.jpg",
             "oldPrice": "53,000원",
             "price": "30,000원",
-            "index": 13
+            "index": 13,
+            "amount": 30000
         },
         {
             "productName": "패딩 자켓",
@@ -133,7 +147,8 @@
             "imageUrl": "../../image/imgs/jacket7.jpg",
             "oldPrice": "74,000원",
             "price": "30,000원",
-            "index": 14
+            "index": 14,
+            "amount": 30000
         },
         {
             "productName": "코듀로이 자켓",
@@ -142,7 +157,8 @@
             "imageUrl": "../../image/imgs/jacket8.jpg",
             "oldPrice": "75,000원",
             "price": "24,000원",
-            "index": 15
+            "index": 15,
+            "amount": 24000
         },
         {
             "productName": "스트레이트 진",
@@ -151,7 +167,8 @@
             "imageUrl": "../../image/imgs/jeans1.jpg",
             "oldPrice": "45,000원",
             "price": "30,000원",
-            "index": 16
+            "index": 16,
+            "amount": 30000
         },
         {
             "productName": "슬림 핏 진",
@@ -160,7 +177,8 @@
             "imageUrl": "../../image/imgs/jeans2.jpg",
             "oldPrice": "48,000원",
             "price": "38,000원",
-            "index": 17
+            "index": 17,
+            "amount": 38000
         },
         {
             "productName": "부츠컷 진",
@@ -169,7 +187,8 @@
             "imageUrl": "../../image/imgs/jeans3.jpg",
             "oldPrice": "53,000원",
             "price": "38,000원",
-            "index": 18
+            "index": 18,
+            "amount": 38000
         },
         {
             "productName": "크롭 진",
@@ -178,7 +197,8 @@
             "imageUrl": "../../image/imgs/jeans4.jpg",
             "oldPrice": "41,000원",
             "price": "23,000원",
-            "index": 19
+            "index": 19,
+            "amount": 23000
         },
         {
             "productName": "하이라이즈 진",
@@ -187,7 +207,8 @@
             "imageUrl": "../../image/imgs/jeans5.jpg",
             "oldPrice": "42,000원",
             "price": "34,000원",
-            "index": 20
+            "index": 20,
+            "amount": 34000
         },
         {
             "productName": "테이퍼드 진",
@@ -196,7 +217,8 @@
             "imageUrl": "../../image/imgs/jeans6.jpg",
             "oldPrice": "62,000원",
             "price": "29,000원",
-            "index": 21
+            "index": 21,
+            "amount": 29000
         },
         {
             "productName": "와이드 데님",
@@ -205,7 +227,8 @@
             "imageUrl": "../../image/imgs/jeans7.jpg",
             "oldPrice": "50,000원",
             "price": "37,000원",
-            "index": 22
+            "index": 22,
+            "amount": 37000
         },
         {
             "productName": "블랙 진",
@@ -214,7 +237,8 @@
             "imageUrl": "../../image/imgs/jeans8.jpg",
             "oldPrice": "56,000원",
             "price": "37,000원",
-            "index": 23
+            "index": 23,
+            "amount": 37000
         },
         {
             "productName": "린넨 셔츠",
@@ -223,7 +247,8 @@
             "imageUrl": "../../image/imgs/shirts1.jpg",
             "oldPrice": "75,000원",
             "price": "34,000원",
-            "index": 24
+            "index": 24,
+            "amount": 34000
         },
         {
             "productName": "옥스포드 셔츠",
@@ -232,7 +257,8 @@
             "imageUrl": "../../image/imgs/shirts2.jpg",
             "oldPrice": "76,000원",
             "price": "21,000원",
-            "index": 25
+            "index": 25,
+            "amount": 21000
         },
         {
             "productName": "스트라이프 셔츠",
@@ -241,7 +267,8 @@
             "imageUrl": "../../image/imgs/shirts3.jpg",
             "oldPrice": "40,000원",
             "price": "36,000원",
-            "index": 26
+            "index": 26,
+            "amount": 36000
         },
         {
             "productName": "화이트 셔츠",
@@ -250,7 +277,8 @@
             "imageUrl": "../../image/imgs/shirts4.jpg",
             "oldPrice": "58,000원",
             "price": "29,000원",
-            "index": 27
+            "index": 27,
+            "amount": 29000
         },
         {
             "productName": "체크 셔츠",
@@ -259,7 +287,8 @@
             "imageUrl": "../../image/imgs/shirts5.jpg",
             "oldPrice": "50,000원",
             "price": "29,000원",
-            "index": 28
+            "index": 28,
+            "amount": 29000
         },
         {
             "productName": "블루 셔츠",
@@ -268,7 +297,8 @@
             "imageUrl": "../../image/imgs/shirts6.jpg",
             "oldPrice": "63,000원",
             "price": "20,000원",
-            "index": 29
+            "index": 29,
+            "amount": 20000
         },
         {
             "productName": "스탠다드 셔츠",
@@ -277,7 +307,8 @@
             "imageUrl": "../../image/imgs/shirts7.jpg",
             "oldPrice": "66,000원",
             "price": "24,000원",
-            "index": 30
+            "index": 30,
+            "amount": 24000
         },
         {
             "productName": "하프 셔츠",
@@ -286,7 +317,8 @@
             "imageUrl": "../../image/imgs/shirts8.jpg",
             "oldPrice": "64,000원",
             "price": "22,000원",
-            "index": 31
+            "index": 31,
+            "amount": 22000
         },
         {
             "productName": "와이드 슬랙스",
@@ -295,7 +327,8 @@
             "imageUrl": "../../image/imgs/slacks1.jpg",
             "oldPrice": "52,000원",
             "price": "33,000원",
-            "index": 32
+            "index": 32,
+            "amount": 33000
         },
         {
             "productName": "테이퍼드 슬랙스",
@@ -304,7 +337,8 @@
             "imageUrl": "../../image/imgs/slacks2.jpg",
             "oldPrice": "73,000원",
             "price": "29,000원",
-            "index": 33
+            "index": 33,
+            "amount": 29000
         },
         {
             "productName": "크롭 슬랙스",
@@ -313,7 +347,8 @@
             "imageUrl": "../../image/imgs/slacks3.jpg",
             "oldPrice": "66,000원",
             "price": "37,000원",
-            "index": 34
+            "index": 34,
+            "amount": 37000
         },
         {
             "productName": "기본 슬랙스",
@@ -322,7 +357,8 @@
             "imageUrl": "../../image/imgs/slacks4.jpg",
             "oldPrice": "55,000원",
             "price": "33,000원",
-            "index": 35
+            "index": 35,
+            "amount": 33000
         },
         {
             "productName": "슬림 슬랙스",
@@ -331,7 +367,8 @@
             "imageUrl": "../../image/imgs/slacks5.jpg",
             "oldPrice": "45,000원",
             "price": "34,000원",
-            "index": 36
+            "index": 36,
+            "amount": 34000
         },
         {
             "productName": "하이웨스트 슬랙스",
@@ -340,7 +377,8 @@
             "imageUrl": "../../image/imgs/slacks6.jpg",
             "oldPrice": "74,000원",
             "price": "23,000원",
-            "index": 37
+            "index": 37,
+            "amount": 23000
         },
         {
             "productName": "밴딩 슬랙스",
@@ -349,7 +387,8 @@
             "imageUrl": "../../image/imgs/slacks7.jpg",
             "oldPrice": "55,000원",
             "price": "32,000원",
-            "index": 38
+            "index": 38,
+            "amount": 32000
         },
         {
             "productName": "정장 슬랙스",
@@ -358,7 +397,8 @@
             "imageUrl": "../../image/imgs/slacks8.jpg",
             "oldPrice": "78,000원",
             "price": "22,000원",
-            "index": 39
+            "index": 39,
+            "amount": 22000
         },
         {
             "productName": "라운드 티셔츠",
@@ -367,7 +407,8 @@
             "imageUrl": "../../image/imgs/tshirts1.jpg",
             "oldPrice": "57,000원",
             "price": "20,000원",
-            "index": 40
+            "index": 40,
+            "amount": 20000
         },
         {
             "productName": "브이넥 티셔츠",
@@ -376,7 +417,8 @@
             "imageUrl": "../../image/imgs/tshirts2.jpg",
             "oldPrice": "58,000원",
             "price": "38,000원",
-            "index": 41
+            "index": 41,
+            "amount": 38000
         },
         {
             "productName": "프린트 티셔츠",
@@ -385,7 +427,8 @@
             "imageUrl": "../../image/imgs/tshirts3.jpg",
             "oldPrice": "53,000원",
             "price": "29,000원",
-            "index": 42
+            "index": 42,
+            "amount": 29000
         },
         {
             "productName": "오버핏 티셔츠",
@@ -394,7 +437,8 @@
             "imageUrl": "../../image/imgs/tshirts4.jpg",
             "oldPrice": "77,000원",
             "price": "33,000원",
-            "index": 43
+            "index": 43,
+            "amount": 33000
         },
         {
             "productName": "슬림 티셔츠",
@@ -403,7 +447,8 @@
             "imageUrl": "../../image/imgs/tshirts5.jpg",
             "oldPrice": "48,000원",
             "price": "28,000원",
-            "index": 44
+            "index": 44,
+            "amount": 28000
         },
         {
             "productName": "스트라이프 티셔츠",
@@ -412,7 +457,8 @@
             "imageUrl": "../../image/imgs/tshirts6.jpg",
             "oldPrice": "47,000원",
             "price": "36,000원",
-            "index": 45
+            "index": 45,
+            "amount": 36000
         },
         {
             "productName": "크롭 티셔츠",
@@ -421,7 +467,8 @@
             "imageUrl": "../../image/imgs/tshirts7.jpg",
             "oldPrice": "73,000원",
             "price": "23,000원",
-            "index": 46
+            "index": 46,
+            "amount": 23000
         },
         {
             "productName": "기본 티셔츠",
@@ -430,7 +477,8 @@
             "imageUrl": "../../image/imgs/tshirts8.jpg",
             "oldPrice": "42,000원",
             "price": "23,000원",
-            "index": 47
+            "index": 47,
+            "amount": 23000
         },
         {
             "productName": "오버핏 코트",
@@ -439,7 +487,8 @@
             "imageUrl": "../../image/imgs/coat9.jpg",
             "oldPrice": "65,000원",
             "price": "30,000원",
-            "index": 48
+            "index": 48,
+            "amount": 30000
         },
         {
             "productName": "심플 울 코트",
@@ -448,7 +497,8 @@
             "imageUrl": "../../image/imgs/coat10.jpg",
             "oldPrice": "48,000원",
             "price": "19,000원",
-            "index": 49
+            "index": 49,
+            "amount": 19000
         },
         {
             "productName": "더블 브레스트 코트",
@@ -457,7 +507,8 @@
             "imageUrl": "../../image/imgs/coat11.jpg",
             "oldPrice": "40,000원",
             "price": "27,000원",
-            "index": 50
+            "index": 50,
+            "amount": 27000
         },
         {
             "productName": "후드 코트",
@@ -466,7 +517,8 @@
             "imageUrl": "../../image/imgs/coat12.jpg",
             "oldPrice": "51,000원",
             "price": "34,000원",
-            "index": 51
+            "index": 51,
+            "amount": 34000
         },
         {
             "productName": "앤드류 코트",
@@ -475,7 +527,8 @@
             "imageUrl": "../../image/imgs/coat13.jpg",
             "oldPrice": "57,000원",
             "price": "26,000원",
-            "index": 52
+            "index": 52,
+            "amount": 26000
         },
         {
             "productName": "모직 코트",
@@ -484,7 +537,8 @@
             "imageUrl": "../../image/imgs/coat14.jpg",
             "oldPrice": "41,000원",
             "price": "32,000원",
-            "index": 53
+            "index": 53,
+            "amount": 32000
         },
         {
             "productName": "봄버 자켓",
@@ -493,7 +547,8 @@
             "imageUrl": "../../image/imgs/jacket9.jpg",
             "oldPrice": "67,000원",
             "price": "25,000원",
-            "index": 54
+            "index": 54,
+            "amount": 25000
         },
         {
             "productName": "테일러드 자켓",
@@ -502,7 +557,8 @@
             "imageUrl": "../../image/imgs/jacket10.jpg",
             "oldPrice": "45,000원",
             "price": "19,000원",
-            "index": 55
+            "index": 55,
+            "amount": 19000
         },
         {
             "productName": "트렌치 자켓",
@@ -511,7 +567,8 @@
             "imageUrl": "../../image/imgs/jacket11.jpg",
             "oldPrice": "78,000원",
             "price": "23,000원",
-            "index": 56
+            "index": 56,
+            "amount": 23000
         },
         {
             "productName": "박시핏 자켓",
@@ -520,7 +577,8 @@
             "imageUrl": "../../image/imgs/jacket12.jpg",
             "oldPrice": "66,000원",
             "price": "32,000원",
-            "index": 57
+            "index": 57,
+            "amount": 32000
         },
         {
             "productName": "하이넥 자켓",
@@ -529,7 +587,8 @@
             "imageUrl": "../../image/imgs/jacket13.jpg",
             "oldPrice": "65,000원",
             "price": "27,000원",
-            "index": 58
+            "index": 58,
+            "amount": 27000
         },
         {
             "productName": "숏 야상",
@@ -538,7 +597,8 @@
             "imageUrl": "../../image/imgs/jacket14.jpg",
             "oldPrice": "63,000원",
             "price": "35,000원",
-            "index": 59
+            "index": 59,
+            "amount": 35000
         },
         {
             "productName": "화이트 진",
@@ -547,7 +607,8 @@
             "imageUrl": "../../image/imgs/jeans9.jpg",
             "oldPrice": "55,000원",
             "price": "31,000원",
-            "index": 60
+            "index": 60,
+            "amount": 31000
         },
         {
             "productName": "디스트로이드 진",
@@ -556,7 +617,8 @@
             "imageUrl": "../../image/imgs/jeans10.jpg",
             "oldPrice": "45,000원",
             "price": "21,000원",
-            "index": 61
+            "index": 61,
+            "amount": 21000
         },
         {
             "productName": "플레어 진",
@@ -565,7 +627,8 @@
             "imageUrl": "../../image/imgs/jeans11.jpg",
             "oldPrice": "70,000원",
             "price": "37,000원",
-            "index": 62
+            "index": 62,
+            "amount": 37000
         },
         {
             "productName": "세미 배기 진",
@@ -574,7 +637,8 @@
             "imageUrl": "../../image/imgs/jeans12.jpg",
             "oldPrice": "71,000원",
             "price": "25,000원",
-            "index": 63
+            "index": 63,
+            "amount": 25000
         },
         {
             "productName": "빈티지 진",
@@ -583,7 +647,8 @@
             "imageUrl": "../../image/imgs/jeans13.jpg",
             "oldPrice": "60,000원",
             "price": "25,000원",
-            "index": 64
+            "index": 64,
+            "amount": 25000
         },
         {
             "productName": "스키니 진",
@@ -592,7 +657,8 @@
             "imageUrl": "../../image/imgs/jeans14.jpg",
             "oldPrice": "41,000원",
             "price": "24,000원",
-            "index": 65
+            "index": 65,
+            "amount": 24000
         },
         {
             "productName": "포켓 셔츠",
@@ -601,7 +667,8 @@
             "imageUrl": "../../image/imgs/shirts9.jpg",
             "oldPrice": "73,000원",
             "price": "36,000원",
-            "index": 66
+            "index": 66,
+            "amount": 36000
         },
         {
             "productName": "카라 셔츠",
@@ -610,7 +677,8 @@
             "imageUrl": "../../image/imgs/shirts10.jpg",
             "oldPrice": "56,000원",
             "price": "28,000원",
-            "index": 67
+            "index": 67,
+            "amount": 28000
         },
         {
             "productName": "슬림 셔츠",
@@ -619,7 +687,8 @@
             "imageUrl": "../../image/imgs/shirts11.jpg",
             "oldPrice": "66,000원",
             "price": "30,000원",
-            "index": 68
+            "index": 68,
+            "amount": 30000
         },
         {
             "productName": "오버핏 셔츠",
@@ -628,7 +697,8 @@
             "imageUrl": "../../image/imgs/shirts12.jpg",
             "oldPrice": "51,000원",
             "price": "33,000원",
-            "index": 69
+            "index": 69,
+            "amount": 33000
         },
         {
             "productName": "레이온 셔츠",
@@ -637,7 +707,8 @@
             "imageUrl": "../../image/imgs/shirts13.jpg",
             "oldPrice": "67,000원",
             "price": "27,000원",
-            "index": 70
+            "index": 70,
+            "amount": 27000
         },
         {
             "productName": "샴브레이 셔츠",
@@ -646,7 +717,8 @@
             "imageUrl": "../../image/imgs/shirts14.jpg",
             "oldPrice": "59,000원",
             "price": "38,000원",
-            "index": 71
+            "index": 71,
+            "amount": 38000
         },
         {
             "productName": "플레어 슬랙스",
@@ -655,7 +727,8 @@
             "imageUrl": "../../image/imgs/slacks9.jpg",
             "oldPrice": "57,000원",
             "price": "24,000원",
-            "index": 72
+            "index": 72,
+            "amount": 24000
         },
         {
             "productName": "핀턱 슬랙스",
@@ -664,7 +737,8 @@
             "imageUrl": "../../image/imgs/slacks10.jpg",
             "oldPrice": "69,000원",
             "price": "38,000원",
-            "index": 73
+            "index": 73,
+            "amount": 38000
         },
         {
             "productName": "스트레이트 슬랙스",
@@ -673,7 +747,8 @@
             "imageUrl": "../../image/imgs/slacks11.jpg",
             "oldPrice": "66,000원",
             "price": "21,000원",
-            "index": 74
+            "index": 74,
+            "amount": 21000
         },
         {
             "productName": "셔링 슬랙스",
@@ -682,7 +757,8 @@
             "imageUrl": "../../image/imgs/slacks12.jpg",
             "oldPrice": "43,000원",
             "price": "38,000원",
-            "index": 75
+            "index": 75,
+            "amount": 38000
         },
         {
             "productName": "린넨 슬랙스",
@@ -691,7 +767,8 @@
             "imageUrl": "../../image/imgs/slacks13.jpg",
             "oldPrice": "50,000원",
             "price": "25,000원",
-            "index": 76
+            "index": 76,
+            "amount": 25000
         },
         {
             "productName": "투턱 슬랙스",
@@ -700,7 +777,8 @@
             "imageUrl": "../../image/imgs/slacks14.jpg",
             "oldPrice": "55,000원",
             "price": "35,000원",
-            "index": 77
+            "index": 77,
+            "amount": 35000
         },
         {
             "productName": "반팔 티셔츠",
@@ -709,7 +787,8 @@
             "imageUrl": "../../image/imgs/tshirts9.jpg",
             "oldPrice": "47,000원",
             "price": "30,000원",
-            "index": 78
+            "index": 78,
+            "amount": 30000
         },
         {
             "productName": "긴팔 티셔츠",
@@ -718,7 +797,8 @@
             "imageUrl": "../../image/imgs/tshirts10.jpg",
             "oldPrice": "39,000원",
             "price": "19,000원",
-            "index": 79
+            "index": 79,
+            "amount": 19000
         },
         {
             "productName": "헨리넥 티셔츠",
@@ -727,7 +807,8 @@
             "imageUrl": "../../image/imgs/tshirts11.jpg",
             "oldPrice": "42,000원",
             "price": "21,000원",
-            "index": 80
+            "index": 80,
+            "amount": 21000
         },
         {
             "productName": "하프넥 티셔츠",
@@ -736,7 +817,8 @@
             "imageUrl": "../../image/imgs/tshirts12.jpg",
             "oldPrice": "62,000원",
             "price": "29,000원",
-            "index": 81
+            "index": 81,
+            "amount": 29000
         },
         {
             "productName": "워싱 티셔츠",
@@ -745,7 +827,8 @@
             "imageUrl": "../../image/imgs/tshirts13.jpg",
             "oldPrice": "47,000원",
             "price": "22,000원",
-            "index": 82
+            "index": 82,
+            "amount": 22000
         },
         {
             "productName": "레터링 티셔츠",
@@ -754,7 +837,8 @@
             "imageUrl": "../../image/imgs/tshirts14.jpg",
             "oldPrice": "48,000원",
             "price": "26,000원",
-            "index": 83
+            "index": 83,
+            "amount": 26000
         }
     ]
 }
