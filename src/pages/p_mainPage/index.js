@@ -272,7 +272,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     heart();
 
-
-
     applyProductFirst();
 });
