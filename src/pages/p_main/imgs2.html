@@ -317,8 +317,8 @@
 
             hearts.forEach(function (heart) {
                 heart.addEventListener("click", function (event) {
-                    event.stopPropagation(); // ✅ 이벤트 버블링 방지!
-                    event.preventDefault();  // ✅ 링크 기능도 방지!
+                    event.stopPropagation(); //  이벤트 버블링 방지!
+                    event.preventDefault();  //  링크 기능도 방지!
 
                     heart.classList.toggle("active");
                     heart.innerHTML = heart.classList.contains("active") ? "&#10084;" : "&#9825;";
