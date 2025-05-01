@@ -10,6 +10,10 @@
 
     <!-- log in & sign up -->
     <link rel="stylesheet" type="text/css" href="css/logIn_signUp.css">
+    <!-- 헤더 css -->
+    <link rel="stylesheet" href="../p_mainPage/header.css">
+    <!-- 헤더 아이콘 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/logIn_signUp.js"></script>
@@ -22,7 +26,22 @@
 
 <body>
     <header>
-        header영역
+        <div class="headerWrap">
+            <!-- 헤더 왼쪽 -->
+            <div class="headerLeft" onclick="location.href='/src/pages/p_mainPage/index.html'">LOGO</div>
+            <!-- 헤더 오른쪽 -->
+            <div class="headerRight">
+                <div class="iconWrap">
+                    <div class="iconBtn" onclick="location.href='./testPage.html'">
+                        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        <div class="cartNum">0</div>
+                    </div>
+                    <div class="iconBtn" onclick="location.href='./testPage.html'">
+                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <div class="loginWrap">
