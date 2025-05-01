@@ -1,6 +1,5 @@
-
 body {
-    padding-top: 125px;
+    padding-top: 70px;
 }
 
 /* banner */
@@ -359,46 +358,76 @@ body {
     transform: translate(-70%, -50%) rotate(-135deg);
 }
 
-/* footer */
-#wrap {
-    min-height: 100vh;
-    position: relative;
-    width: 100%;
-    background-color: #f2f2f2;
+/* 상품 개수 */
+.productNumbers {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 100px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
-section {
-    padding-bottom: 105px;
+/* 최근 본 상품 */
+.recent-products {
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px 0;
 }
 
-footer {
-    width: 100%;
-    height: 125px;
-    bottom: 0px;
-    /* position: absolute; */
-    border-top: 1px solid #c4c4c4;
-    padding-top: 15px;
-    color: #808080;
+.recent-products h4 {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    color: #333;
+}
+
+#recentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0 10px;
+}
+
+.recent-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 110px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    color: #222;
+    transition: all 0.2s;
     font-size: 12px;
 }
 
-footer a {
-    display: inline-block;
-    margin: 0 20px 10px 20px;
-    color: #3d3d3d;
-    font-size: 13px;
+.recent-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
 
-footer a:visited {
-    color: #808080;
+.recent-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
 }
 
-footer p {
-    margin-top: 0;
-    margin-bottom: 0;
+.recent-item div {
+    margin-bottom: 3px;
 }
 
-footer p span {
-    display: inline-block;
-    margin-left: 20px;
+.recent-item div:nth-of-type(1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 }
