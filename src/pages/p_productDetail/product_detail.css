@@ -1,0 +1,415 @@
+@charset "utf-8";
+
+/* 페이지 전체 구조 */
+html {
+    overflow-y: scroll;
+    /* 무조건 수직 스크롤바를 표시 (필요 없으면 비활성화된 상태로 존재) */
+}
+
+header {
+    width: 1200px;
+    height: 90px;
+
+}
+
+.page-wrapper {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 auto;
+
+}
+
+.main-layout {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start; /* 추가 */
+    flex: 1;
+}
+
+.sub-layout {
+    width: 850px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden; /
+}
+
+.content-area {
+
+    width: 880px;
+}
+
+
+/* 이미지 영역 */
+.product-images {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    border: 1px solid #ccc;
+}
+
+/* 썸네일 목록 */
+.thumbnail-list {
+    margin: 50px 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80px;
+}
+
+.thumbnail-list img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-list img:hover,
+.thumbnail-list img.active {
+    opacity: 1;
+    border-color: blue;
+}
+
+/* 메인 이미지 뷰어 */
+.main-image-viewer {
+    width: 400px;
+    height: 600px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-left: 125px;
+}
+
+.main-image-viewer img {
+    border: 1px solid #ccc;
+    margin: auto;
+    display: block;
+    width: 400px;
+    height: 600px;
+}
+
+/* 사이드바 */
+.product-sidebar {
+    width: 350px;
+    position: sticky;
+    /* 또는 fixed로도 가능 */
+    top: 40px;
+    /* 상단 기준 위치 */
+    align-content: flex-end;
+    height: fit-content;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* 사이드바 내부 요소들 */
+.brand-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.likeBtn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.category,
+.rating {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.price del {
+    color: #999;
+    font-size: 14px;
+}
+
+.discount {
+    color: #d32f2f;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.coupon-box {
+
+    background: #eef6ff;
+    padding: 10px;
+    margin: 25px 0;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+.point-box {
+    background: #fafafa;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px dashed #ccc;
+    margin-bottom: 10px;
+}
+
+.option-select {
+    margin-top: 25px;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.action-buttons {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cart-btn,
+.buy-btn,
+.wishlist {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cart-btn {
+    background: white;
+    border: 1px solid black;
+}
+
+.buy-btn {
+    background: black;
+    color: white;
+}
+
+.wishlist {
+    background: none;
+    border: none;
+    text-align: left;
+}
+
+.payment-benefit {
+    font-size: 12px;
+    margin-top: 15px;
+    color: #444;
+}
+
+.size-inf {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* ✅ 가운데 정렬 */
+    align-items: center;
+    /* ✅ (필요시) 세로 정렬 */
+}
+
+/* 네비이션 바*/
+.tab-menu {
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.tab {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #666;
+}
+
+.tab.active {
+    color: black;
+    border-bottom: 3px solid black;
+}
+
+.inforImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sizeImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tab-content {
+    display: flex;
+    /* 가로 정렬 시작 */
+    flex-direction: row;
+    /* 기본값이긴 하지만 명시적으로 */
+    gap: 20px;
+    /* 항목 사이 간격 */
+    justify-content: flex-start;
+    /* 왼쪽부터 정렬 (center나 space-between도 가능) */
+
+    /* 세로 정렬 */
+}
+
+.sugItem {
+    width: 150px;
+    height: 100px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+footer {
+    width: 1200px;
+    height: 70px;
+    justify-content: center;
+}
+
+
+.smallArticleContainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.smallArticleScroll {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.smallArticleScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.smallArticleBox {
+  display: flex;
+  width: max-content;
+  min-width: 100%;
+  height: 100%;
+}
+
+.smallArticle {
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  margin-right: 10px;
+  border: 1px #999;
+}
+
+.smallArticle img {
+  width: 230px;
+  height: 250px;
+}
+
+.prevSmallArticle,
+.nextSmallArticle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.prevSmallArticle {
+  left: 10px;
+}
+
+.nextSmallArticle {
+  right: 10px;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+section {
+    padding-bottom: 105px;
+}
+
+footer {
+    width: 100%;
+    height: 125px;
+    bottom: 0px;
+    position: relative;
+    border-top: 1px solid #c4c4c4;
+    padding-top: 15px;
+    color: #808080;
+    font-size: 12px;
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 20px 10px 20px;
+    color: #3d3d3d;
+    font-size: 13px;
+}
+
+footer a:visited {
+    color: #808080;
+}
+
+footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer p span {
+    display: inline-block;
+    margin-left: 20px;
+}

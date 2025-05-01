@@ -54,20 +54,41 @@ $(document).ready(() => {
 
 
     $("#refundList").click(() => {
-        window.location = "#";
-        alert("refund List Click to move");
+        nextLocate = "refundList.html";
+        $("#transitionPage").css(
+            {
+                "transition": "500ms",
+                "left": "0%",
+            }
+        )
     });
 
     $("#customCenter").click(() => {
-        window.location = "#";
-        alert("customCenter List Click to move");
+        nextLocate = "customerCenter.html";
+        $("#transitionPage").css(
+            {
+                "transition": "500ms",
+                "left": "0%",
+            }
+        )
     });
 
     $("#notice").click(() => {
-        window.location = "#";
-        alert("notice List Click to move");
+        nextLocate = "notice.html";
+        $("#transitionPage").css(
+            {
+                "transition": "500ms",
+                "left": "0%",
+            }
+        )
     });
 
+    $("#PInfomodify").click(() => {
+        let option = 'width = 440px, height=100px, left =50px, top = 100px, menubar = no';
+        let userModify = window.open('modifyInfo.html', user.textContent, option);
+
+        console.log(userModify);
+    });
 })
 
 function showTransitionDiv() {
@@ -86,8 +107,7 @@ function hideTransitionLeft() {
     );
 }
 
-function addTransitionEvent()
-{
+function addTransitionEvent() {
     let transEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
 
     $("#transitionPage").on(transEnd, () => {

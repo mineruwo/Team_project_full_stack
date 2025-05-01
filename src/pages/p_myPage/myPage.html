@@ -24,44 +24,33 @@
     <script src="myPageJS.js"></script>
     <script src="../../common/localStorage.js"></script>
     <link rel="stylesheet" href="../p_main/footer1.css">
-    </head>
+    <!-- 헤더 css -->
+    <link rel="stylesheet" href="../p_mainPage/header.css">
+    <!-- 헤더 아이콘 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 
 <body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Start Bootstrap</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">All Products</a></li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
-                        <i class="bi-cart-fill me-1"></i>
-                        Cart
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                    </button>
-                </form>
+    <!-- Header-->
+    <header>
+        <div class="headerWrap">
+            <!-- 헤더 왼쪽 -->
+            <div class="headerLeft" onclick="location.href='/src/pages/p_mainPage/index.html'">LOGO</div>
+            <!-- 헤더 오른쪽 -->
+            <div class="headerRight">
+                <div class="iconWrap">
+                    <div class="iconBtn" onclick="location.href='./testPage.html'">
+                        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        <div class="cartNum">0</div>
+                    </div>
+                    <div class="iconBtn" onclick="location.href='./testPage.html'">
+                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-    <!-- Header-->
+    </header>
+
     <div class="innerDiv">
         <div class="innerDivWrap">
             <div class="userInfoDiv">
@@ -93,8 +82,8 @@
             </div>
 
             <div class="transitionDiv" id="transitionPage">
+            </div>
         </div>
-    </div>
 
 
     </div>

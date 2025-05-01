@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modifyinfocss.css">
+    <link rel="stylesheet" href="../../common/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="../../common/stringUtils.js"></script>
+    <script src="../../common/localStorage.js"></script>
+    <script src="modifyAddressJS.js"></script>
+    <title>개인 정보 수정</title>
+</head>
+
+<body>
+    <div class="topDiv">
+        <h2>개인 정보 수정</h2>
+    </div>
+    <button class="btn btn-secondary" id="addressFindButton">주소 찾기</button>
+
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="midDiv mb-3">
+            <input type="text" class="form-control" id="address" placeholder="서울특별시 OO구" required disabled >
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="detailAddress" placeholder="OOO동 OOO호" required>
+                <label for="detailAddress" class="form-label">상세 주소</label>
+            </div>
+
+            <button id="submitButton">수정</button>
+        </div>
+    </form>
+
+
+    <div class="bottomDiv">
+        <p id="term">
+            <span id="title"> &lt;(주) 더조은쇼핑몰 &gt; 개인정보 처리방침</span>
+            <br>
+            <br>
+            <br>
+
+        </p>
+        <p>
+            <span>&lt;더조은쇼핑몰&gt;은(는) 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」
+                및 관계 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게
+                관리하고 있습니다.<br><br>
+                이에 「개인정보 보호법」 제30조에 따라 정보주체에게
+                개인정보의 처리와 보호에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을
+                신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을
+                수립・공개합니다.</span>
+        </p>
+    </div>
+</body>
+
+</html>

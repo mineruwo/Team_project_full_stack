@@ -11,12 +11,14 @@ $(document).ready(() => {
         }
     )
 
-    $("#nameValue").text(nameEncrypt("손민우"));
-    $("#birValue").text(birthEncrypt("19940913"));
-    $("#phoneValue").text(phoneNumEncrypt("01049503013"));
-    $("#phoneValue").text(phoneNumEncrypt("01049503013"));
-    $("#mailValue").text(emailAddrEncrypt("mineruwo@gmail.com"));
-    $("#addrValue").text(addrEncrypt("서울특별시 강동구 암사2동 삼성광나루 아파트 102동 1103호"));
+    let currentUser = currentLoginInfo();
+
+    $("#nameValue").text(nameEncrypt(`${currentUser.name}`));
+    $("#birValue").text(birthEncrypt(`${currentUser.birthday}`));
+    $("#phoneValue").text(phoneNumEncrypt(`${currentUser.phonenumber}`));
+    $("#mailValue").text(emailAddrEncrypt(`${currentUser.email}`));
+    $("#addrValue").text(addrEncrypt(`${currentUser.address}`));
+    $("#nickname").text(`${currentUser.nickname} 님`);
 
     $("#photoChnage").click(() => {
         alert("photoChange");
@@ -32,7 +34,7 @@ $(document).ready(() => {
 
     $("#nickform").submit((evnet) => {
         evnet.preventDefault();
-    })
+    });
 
 
     $("#nickSave").on('click', function () {
@@ -41,7 +43,23 @@ $(document).ready(() => {
         console.log(modalBodyInput[0].value);
         $("#nickname").text(`${modalBodyInput[0].value} 님`);
         $("#nickNameChange").modal('hide');
-    })
+    });
+
+    $("#PInfomodify").click(() => {
+        let option = 'width = 440px, height=600px, left =50px, top = 100px, menubar = no';
+        let userModify = window.open('modifyInfo.html', userInfoTable.textContent, option);
+
+        console.log(userModify);
+    });
+
+    $("#addrModify").click(()=>
+        {
+
+            let option = 'width = 440px, height=600px, left =50px, top = 100px, menubar = no';
+            let userModify = window.open('modifyAdress.html', userInfoTable.textContent, option);
+    
+            console.log(userModify);
+        });
 })
 
 history.pushState(null, null, document.URL);

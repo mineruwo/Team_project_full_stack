@@ -1,7 +1,7 @@
 $(document).ready(() => {
     let transEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
     $("#transitionPage").on(transEnd, () => {
-    
+
     });
 
     $("#transitionPage").css(
@@ -11,13 +11,16 @@ $(document).ready(() => {
         }
     )
 
-    fetch("../../json/orderList.json")
-        .then((response) => response.json())
-        .then((jsonData) => {
-            let orderList = jsonData.orderList;
+    let currnentUser = currentLoginInfo();
+    if(currnentUser == null)
+    {
+        alert("로그인 한 유저가 존재하지 않습니다.");
+        return;
+    }
 
-            createOrderList(orderList, true);
-        });
+    let orderList = currnentUser.orderList;
+
+    createOrderList(orderList, true);
 })
 
 
@@ -100,7 +103,7 @@ function createProductItem(parentNode, product) {
 }
 
 history.pushState(null, null, document.URL);
-window.addEventListener('popstate', function() {
+window.addEventListener('popstate', function () {
 
     let transEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
 
@@ -112,7 +115,7 @@ window.addEventListener('popstate', function() {
         {
             "display": "block",
             "left": "0%",
-            "transition" : "500ms"
+            "transition": "500ms"
         }
     );
 });

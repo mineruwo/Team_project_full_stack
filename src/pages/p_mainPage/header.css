@@ -1,0 +1,121 @@
+body {
+    /* header 70 */
+    padding-top: 70px;
+}
+
+/* header */
+header {
+    /* 헤더 상단 고정 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+}
+
+.headerWrap {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 70px;
+}
+
+/* 로고 */
+.headerLeft {
+    font-weight: 900;
+    font-size: 28px;
+    padding: 0.3em;
+    cursor: pointer;
+    text-shadow: 
+        2px 2px 3px rgba(0, 0, 0, 0.2),  /* 첫 번째 더 큰 그림자 */
+        4px 4px 6px rgba(0, 0, 0, 0.25), /* 두 번째 더 큰 그림자 */
+        6px 6px 8px rgba(208, 208, 208, 0.3);  /* 세 번째 그림자, 입체감 강조 */
+}
+
+/* 아이콘 */
+.headerRight {
+    display: flex;
+    gap: 0.7em;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.iconWrap {
+    display: flex;
+    height: fit-content;
+}
+
+.iconBtn {
+    font-size: 1.5em;
+    padding: 0.5em 0.3em;
+    cursor: pointer;
+    transition: color 0.2, text-shadow 0.2s, transform 0.3s;
+}
+
+.iconBtn:not(:hover) {
+    color: black;
+}
+
+.iconBtn:hover {
+    color: #fff;
+    text-shadow: 0 0 4px black;
+    transform: scale(1.1); 
+}
+
+/* 카트 위 숫자 */
+.iconBtn:nth-child(1) {
+    position: relative;
+}
+
+.iconBtn:nth-child(1) .cartNum {
+    font-size: 0.7rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgb(241, 79, 79);
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+}
+
+/* 로그인 리스트 항목 스타일 */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    /* 기본 리스트 스타일 제거 */
+}
+
+.login li {
+    background-color: transparent;
+    /* 배경 없앰 */
+    color: #333;
+    /* 기본 텍스트 색상 */
+    font-weight: 500;
+    font-size: 14px;
+    /* 텍스트 크기 */
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    /* 둥글게 */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* 색상 변화 및 확대 효과 */
+}
+
+.login li:hover {
+    color: #989898;
+    /* 호버 시 텍스트 색상 회색으로 변경 */
+    transform: scale(1.1);
+    /* 호버 시 살짝 확대 */
+}

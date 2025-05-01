@@ -1,0 +1,49 @@
+
+
+.topDiv
+{
+    background-color: lightgray;
+}
+
+.topDiv h2
+{
+    font-weight: bold;
+    font-size:  28px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.midDiv
+{
+    margin-bottom: 30px;
+    height: fit-content;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    display: grid;
+    
+    gap: 3px;
+
+}
+
+
+.bottomDiv
+{
+    height: fit-content;
+    background-color: gray;
+    color: aliceblue;
+    font-size: 12px;
+    padding: 5px 5px 5px 5px;
+}
+
+.bottomDiv #term
+{
+    overflow-y: hidden;
+}
+
+.bottomDiv #title
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
