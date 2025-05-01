@@ -24,12 +24,9 @@ $(document).ready(() => {
     if (navi?.type === 'back_forward') {
         showTransitionDiv();
         setTimeout(hideTransitionLeft, 100);
+    }
 
-        addTransitionEvent();
-    }
-    else {
-        addTransitionEvent();
-    }
+    addTransitionEvent();
 
     $("#orderList").click(() => {
 
