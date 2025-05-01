@@ -1,4 +1,9 @@
 /* login 영역 시작 */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     width: 1200px;
     height: 70px;
@@ -8,7 +13,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1200px;
+    width: 100%;
     height: 100%;
     background-color: lightgray;
     padding: 20px 0 20px 0;

@@ -52,7 +52,7 @@ function getUserInfo(rawData) {
 }
 
 function isLogin() {
-    return window.localStorage.getItem('currentLogin') == undefined ? false : true;
+    return window.localStorage.getItem('currentLogin') == "undefined" ? false : true;
 }
 
 function registerUser(id, pw, name, birthday, phonenum, email) {
