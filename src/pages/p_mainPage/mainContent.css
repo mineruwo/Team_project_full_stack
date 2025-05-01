@@ -1,5 +1,5 @@
 body {
-    padding-top: 70px;
+    padding-top: 125px;
 }
 
 /* banner */
@@ -49,9 +49,8 @@ body {
     height: 100%;
 }
 
-
 /* 갤러리 */
-.product-summary {
+.productSummary {
     max-width: 1200px;
     padding-top: 40px;
     height: 120px;
@@ -366,68 +365,4 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
-}
-
-/* 최근 본 상품 */
-.recent-products {
-    margin: 50px auto;
-    max-width: 1200px;
-    padding: 20px 0;
-}
-
-.recent-products h4 {
-    margin-bottom: 20px;
-    padding-left: 10px;
-    color: #333;
-}
-
-#recentContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 0 10px;
-}
-
-.recent-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    width: 110px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    text-decoration: none;
-    color: #222;
-    transition: all 0.2s;
-    font-size: 12px;
-}
-
-.recent-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-}
-
-.recent-item img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 8px;
-    border: 1px solid #ddd;
-}
-
-.recent-item div {
-    margin-bottom: 3px;
-}
-
-.recent-item div:nth-of-type(1) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 100%;
 }

@@ -54,7 +54,7 @@ function loadGallery(galleryId) {
             heart();
             // 새로 로드된 내용에 대해 함수 재호출(끝)
 
-            // 새 페이지에 슬라이드 적용
+            // 새 페이지에 슬라이드 넘기기 적용
             new bootstrap.Carousel(document.querySelector('#visualSlider'), {
                 interval: 3000,
                 ride: 'carousel'
@@ -66,6 +66,13 @@ function loadGallery(galleryId) {
             if (summary) {
                 summary.textContent = `전체 ${productCount}개`;
             }
+
+            // 최근 본 상품 클릭 이벤트 바인딩
+            setupRecentProductsTracking();
+
+            // (필요 시 최근 본 상품 목록 다시 그림 — 단, 첫 페이지에서만 할 수도 있음)
+            renderRecentProducts();
+
 
             // 페이지에 따라 다른 gallery 사진
             switch (galleryId) {
@@ -126,6 +133,11 @@ async function applyProductInfo(num) {
 
         if (!product) return;
 
+        // 상품 정보 보내기 
+        article.addEventListener('click', () => {
+            setClickItem(idx);
+        });
+
         let imgElement = article.querySelector('.thumb img');
         if (imgElement) {
             imgElement.src = product.imageUrl;
@@ -143,7 +155,13 @@ async function applyProductInfo(num) {
     smallArticles.forEach((article, idx) => {
         // productList 0~ 47 작은 사진
         let product = productList.productList[(num - 1) * 8 + idx];
+
         if (!product) return;
+
+        // 상품 정보 보내기 
+        article.addEventListener('click', () => {
+            setClickItem(idx);
+        });
 
         let imgElement = article.querySelector('.thumb img');
         if (imgElement) {
@@ -171,7 +189,10 @@ async function applyProductFirst() {
 
         if (!product) return;
 
-        console.log(idx * 6 + 48);
+        // 상품 정보 보내기 
+        article.addEventListener('click', () => {
+            setClickItem(idx);
+        });
 
         let imgElement = article.querySelector('.thumb img');
         if (imgElement) {
@@ -191,7 +212,10 @@ async function applyProductFirst() {
         let product = productList.productList[idx * 6];
         if (!product) return;
 
-        console.log(idx * 6);
+        // 상품 정보 보내기 
+        article.addEventListener('click', () => {
+            setClickItem(idx);
+        });
 
         let imgElement = article.querySelector('.thumb img');
         if (imgElement) {
@@ -208,18 +232,7 @@ async function applyProductFirst() {
     });
 }
 
-
-
-// 호출
-document.addEventListener("DOMContentLoaded", () => {
-    // 전체 상품 수 세기 + 출력
-    const productCount = document.querySelectorAll(".products article").length;
-    const summary = document.querySelector(".productNumbers");
-    if (summary) {
-        summary.textContent = `전체 ${productCount}개`;
-    }
-
-    // 최근 본 상품 (시작)
+function setupRecentProductsTracking() {
     const productLinks = document.querySelectorAll(".products a");
     productLinks.forEach(link => {
         link.addEventListener("click", () => {
@@ -242,22 +255,39 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("recentProducts", JSON.stringify(recent));
         });
     });
+}
 
+function renderRecentProducts() {
     const container = document.getElementById("recentContainer");
+    if (!container) return;
+
+    container.innerHTML = ""; // 이전 내용 초기화
+
     const recent = JSON.parse(localStorage.getItem("recentProducts")) || [];
     recent.forEach(p => {
         const item = document.createElement("a");
-        item.className = "recent-item";
+        item.className = "recentItem";
         item.href = p.url || "#";
         item.innerHTML = `
-                    <img src="${p.img}" alt="${p.name}">
-                    <div>${p.name}</div>
-                    <div>${Number(p.price).toLocaleString()}원</div>
-                `;
+            <img src="${p.img}" alt="${p.name}">
+            <div>${p.name}</div>
+            <div>${Number(p.price).toLocaleString()}원</div>
+        `;
         container.appendChild(item);
     });
-    // 최근 본 상품 (끝)
+}
 
+
+// 호출
+document.addEventListener("DOMContentLoaded", () => {
+    // 전체 상품 수 세기 + 출력
+    const productCount = document.querySelectorAll(".products article").length;
+    const summary = document.querySelector(".productNumbers");
+    if (summary) {
+        summary.textContent = `전체 ${productCount}개`;
+    }
+
+    // 스크롤
     scrollImg({
         itemSelector: ".bigArticleScroll",
         prevButtonSelector: ".prevBigArticle",
@@ -270,9 +300,14 @@ document.addEventListener("DOMContentLoaded", () => {
         nextButtonSelector: ".nextSmallArticle"
     });
 
+    // 하트
     heart();
 
-
-
+    // 첫 페이지 상품 불러오기 
     applyProductFirst();
+
+    // 최근 본 상품 클릭 이벤트 
+    setupRecentProductsTracking();
+    renderRecentProducts();
+
 });
