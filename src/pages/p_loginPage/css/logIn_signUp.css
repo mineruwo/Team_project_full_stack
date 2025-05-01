@@ -4,11 +4,6 @@ body {
     flex-direction: column;
 }
 
-header {
-    width: 1200px;
-    height: 70px;
-}
-
 main {
     display: flex;
     flex-direction: column;

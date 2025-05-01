@@ -58,7 +58,6 @@ $(document).ready(() => {
 
     // 아이디 비밀번호 찾기 체인지 버튼
     $(document).ready(() => {
-        // 아이디 비밀번호 찾기 체인지 버튼
         $("#id_findPwBtn").on({
             click: () => {
                 $(".findIdWrap").css(
@@ -311,6 +310,3 @@ $(document).ready(() => {
         checkForm();
     });
 });
-
-
-
