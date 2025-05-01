@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     // 사이드 바 찜버튼 활성화시 카운트 ++
-    const likeBtn = document.querySelector('.likeBtn');//likeBtn의 클래스를 가진 
-    const likeCount = document.getElementById('likeCount');
+    const likeBtn = document.querySelector('.likeBtn');//likeBtn의 클래스를 likeBtn에 대입한다 
+    const likeCount = document.getElementById('likeCount');//likeCount ID를 likeCount 라는 함수에 대입
 
-    let count = 0;
+    let count = 0;//카운트에 0 대입 
 
-    likeBtn.addEventListener('click', () => {
-        count++;
-        likeCount.textContent = count;
+    likeBtn.addEventListener('click', () => {//likeBtn에 클릭을 햇을때
+        count++; //카운트가 1씩늘어난다
+        likeCount.textContent = count;//likeCount의 출력문을 count만큼 출력한다 
     });
 
     const likeProduct= document.querySelector('.wishlist');
@@ -38,18 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
         
     });
  //네비게이션 바 스크립트 적용
-    const tabs = document.querySelectorAll(".tab");
-    const contents = document.querySelectorAll(".tab-content");
+    const tabs = document.querySelectorAll(".tab");//tab 클래스들을 tabs에 정의한다
+    const contents = document.querySelectorAll(".tab-content");//tab-content들을 contents에 정의한다
   
-    tabs.forEach(tab => {
-      tab.addEventListener("click", () => {
-        tabs.forEach(t => t.classList.remove("active"));
-        contents.forEach(c => c.style.display = "none");
+    tabs.forEach(tab => { //각 탭내부를 돌며 
+      tab.addEventListener("click", () => {//탭을클릭햇을시 
+        tabs.forEach(t => +
+            t.classList.remove("active"));//각탭의 active속성을 지우고
+        contents.forEach(c => c.style.display = "none");//탭의 정보를 지우고
   
         // 현재 탭 활성화
-        tab.classList.add("active");
-        const target = tab.getAttribute("data-tab");
-        document.getElementById(target).style.display = "block";
+        tab.classList.add("active");//클릭된탭에 active를 추가한다 
+        const target = tab.getAttribute("data-tab");//target에 data-tab을 대입한다 
+        document.getElementById(target).style.display = "block";//타겟이 가진 정보를 표시한다.
       });
     });
 
