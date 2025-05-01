@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-
     <link rel="stylesheet" href="../../common/reset.css">
     <link rel="stylesheet" href="../p_mainPage/header.css">
     <link rel="stylesheet" href="../p_mainPage/menu.css">
     <link rel="stylesheet" href="../p_mainPage/mainContent.css">
     <link rel="stylesheet" href="../p_mainPage/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="/src/pages/p_mainPage/index.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../../common/localStorage.js"></script>
+    <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -27,7 +31,7 @@
     <header>
         <div class="headerWrap">
             <!-- 헤더 왼쪽 -->
-            <div class="headerLeft" onclick="location.href='/src/pages/p_mainPage/index.html'">LOGO</div>
+            <div class="headerLeft" onclick="location.href='../p_mainPage/index.html'">LOGO</div>
             <!-- 헤더 오른쪽 -->
             <div class="headerRight">
                 <div class="iconWrap">
@@ -38,6 +42,9 @@
                     <div class="iconBtn" onclick="location.href='./testPage.html'">
                         <i class="fa-solid fa-user" aria-hidden="true"></i>
                     </div>
+                    <ul class="login">
+                        <li onclick="location.href='your-link-here.html'">로그인</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -70,54 +77,46 @@
             </ul>
         </nav>
     </div>
-    </div>
 
     <main id="mainContent">
+        <!-- banner -->
+        <div class="top-banner">
+            지금 가입하면 10% 할인 쿠폰 증정
+        </div>
         <!-- 슬라이드 -->
-<div id="visualSlider" class="carousel slide">
-    <div class="carousel-inner" id="imgContainer">
-        <div class="carousel-item active" id="imgBox">
-            <div class="d-flex justify-content-center">
-                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                    <img src="/src/pages/p_mainPage/imgs/b19.jpg" class="d-block w-45">
-                </a>
-                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                    <img src="/src/pages/p_mainPage/imgs/b15.jpg" class="d-block w-45">
-                </a>
+        <div id="visualSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner" id="imgContainer">
+                <div class="carousel-item active" id="imgBox">
+                    <div class="d-flex justify-content-center">
+                        <a href="./testPage.html" class="d-block w-45">
+                            <img src="../../image/imgs/1.jpg" class="d-block w-45">
+                        </a>
+                        <a href="./testPage.html" class="d-block w-45">
+                            <img src="../../image/imgs/2.jpg" class="d-block w-45">
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item" id="imgBox">
+                    <div class="d-flex justify-content-center">
+                        <a href="./testPage.html" class="d-block w-45">
+                            <img src="../../image/imgs/3.jpg" class="d-block w-45">
+                        </a>
+                        <a href="./testPage.html" class="d-block w-45">
+                            <img src="../../image/imgs/4.jpg" class="d-block w-45">
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item" id="imgBox">
+                    <div class="d-flex justify-content-center">
+                        <a href="./testPage.html" class="d-block w-45">
+                            <img src="../../image/imgs/5.jpg" class="d-block w-45">
+                        </a>
+                        <a href="./testPage.html" class="d-block w-45">
+                            <img src="../../image/imgs/6.jpg" class="d-block w-45">
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="carousel-item" id="imgBox">
-            <div class="d-flex justify-content-center">
-                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                    <img src="/src/pages/p_mainPage/imgs/b12.jpg" class="d-block w-45">
-                </a>
-                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                    <img src="/src/pages/p_mainPage/imgs/b8.webp" class="d-block w-45">
-                </a>
-            </div>
-        </div>
-        <div class="carousel-item" id="imgBox">
-            <div class="d-flex justify-content-center">
-                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                    <img src="/src/pages/p_mainPage/imgs/b4.jpg" class="d-block w-45">
-                </a>
-                <a href="/src/pages/p_mainPage/testPage.html" class="d-block w-45">
-                    <img src="/src/pages/p_mainPage/imgs/b12.jpg" class="d-block w-45">
-                </a>
-            </div>
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#visualSlider" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#visualSlider" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-
             <button class="carousel-control-prev" type="button" data-bs-target="#visualSlider" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -132,7 +131,7 @@
         <!-- 갤러리 -->
         <div class="product-summary">
             <h4>NEW ARRIVAL</h4>
-            <h6>오늘의 신상</h6>          
+            <h6>오늘의 신상</h6>
         </div>
 
         <div class="productNumbers">전체 12개</div>
@@ -145,7 +144,6 @@
                         <article class="bigArticle">
                             <a href="#">
                                 <div class="thumb">
-
                                     <img src="">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
@@ -167,37 +165,6 @@
                                     <b></b>
                                     <div><del></del></div>
                                     <div class="price"></div>
-
-                                </div>
-                            </a>
-                        </article>
-                        <article class="bigArticle">
-                            <a href="#">
-                                <div class="thumb">
-
-                                    <img src="">
-                                    <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
-                                </div>
-                                <div class="info">
-                                    <b></b>
-                                    <div><del></del></div>
-                                    <div class="price"></div>
-
-                                </div>
-                            </a>
-                        </article>
-                        <article class="bigArticle">
-                            <a href="#">
-                                <div class="thumb">
-
-                                    <img src="">
-                                    <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
-                                </div>
-                                <div class="info">
-                                    <b></b>
-                                    <div><del></del></div>
-                                    <div class="price"></div>
-
                                 </div>
                             </a>
                         </article>
@@ -227,7 +194,32 @@
                                 </div>
                             </a>
                         </article>
-
+                        <article class="bigArticle">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="">
+                                    <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
+                                </div>
+                                <div class="info">
+                                    <b></b>
+                                    <div><del></del></div>
+                                    <div class="price"></div>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="bigArticle">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="">
+                                    <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
+                                </div>
+                                <div class="info">
+                                    <b></b>
+                                    <div><del></del></div>
+                                    <div class="price"></div>
+                                </div>
+                            </a>
+                        </article>
                     </div>
                 </div>
                 <!-- 화살표 버튼 -->
@@ -246,7 +238,6 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-
                                     <img src="">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
@@ -254,7 +245,20 @@
                                     <b></b>
                                     <div><del></del></div>
                                     <div class="price"></div>
+                                </div>
+                            </a>
 
+                        </article>
+                        <article class="smallArticle">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="">
+                                    <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
+                                </div>
+                                <div class="info">
+                                    <b></b>
+                                    <div><del></del></div>
+                                    <div class="price"></div>
                                 </div>
                             </a>
 
@@ -276,7 +280,6 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-
                                     <img src="">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
@@ -291,7 +294,6 @@
                         <article class="smallArticle">
                             <a href="#">
                                 <div class="thumb">
-
                                     <img src="">
                                     <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
                                 </div>
@@ -299,38 +301,6 @@
                                     <b></b>
                                     <div><del></del></div>
                                     <div class="price"></div>
-
-                                </div>
-                            </a>
-
-                        </article>
-                        <article class="smallArticle">
-                            <a href="#">
-                                <div class="thumb">
-
-                                    <img src="">
-                                    <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
-                                </div>
-                                <div class="info">
-                                    <b></b>
-                                    <div><del></del></div>
-                                    <div class="price"></div>
-
-                                </div>
-                            </a>
-                        </article>
-                        <article class="smallArticle">
-                            <a href="#">
-                                <div class="thumb">
-
-                                    <img src="">
-                                    <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
-                                </div>
-                                <div class="info">
-                                    <b></b>
-                                    <div><del></del></div>
-                                    <div class="price"></div>
-
                                 </div>
                             </a>
                         </article>
@@ -344,7 +314,6 @@
                                     <b></b>
                                     <div><del></del></div>
                                     <div class="price"></div>
-
                                 </div>
                             </a>
                         </article>
@@ -358,7 +327,19 @@
                                     <b></b>
                                     <div><del></del></div>
                                     <div class="price"></div>
-
+                                </div>
+                            </a>
+                        </article>
+                        <article class="smallArticle">
+                            <a href="#">
+                                <div class="thumb">
+                                    <img src="">
+                                    <button class="heart" aria-label="찜하기">&#9825;</button> <!-- 기본 하트 -->
+                                </div>
+                                <div class="info">
+                                    <b></b>
+                                    <div><del></del></div>
+                                    <div class="price"></div>
                                 </div>
                             </a>
                         </article>
@@ -374,7 +355,6 @@
             <!-- 작은 사진 끝 -->
         </section>
     </main>
-
 
     <!--  최근 본 상품 영역 추가 -->
     <div class="recent-products">
@@ -423,7 +403,6 @@
 
         </div>
     </footer>
-
 
 </body>
 
