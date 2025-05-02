@@ -64,7 +64,6 @@ function loadGallery(galleryId) {
             // (필요 시 최근 본 상품 목록 다시 그림 — 단, 첫 페이지에서만 할 수도 있음)
             renderRecentProducts();
 
-
             // 페이지에 따라 다른 gallery 사진
             switch (galleryId) {
                 case 'galleryCoat.html':
@@ -222,6 +221,7 @@ async function applyProductFirst() {
 
     });
 }
+
 
 function setupRecentProductsTracking() {
     const productLinks = document.querySelectorAll(".products a");
