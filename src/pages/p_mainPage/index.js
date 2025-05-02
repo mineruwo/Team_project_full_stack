@@ -1,5 +1,5 @@
 // 이미지 스크롤
-function scrollImg({ itemSelector, prevButtonSelector, nextButtonSelector }) {
+function scrollImg(itemSelector, prevButtonSelector, nextButtonSelector) {
     const scrollItems = document.querySelectorAll(itemSelector);
     const prevBtns = document.querySelectorAll(prevButtonSelector);
     const nextBtns = document.querySelectorAll(nextButtonSelector);
@@ -24,6 +24,7 @@ function scrollImg({ itemSelector, prevButtonSelector, nextButtonSelector }) {
     });
 }
 
+
 // 페이지 로드
 function loadGallery(galleryId) {
     const contentArea = document.getElementById('mainContent');
@@ -39,20 +40,10 @@ function loadGallery(galleryId) {
             contentArea.innerHTML = html;
 
             // 새로 로드된 내용에 대해 함수 재호출(시작)
-            scrollImg({
-                itemSelector: ".bigArticleScroll",
-                prevButtonSelector: ".prevBigArticle",
-                nextButtonSelector: ".nextBigArticle"
-            });
-
-            scrollImg({
-                itemSelector: ".smallArticleScroll",
-                prevButtonSelector: ".prevSmallArticle",
-                nextButtonSelector: ".nextSmallArticle"
-            });
+            scrollImg(".bigArticleScroll", ".prevBigArticle", ".nextBigArticle");
+            scrollImg(".smallArticleScroll", ".prevSmallArticle", ".nextSmallArticle");
 
             heart();
-            // 새로 로드된 내용에 대해 함수 재호출(끝)
 
             // 새 페이지에 슬라이드 넘기기 적용
             new bootstrap.Carousel(document.querySelector('#visualSlider'), {
@@ -287,18 +278,8 @@ document.addEventListener("DOMContentLoaded", () => {
         summary.textContent = `전체 ${productCount}개`;
     }
 
-    // 스크롤
-    scrollImg({
-        itemSelector: ".bigArticleScroll",
-        prevButtonSelector: ".prevBigArticle",
-        nextButtonSelector: ".nextBigArticle"
-    });
-
-    scrollImg({
-        itemSelector: ".smallArticleScroll",
-        prevButtonSelector: ".prevSmallArticle",
-        nextButtonSelector: ".nextSmallArticle"
-    });
+    scrollImg(".bigArticleScroll", ".prevBigArticle", ".nextBigArticle");
+    scrollImg(".smallArticleScroll", ".prevSmallArticle", ".nextSmallArticle");
 
     // 하트
     heart();
