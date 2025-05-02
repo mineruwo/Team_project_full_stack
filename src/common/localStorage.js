@@ -53,11 +53,8 @@ function getUserInfo(rawData) {
 
 function isLogin() {
 
-    let currentUser = window.localStorage.getItem('currentLogin');
+    return window.localStorage.getItem('currentLogin') == "undefined" ? false : true;
 
-
-    return  currentUser == "undefined" ? false : true;
-}
 
 function registerUser(id, pw, name, birthday, phonenum, email) {
     let userObject = createUserInfoObject(id, pw, name, birthday, phonenum, email);

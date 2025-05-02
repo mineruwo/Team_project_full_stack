@@ -284,7 +284,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // 하트
     heart();
 
-    // 첫 페이지 상품 불러오기 
+    let isLoginUser = isLogin();
+
+    $(".login>li")[0].innerHTML = `${isLoginUser ? "로그아웃" : "로그인"}`;
+
+    $(".login").click(function () {
+
+        if(isLoginUser)
+        {   
+            userLogout();
+            alert("로그아웃 되었습니다.");
+            console.log(isLoginUser);
+            location.reload();
+            return;
+        }
+        else
+        {
+            location.href = "../p_loginPage/login_signUp.html";
+        }
+        
+    });
+
     applyProductFirst();
 
     $("#mypage").click(()=>
@@ -303,3 +323,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setupRecentProductsTracking();
     renderRecentProducts();
 });
+
+

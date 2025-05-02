@@ -5,21 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- header -->
-    <!-- header -->
+        
+    <!-- footer -->
+    <link rel="stylesheet" href="../p_mainPage/footer.css">
+    <!-- 헤더 css -->
+    <link rel="stylesheet" href="../p_mainPage/header.css">
 
     <!-- log in & sign up -->
     <link rel="stylesheet" type="text/css" href="css/logIn_signUp.css">
-    <!-- 헤더 css -->
-    <link rel="stylesheet" href="../p_mainPage/header.css">
-    <!-- 헤더 아이콘 css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/logIn_signUp.js"></script>
-    <link rel="stylesheet" href="../p_main/footer1.css">
     <script src="../../common/localStorage.js"></script>
-    <!-- log in & sign up -->
 
     <!-- footer -->
 
@@ -27,12 +25,11 @@
     <!-- footer -->
 
 </head>
-
 <body>
     <header>
         <div class="headerWrap">
             <!-- 헤더 왼쪽 -->
-            <div class="headerLeft" onclick="location.href='/src/pages/p_mainPage/index.html'">LOGO</div>
+            <div class="headerLeft" onclick="location.href='../p_mainPage/index.html'">LOGO</div>
             <!-- 헤더 오른쪽 -->
             <div class="headerRight">
                 <div class="iconWrap">
@@ -43,10 +40,14 @@
                     <div class="iconBtn" onclick="location.href='./testPage.html'">
                         <i class="fa-solid fa-user" aria-hidden="true"></i>
                     </div>
+                    <ul class="login">
+                        <li onclick="location.href='your-link-here.html'">로그인</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </header>
+
     <main>
         <div class="loginWrap">
             <div class="selectBtn">
@@ -147,7 +148,7 @@
                     </div>
                     <div class="inputDiv">
                     <input class="up_input" type="password" name="up_inputPw" id="up_inputPw"
-                        placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함, 8~16 자)">
+                        placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함, 8 ~ 16 자)">
                     </div>
                     <p class="up_errPw"></p>
                 </div>
@@ -186,7 +187,7 @@
                         </select>
                         <div class="containInput">
                         <input class="up_input" type="tel" name="up_inputTell" id="up_inputTell"
-                            placeholder="휴대폰 번호 입력 ('-'' 제외, 11~12자리 입력)">
+                            placeholder="휴대폰 번호 입력 ('-' 제외, 11~12자리 입력)">
                         </div>
                     </div>
                     <p class="errTell"></p>
@@ -259,9 +260,9 @@
             </div>
         </div>
     </main>
+
     <footer>
         <nav>
-
             <a href='' target='_blank'>이용약관</a> |
             <a href='' target='_blank'>이용안내</a>
         </nav>
