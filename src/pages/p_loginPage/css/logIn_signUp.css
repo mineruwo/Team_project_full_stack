@@ -1,5 +1,6 @@
 /* login 영역 시작 */
 body {
+    padding-top: 70px; 
     display: flex;
     flex-direction: column;
 }

@@ -5,26 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        
+
+    <link rel="stylesheet" href="../../common/reset.css">
     <!-- footer -->
     <link rel="stylesheet" href="../p_mainPage/footer.css">
     <!-- 헤더 css -->
     <link rel="stylesheet" href="../p_mainPage/header.css">
 
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> -->
+
     <!-- log in & sign up -->
-    <link rel="stylesheet" type="text/css" href="css/logIn_signUp.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/logIn_signUp.js"></script>
     <script src="../../common/localStorage.js"></script>
-
+    <!-- 헤더 js -->
+    <script src="../p_mainPage/header.js"></script>
     <!-- footer -->
 
-     <link rel="stylesheet" href="../p_mainPage/mainContent.css">
+    <link rel="stylesheet" href="../p_mainPage/mainContent.css">
     <!-- footer -->
+    <link rel="stylesheet" type="text/css" href="css/logIn_signUp.css">
 
 </head>
+
 <body>
     <header>
         <div class="headerWrap">
@@ -33,15 +40,16 @@
             <!-- 헤더 오른쪽 -->
             <div class="headerRight">
                 <div class="iconWrap">
-                    <div class="iconBtn" onclick="location.href='./testPage.html'">
+                    <div class="iconBtn" id="cart">
                         <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
                         <div class="cartNum">0</div>
                     </div>
-                    <div class="iconBtn" onclick="location.href='./testPage.html'">
+                    <div class="iconBtn" id="mypage">
                         <i class="fa-solid fa-user" aria-hidden="true"></i>
                     </div>
                     <ul class="login">
-                        <li onclick="location.href='your-link-here.html'">로그인</li>
+                        <li>로그인</li>
+                        <!-- <li onclick="location.href='your-link-here.html'">로그인</li> -->
                     </ul>
                 </div>
             </div>
@@ -52,30 +60,31 @@
         <div class="loginWrap">
             <div class="selectBtn">
                 <div id="in_loginBtn">
-                <button>로그인</button>
+                    <button>로그인</button>
                 </div>
                 <div id="in_signupBtn">
-                <button>회원가입</button>
+                    <button>회원가입</button>
                 </div>
             </div>
 
-            <div class ="panel formPanel">
+            <div class="panel formPanel">
                 <div class="inputWrap">
                     <div class="labelDiv">
-                    <label for="in_inputId">아이디</label>
+                        <label for="in_inputId">아이디</label>
                     </div>
                     <div class="inputDiv">
-                    <input class="in_input" type="text" name="in_inputId" id="in_inputId" placeholder="아이디를 입력해주세요">
+                        <input class="in_input" type="text" name="in_inputId" id="in_inputId" placeholder="아이디를 입력해주세요">
                     </div>
                     <p class="in_errId"></p>
                 </div>
 
                 <div class="inputWrap">
                     <div class="labelDiv">
-                    <label for="in_inputPw">비밀번호</label>
+                        <label for="in_inputPw">비밀번호</label>
                     </div>
                     <div class="inputDiv">
-                    <input class="in_input" type="password" name="in_inputPw" id="in_inputPw" placeholder="비밀번호를 입력해주세요">
+                        <input class="in_input" type="password" name="in_inputPw" id="in_inputPw"
+                            placeholder="비밀번호를 입력해주세요">
                     </div>
                     <p class="in_errPw"></p>
                 </div>
@@ -83,7 +92,7 @@
                 <div class="in_find">
                     <button type="submit" id="find">아이디 / 비밀번호 찾기</button>
                 </div>
-                
+
                 <div class="submit_button">
                     <button type="submit" class="btn btn_in">로그인</button>
                 </div>
@@ -95,23 +104,26 @@
                 <div class="social">
                     <div class="social_naver">
                         <a href="https://nid.naver.com/nidlogin.login">
-                        <img src="image/icons/naver.png" alt="naver">
+                            <img src="image/icons/naver.png" alt="naver">
                         </a>
                     </div>
                     <div class="social_kakao">
-                        <a href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount#login">
-                        <img src="image/icons/kakao.png" alt="kakao">
-                    </a>
+                        <a
+                            href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount#login">
+                            <img src="image/icons/kakao.png" alt="kakao">
+                        </a>
                     </div>
                     <div class="social_google">
                         </a>
-                        <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3D%25EA%25B5%25AC%25EA%25B8%2580%25EB%25A1%259C%25EA%25B7%25B8%25EC%259D%25B8%26oq%3D%25EA%25B5%25AC%25EA%25B8%2580%25EB%25A1%259C%25EA%25B7%25B8%25EC%259D%25B8%26gs_lcrp%3DEgZjaHJvbWUyBggAEEUYOTISCAEQLhhDGMcBGNEDGIAEGIoFMgwIAhAAGEMYgAQYigUyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyDQgGEAAYgwEYsQMYgAQyDAgHEAAYQxiABBiKBTINCAgQABiDARixAxiABNIBCDEyMzZqMGo5qAIAsAIB%26sourceid%3Dchrome%26ie%3DUTF-8&ec=GAZAAQ&hl=ko&passive=true&ifkv=ASKV5Mg-i7rOoRafcPUEFU5IGsCJRPHI4nkj9K1bGYfzxRlRIzL3iUho44YvICmodgpo8pSrLnPR&ddm=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
-                        <img src="image/icons/google.png" alt="google">
+                        <a
+                            href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3D%25EA%25B5%25AC%25EA%25B8%2580%25EB%25A1%259C%25EA%25B7%25B8%25EC%259D%25B8%26oq%3D%25EA%25B5%25AC%25EA%25B8%2580%25EB%25A1%259C%25EA%25B7%25B8%25EC%259D%25B8%26gs_lcrp%3DEgZjaHJvbWUyBggAEEUYOTISCAEQLhhDGMcBGNEDGIAEGIoFMgwIAhAAGEMYgAQYigUyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyDQgGEAAYgwEYsQMYgAQyDAgHEAAYQxiABBiKBTINCAgQABiDARixAxiABNIBCDEyMzZqMGo5qAIAsAIB%26sourceid%3Dchrome%26ie%3DUTF-8&ec=GAZAAQ&hl=ko&passive=true&ifkv=ASKV5Mg-i7rOoRafcPUEFU5IGsCJRPHI4nkj9K1bGYfzxRlRIzL3iUho44YvICmodgpo8pSrLnPR&ddm=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                            <img src="image/icons/google.png" alt="google">
                         </a>
                     </div>
                     <div class="social_apple">
-                        <a href="https://secure9.store.apple.com/kr/shop/signIn?ssi=2AAABln9rcAEAIAYwkqebiSThpSm_-DBPripkJsDrmSzejQRx_LitoCqGAAAAO2h0dHBzOi8vc3VwcG9ydC5hcHBsZS5jb20va28ta3IvMTExMDAxP2RldmljZS10eXBlPWlwaG9uZXx8AAIBxyqD3bQUVw8FLqEHD49kX7AfTr4XKbz-ES2kgGbaY70">
-                        <img src="image/icons/apple.png" alt="apple">
+                        <a
+                            href="https://secure9.store.apple.com/kr/shop/signIn?ssi=2AAABln9rcAEAIAYwkqebiSThpSm_-DBPripkJsDrmSzejQRx_LitoCqGAAAAO2h0dHBzOi8vc3VwcG9ydC5hcHBsZS5jb20va28ta3IvMTExMDAxP2RldmljZS10eXBlPWlwaG9uZXx8AAIBxyqD3bQUVw8FLqEHD49kX7AfTr4XKbz-ES2kgGbaY70">
+                            <img src="image/icons/apple.png" alt="apple">
                         </a>
                     </div>
                 </div>
@@ -121,61 +133,64 @@
         <div class="signupWrap">
             <div class="selectBtn">
                 <div id="up_loginBtn">
-                <button>로그인</button>
+                    <button>로그인</button>
                 </div>
                 <div id="up_signupBtn">
-                <button>회원가입</button>
+                    <button>회원가입</button>
                 </div>
             </div>
-    
+
             <div class="panel formPanel">
                 <div class="inputWrap">
                     <div class="labelDiv">
-                    <label for="up_inputId">아이디</label>
+                        <label for="up_inputId">아이디</label>
                     </div>
                     <div class="containInput">
                         <div>
-                        <input class="up_input" type="text" name="up_inputId" id="up_inputId" placeholder="아이디 입력 (6 ~ 20자)">
+                            <input class="up_input" type="text" name="up_inputId" id="up_inputId"
+                                placeholder="아이디 입력 (6 ~ 20자)">
                         </div>
                         <button type="submit" id="checkBtn">중복확인</button>
                     </div>
                     <p class="up_errId"></p>
                 </div>
-    
+
                 <div class="inputWrap">
                     <div class="labelDiv">
-                    <label for="up_inputPw">비밀번호</label>
+                        <label for="up_inputPw">비밀번호</label>
                     </div>
                     <div class="inputDiv">
-                    <input class="up_input" type="password" name="up_inputPw" id="up_inputPw"
-                        placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함, 8 ~ 16 자)">
+                        <input class="up_input" type="password" name="up_inputPw" id="up_inputPw"
+                            placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함, 8 ~ 16 자)">
                     </div>
                     <p class="up_errPw"></p>
                 </div>
-    
+
                 <div class="inputWrap">
                     <div class="labelDiv">
-                    <label for="up_inputPwChk">비밀번호 확인</label>
+                        <label for="up_inputPwChk">비밀번호 확인</label>
                     </div>
                     <div class="inputDiv">
-                    <input class="up_input" type="password" name="up_inputPwChk" id="up_inputPwChk" placeholder="비밀번호 재입력">
-                    </div>  
+                        <input class="up_input" type="password" name="up_inputPwChk" id="up_inputPwChk"
+                            placeholder="비밀번호 재입력">
+                    </div>
                     <p class="errPwChk"></p>
                 </div>
-    
+
                 <div class="inputWrap">
                     <div class="labelDiv">
-                    <label for="up_inputName">이름</label>
+                        <label for="up_inputName">이름</label>
                     </div>
                     <div class="inputDiv">
-                    <input class="up_input" type="text" name="up_inputName" id="up_inputName" placeholder="이름을 입력해주세요">
+                        <input class="up_input" type="text" name="up_inputName" id="up_inputName"
+                            placeholder="이름을 입력해주세요">
                     </div>
                     <p class="errName"></p>
                 </div>
-    
+
                 <div class="inputWrap">
                     <div class="labelDiv">
-                    <label for="up_inputTell">전화번호</label>
+                        <label for="up_inputTell">전화번호</label>
                     </div>
                     <div class="tellWrap">
                         <select name="brandSel" id="brandSel">
@@ -186,20 +201,21 @@
                             <option value="AL">알뜰폰</option>
                         </select>
                         <div class="containInput">
-                        <input class="up_input" type="tel" name="up_inputTell" id="up_inputTell"
-                            placeholder="휴대폰 번호 입력 ('-' 제외, 11~12자리 입력)">
+                            <input class="up_input" type="tel" name="up_inputTell" id="up_inputTell"
+                                placeholder="휴대폰 번호 입력 ('-' 제외, 11~12자리 입력)">
                         </div>
                     </div>
                     <p class="errTell"></p>
                 </div>
-    
+
                 <div class="inputWrap">
                     <div class="labelDiv">
-                    <label for="up_inputEmail">이메일</label>
+                        <label for="up_inputEmail">이메일</label>
                     </div>
                     <div class="emailWrap">
                         <div class="containInput">
-                        <input class="up_input" type="text" name="up_inputEmail" id="up_inputEmail" placeholder="이메일 주소 입력">
+                            <input class="up_input" type="text" name="up_inputEmail" id="up_inputEmail"
+                                placeholder="이메일 주소 입력">
                         </div>
                         <p>@</p>
                         <select name="emailSel" id="emailSel">
@@ -211,10 +227,10 @@
                     </div>
                     <p class="errEmail"></p>
                 </div>
-    
+
                 <div class="inputWrap">
                     <div class="labelDiv">
-                    <label for="birth-year">생년월일</label>
+                        <label for="birth-year">생년월일</label>
                     </div>
                     <div class="birthWrap">
                         <select class="birthSel" id="birthYear">
@@ -225,35 +241,37 @@
                         </select>일
                     </div>
                 </div>
-    
+
                 <div class="submit_button">
                     <button type="submit" class="btn btn_up">회원가입</button>
                 </div>
-    
+
                 <div>
                     <button type="submit" class="btn btn_sns">SNS 가입</button>
                 </div>
-    
+
                 <div class="social">
                     <div class="social_naver">
                         <a href="https://nid.naver.com/user2/join/agree?lang=ko_KR&realname=N">
-                        <img src="image/icons/naver.png" alt="naver">
+                            <img src="image/icons/naver.png" alt="naver">
                         </a>
                     </div>
                     <div class="social_kakao">
-                        <a href="https://accounts.kakao.com/weblogin/create_account/?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount&lang=ko&showHeader=false#selectVerifyMethod">
-                        <img src="image/icons/kakao.png" alt="kakao">
-                    </a>
+                        <a
+                            href="https://accounts.kakao.com/weblogin/create_account/?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount&lang=ko&showHeader=false#selectVerifyMethod">
+                            <img src="image/icons/kakao.png" alt="kakao">
+                        </a>
                     </div>
                     <div class="social_google">
                         </a>
-                        <a href="https://accounts.google.com/lifecycle/steps/signup/name?continue=https://www.google.com/search?q%3D%25EA%25B5%25AC%25EA%25B8%2580%25EB%25A1%259C%25EA%25B7%25B8%25EC%259D%25B8%26oq%3D%25EA%25B5%25AC%25EA%25B8%2580%25EB%25A1%259C%25EA%25B7%25B8%25EC%259D%25B8%26gs_lcrp%3DEgZjaHJvbWUyBggAEEUYOTISCAEQLhhDGMcBGNEDGIAEGIoFMgwIAhAAGEMYgAQYigUyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyDQgGEAAYgwEYsQMYgAQyDAgHEAAYQxiABBiKBTINCAgQABiDARixAxiABNIBCDEyMzZqMGo5qAIAsAIB%26sourceid%3Dchrome%26ie%3DUTF-8&dsh=S907517746:1745894404664188&ec=GAZAAQ&flowEntry=SignUp&flowName=GlifWebSignIn&hl=ko&ifkv=ASKV5Mg-i7rOoRafcPUEFU5IGsCJRPHI4nkj9K1bGYfzxRlRIzL3iUho44YvICmodgpo8pSrLnPR&TL=AArrULStU-SeGCZK4QYJM7F1qnbeSHYxCMPYsjdMJCcrxMYJfEUzM0VYB2igqDt_">
-                        <img src="image/icons/google.png" alt="google">
+                        <a
+                            href="https://accounts.google.com/lifecycle/steps/signup/name?continue=https://www.google.com/search?q%3D%25EA%25B5%25AC%25EA%25B8%2580%25EB%25A1%259C%25EA%25B7%25B8%25EC%259D%25B8%26oq%3D%25EA%25B5%25AC%25EA%25B8%2580%25EB%25A1%259C%25EA%25B7%25B8%25EC%259D%25B8%26gs_lcrp%3DEgZjaHJvbWUyBggAEEUYOTISCAEQLhhDGMcBGNEDGIAEGIoFMgwIAhAAGEMYgAQYigUyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyDQgGEAAYgwEYsQMYgAQyDAgHEAAYQxiABBiKBTINCAgQABiDARixAxiABNIBCDEyMzZqMGo5qAIAsAIB%26sourceid%3Dchrome%26ie%3DUTF-8&dsh=S907517746:1745894404664188&ec=GAZAAQ&flowEntry=SignUp&flowName=GlifWebSignIn&hl=ko&ifkv=ASKV5Mg-i7rOoRafcPUEFU5IGsCJRPHI4nkj9K1bGYfzxRlRIzL3iUho44YvICmodgpo8pSrLnPR&TL=AArrULStU-SeGCZK4QYJM7F1qnbeSHYxCMPYsjdMJCcrxMYJfEUzM0VYB2igqDt_">
+                            <img src="image/icons/google.png" alt="google">
                         </a>
                     </div>
                     <div class="social_apple">
                         <a href="https://account.apple.com/account">
-                        <img src="image/icons/apple.png" alt="apple">
+                            <img src="image/icons/apple.png" alt="apple">
                         </a>
                     </div>
                 </div>

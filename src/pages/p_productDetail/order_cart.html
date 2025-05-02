@@ -7,78 +7,81 @@
     <title>Document</title>
     <link rel="stylesheet" href="/src/pages/p_productDetail/order_cart.css">
     <script src="/src/pages/p_productDetail/order_cart.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="../../common/localStorage.js"></script>
     <link rel="stylesheet" href="../p_mainPage/header.css">
+    <script src="../p_mainPage/header.js"></script>
 </head>
 
 <body>
-    <div class="fullscreen">
-        <header>
-            <div class="headerWrap">
-                <!-- 헤더 왼쪽 -->
-                <div class="headerLeft" onclick="location.href='../p_main/index.html'">LOGO</div>
-                <!-- 헤더 오른쪽 -->
-                <div class="headerRight">
-                    <div class="iconWrap">
-                        <div class="iconBtn" onclick="location.href='./testPage.html'">
-                            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                            <div class="cartNum">0</div>
-                        </div>
-                        <div class="iconBtn" onclick="location.href='./testPage.html'">
-                            <i class="fa-solid fa-user" aria-hidden="true"></i>
-                        </div>
-                        <ul class="login">
-                            <!-- 로그인 버튼 -->
-                            <li id="loginButton" onclick="login()">로그인</li>
-      
-                            <!-- 로그아웃 버튼 -->
-                            <li id="logoutButton" onclick="logout()" style="display: none;">로그아웃</li>
-                        </ul>
-      
+    <header>
+        <div class="headerWrap">
+            <!-- 헤더 왼쪽 -->
+            <div class="headerLeft" onclick="location.href='../p_mainPage/index.html'">LOGO</div>
+            <!-- 헤더 오른쪽 -->
+            <div class="headerRight">
+                <div class="iconWrap">
+                    <div class="iconBtn" id="cart">
+                        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        <div class="cartNum">0</div>
                     </div>
+                    <div class="iconBtn" id="mypage">
+                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                    </div>
+                    <ul class="login">
+                        <li>로그인</li>
+                        <!-- <li onclick="location.href='your-link-here.html'">로그인</li> -->
+                    </ul>
                 </div>
             </div>
-      
-      
-        </header>
+        </div>
+    </header>
+
+    <div class="fullscreen">
         <div class="orderCart">
             <div class="cart">
                 <div class="information">
                     <h3>쇼핑백 </h3>
                 </div>
                 <div class="product_item">
-                    <label><input type="checkbox" class="checkProduct">상품명: 티셔츠 </label>
+                    <span><input type="checkbox" class="checkProduct">상품명: 티셔츠 </span>
                     <img src="/featur/product_detail/img/woman-4390055_1280.jpg" alt="">
                     <div class="productPrice" data-price="15000"> <span class="firstPro"></span></div>
-                    <label>사이즈: XXL</label>
-                    <label>수량: 1</label>
+                    <span>사이즈: XXL</span>
+                    <span>수량: 1</span>
                 </div>
                 <div class="product_item">
-                    <label><input type="checkbox" class="checkProduct">상품명: 바지</label>
+                    <span><input type="checkbox" class="checkProduct">상품명: 바지</span>
                     <img src="/featur/product_detail/img/woman-4390055_1280.jpg" alt="">
                     <div class="productPrice" data-price="34000"> <span class="secondPro"></span></div>
-                    <label>사이즈: 32</label>
-                    <label>수량: 1</label>
+                    <span>사이즈: 32</span>
+                    <span>수량: 1</span>
                 </div>
                 <div class="product_item">
-                    <label><input type="checkbox" class="checkProduct">상품명: 샌들 </label>
+                    <span><input type="checkbox" class="checkProduct">상품명: 샌들 </span>
                     <img src="/featur/product_detail/img/woman-4390055_1280.jpg" alt="">
                     <div class="productPrice" data-price="67000"> <span class="thirdPro"></span></div>
-                    <label>사이즈: 240</label>
-                    <label>수량: 1</label>
+                    <span>사이즈: 240</span>
+                    <span>수량: 1</span>
                 </div>
                 <div class="product_item">
-                    <label><input type="checkbox" class="checkProduct">상품명: 원피스</label>
+                    <span><input type="checkbox" class="checkProduct">상품명: 원피스</span>
                     <img src="/featur/product_detail/img/woman-4390055_1280.jpg" alt="">
                     <div class="productPrice" data-price="65000"> <span class="forthPro"></span></div>
-                    <label>사이즈: 55</label>
-                    <label>수량: 1</label>
+                    <span>사이즈: 55</span>
+                    <span>수량: 1</span>
                 </div>
                 <div class="product_item">
-                    <label><input type="checkbox" class="checkProduct">상품명: 모자</label>
+                    <span><input type="checkbox" class="checkProduct">상품명: 모자</span>
                     <img src="/featur/product_detail/img/woman-4390055_1280.jpg" alt="">
                     <div class="productPrice" data-price="32000"> <span class="fifthPro"></span></div>
-                    <label>사이즈: Free</label>
-                    <label>수량: 1</label>
+                    <span>사이즈: Free</span>
+                    <span>수량: 1</span>
                 </div>
             </div>
             <div class="priceClac">
@@ -92,8 +95,7 @@
                     <label for="price">합계 </label> <span class="totalPay"></span>
                 </div>
                 <div class="actionBtn">
-                    <button class="keepChargeBtn">결제 계속하기 </button>
-                    <button class="logInBtn">로그인</button>
+                    <button class="keepChargeBtn" id="payButton">결제 계속하기 </button>
                 </div>
                 <div>
                     <p>

@@ -7,8 +7,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>마이페이지 > 정보 수정</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -18,35 +19,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="../../common/stringUtils.js"></script>
     <script src="modifyjs.js"></script>
-    <link rel="stylesheet" href="modifycss.css">
     <script src="../../common/localStorage.js"></script>
     <link rel="stylesheet" href="../p_main/footer1.css">
     <!-- 헤더 css -->
     <link rel="stylesheet" href="../p_mainPage/header.css">
     <!-- 헤더 아이콘 css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="../p_mainPage/header.js"></script>
+
+    <link rel="stylesheet" href="modifycss.css">
 </head>
 
 <body>
     <header>
-        <!-- Header-->
         <div class="headerWrap">
             <!-- 헤더 왼쪽 -->
-            <div class="headerLeft" onclick="location.href='/src/pages/p_mainPage/index.html'">LOGO</div>
+            <div class="headerLeft" onclick="location.href='../p_mainPage/index.html'">LOGO</div>
             <!-- 헤더 오른쪽 -->
             <div class="headerRight">
                 <div class="iconWrap">
-                    <div class="iconBtn" onclick="location.href='./testPage.html'">
+                    <div class="iconBtn" id="cart">
                         <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
                         <div class="cartNum">0</div>
                     </div>
-                    <div class="iconBtn" onclick="location.href='./testPage.html'">
+                    <div class="iconBtn" id="mypage">
                         <i class="fa-solid fa-user" aria-hidden="true"></i>
                     </div>
+                    <ul class="login">
+                        <li>로그인</li>
+                        <!-- <li onclick="location.href='your-link-here.html'">로그인</li> -->
+                    </ul>
                 </div>
             </div>
         </div>

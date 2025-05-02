@@ -1,5 +1,14 @@
 $(document).ready( async ()=>
     {
+        console.log("jquery");
+        if(!isLogin())
+        {
+            alert("로그인이 필요한 페이지 입니다.");
+
+            window.location.href =  "../p_loginPage/logIn_signUp.html"
+            return;
+        }
+        let currentUser = currentLoginInfo();
 
         let listNode = document.querySelector(".orderListDiv");
 
@@ -24,10 +33,15 @@ $(document).ready( async ()=>
 
         $("#sumValue").text(`총 금액 : ${sumValue.toLocaleString()}원`);
         
-        let currentUser = currentLoginInfo();
+      
 
         console.log(currentUser);
-        $("#address").text()
+        $("#address").text(currentUser.address);
+
+        $("#buyButton").click(()=>
+            {
+                alert("미구현 기능입니다.");
+            })
     });
 
     function createItem(productInfo, parentNode)

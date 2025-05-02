@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (checkbox.checked) { // 체크된 상품만 가격 더하기 //만약 대입된 checkbox가 체크되엇다면 
         const priceElement = item.querySelector('.productPrice');//priceElement에 iteme들의 가격을 대입하고
-        const price =  priceElement.dataset.price != 0 ? priceElement.dataset.price : 0;//가격에 priceElement의 가격 정보가 0이면 
+        const price = priceElement.dataset.price != 0 ? priceElement.dataset.price : 0;//가격에 priceElement의 가격 정보가 0이면 
         productTotal += parseInt(price);//productTotal에 price 값을 계속 대입한다 
 
         // 상품별 가격 출력 대상 클래스 배열
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 배송비 추출 후 총합 계산
     const deliveryFee = deliveryFeeEl.textContent;//딜리버리피의 문자값을 deliveryFee 대입한다 
-    const totalPay =  productTotal + parseInt(deliveryFee);// 총금액은 상품값 총합에 배송료를 더한 값이다
+    const totalPay = productTotal + parseInt(deliveryFee);// 총금액은 상품값 총합에 배송료를 더한 값이다
 
     // 총 결제 금액 표시
     totalEl.textContent = `₩${totalPay.toLocaleString()}`;//총 결제금액은 totalpay의 값을 텍스트로 출력한다 
@@ -54,4 +54,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   allCalcTotal(); // 처음에 한번 계산
+
+  $("#payButton").click(() => {
+
+    let getProductList = Object.values(productItems);
+
+    let checkedProduct = getProductList.filter(element => element.querySelector('.checkProduct').checked == true);
+
+    console.log(checkedProduct);
+    if (checkedProduct.length == 0) {
+        alert("선택한 상품이 존재하지 않습니다.");
+      return;
+    }
+
+    window.location.href = "../p_orderPage/orderProduct.html"
+  })
 });

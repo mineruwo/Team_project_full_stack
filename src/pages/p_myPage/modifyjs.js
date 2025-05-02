@@ -13,6 +13,8 @@ $(document).ready(() => {
 
     let currentUser = currentLoginInfo();
 
+    console.log(currentUser);
+
     $("#nameValue").text(nameEncrypt(`${currentUser.name}`));
     $("#birValue").text(birthEncrypt(`${currentUser.birthday}`));
     $("#phoneValue").text(phoneNumEncrypt(`${currentUser.phonenumber}`));
@@ -21,7 +23,7 @@ $(document).ready(() => {
     $("#nickname").text(`${currentUser.nickname} 님`);
 
     $("#photoChnage").click(() => {
-        alert("photoChange");
+        alert("photoChange (현재 미구현 기능입니다.)");
     });
 
     const nickModal = document.getElementById('nickNameChange');
@@ -41,6 +43,7 @@ $(document).ready(() => {
         const modalBodyInput = $("#changeNick");
         console.log(modalBodyInput[0]);
         console.log(modalBodyInput[0].value);
+        modifyNickname(modalBodyInput[0].value);
         $("#nickname").text(`${modalBodyInput[0].value} 님`);
         $("#nickNameChange").modal('hide');
     });
@@ -69,6 +72,10 @@ $(document).ready(() => {
 
         window.location.href = "../p_myPage/myPage.html";
     });
+
+    $("#unsubscribeButton").click(()=>{
+        alert("회원 탈퇴 기능 (현재 미구현입니다.)");
+    })
 })
 
 history.pushState(null, null, document.URL);

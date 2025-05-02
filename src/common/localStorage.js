@@ -37,8 +37,7 @@ function localStorageClearAll() {
 function currentLoginInfo() {
     let loginInfo = window.localStorage.getItem('currentLogin');
 
-    if(loginInfo == undefined)
-    {
+    if (loginInfo == undefined) {
         return null;
     }
 
@@ -47,14 +46,14 @@ function currentLoginInfo() {
 }
 
 function getUserInfo(rawData) {
-    let jsonData =  JSON.parse(rawData);
+    let jsonData = JSON.parse(rawData);
     return jsonData;
 }
 
 function isLogin() {
 
     return window.localStorage.getItem('currentLogin') == "undefined" ? false : true;
-
+}
 
 function registerUser(id, pw, name, birthday, phonenum, email) {
     let userObject = createUserInfoObject(id, pw, name, birthday, phonenum, email);
@@ -76,8 +75,8 @@ function createUserInfoObject(id, pw, name, birthday, phonenum, email) {
         "nickname": "",
         "isDelete": "false",
         "orderList": [],
-        "refundList" : [],
-        "csList" : [], 
+        "refundList": [],
+        "csList": [],
     }
 
     return returnObject;
@@ -103,13 +102,18 @@ function getUserList() {
     let readJson = window.localStorage.getItem('userList');
 
     if (readJson == null) {
-        let defaultUserList = '{userList:[]}'
+        let defaultUserList = '{"userList":[]}'
         readJson = defaultUserList;
+
         window.localStorage.setItem('userList', defaultUserList);
     }
+    
+    console.log(readJson);
 
+    console.log(JSON.parse(readJson));
     return JSON.parse(readJson);
 }
+
 //이거 쓰지 마세요. private method 입니다.
 function IDCheck(id) {
     let jsonData = getUserList();
@@ -167,10 +171,9 @@ function removeUser(removeUserId) {
     console.log(jsonData);
     window.localStorage.setItem('userList', rawData);
 }
-function removeAllUser()
-{
+function removeAllUser() {
     let empty = {
-        userList : []
+        userList: []
     };
 
     let rawdata = JSON.stringify(empty);
@@ -178,8 +181,7 @@ function removeAllUser()
     window.localStorage.setItem('userList', rawdata);
 }
 
-function userLogout()
-{
+function userLogout() {
 
     let currentUser = window.localStorage.getItem('currentLogin');
 
@@ -255,21 +257,18 @@ async function getProductList() {
     return jsonData;
 }
 
-function getClickItem()
-{
-   let index = window.localStorage.getItem("selectedProductIndex");
+function getClickItem() {
+    let index = window.localStorage.getItem("selectedProductIndex");
 
-   if(index === undefined)
-   {
+    if (index === undefined) {
         console.log("선택된 아이템이 없습니다.");
         return 0;
     }
 
-   return index;
+    return index;
 }
 
-function setClickItem(index)
-{
+function setClickItem(index) {
     window.localStorage.setItem("selectedProductIndex", index);
     console.log(`selected => ${index} Done`);
 }
@@ -282,7 +281,7 @@ function modifyNickname(modifyNickname) {
 
     let jsonData = getUserList();
 
-    let findUserIndex = jsonData.userList.findIndex(element=> element.index == currentLoginUser.index);
+    let findUserIndex = jsonData.userList.findIndex(element => element.index == currentLoginUser.index);
 
     if (findUserIndex == -1) {
         console.log("해당 유저를 찾을 수 없습니다.");
@@ -295,6 +294,10 @@ function modifyNickname(modifyNickname) {
     let rawData = JSON.stringify(jsonData);
 
     window.localStorage.setItem('userList', rawData);
+
+    let rawCurrentUserData = JSON.stringify(currentLoginUser);
+
+    window.localStorage.setItem('currentLogin', rawCurrentUserData);
 }
 
 function modifyUserInfo(phonenumber, email) {
@@ -302,7 +305,7 @@ function modifyUserInfo(phonenumber, email) {
 
     let jsonData = getUserList();
 
-    let findUserIndex = jsonData.userList.findIndex(element=> element.index == currentLoginUser.index);
+    let findUserIndex = jsonData.userList.findIndex(element => element.index == currentLoginUser.index);
 
     if (findUserIndex == -1) {
         console.log("해당 유저를 찾을 수 없습니다.");
@@ -323,7 +326,7 @@ function modifyUserInfo(phonenumber, email) {
 
     window.localStorage.setItem('userList', rawData);
 
-    
+
     let rawCurrentUserData = JSON.stringify(currentLoginUser);
 
     window.localStorage.setItem('currentLogin', rawCurrentUserData);
@@ -338,7 +341,7 @@ function modifyAddress(address) {
 
     let jsonData = getUserList();
 
-    let findUserIndex = jsonData.userList.findIndex(element=> element.index == currentLoginUser.index);
+    let findUserIndex = jsonData.userList.findIndex(element => element.index == currentLoginUser.index);
 
     if (findUserIndex == -1) {
         console.log("해당 유저를 찾을 수 없습니다.");

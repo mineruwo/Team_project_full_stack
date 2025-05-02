@@ -96,6 +96,17 @@ $(document).ready(() => {
         window.location.href = "../p_myPage/myPage.html";
     });
 
+
+    $("#cart").click(() => {
+        if (!isLogin()) {
+            window.location.href = "../p_loginPage/logIn_signUp.html";
+            return;
+        }
+
+        window.location.href = "../p_productDetail/order_cart.html";
+    });
+
+
     $(".name")[0].innerText = `${currentLoginInfo().nickname} 님`;
 })
 
