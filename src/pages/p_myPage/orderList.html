@@ -13,7 +13,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../../common/default.css" rel="stylesheet" />
-    <link rel="stylesheet" href="orderListcss.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
@@ -21,13 +20,17 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="../p_main/footer1.css">
     <script src="../../common/localStorage.js"></script>
     <script src="orderListjs.js"></script>
     <!-- 헤더 css -->
     <link rel="stylesheet" href="../p_mainPage/header.css">
     <!-- 헤더 아이콘 css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="../p_mainPage/header.js"></script>
+
+    <link rel="stylesheet" href="orderListcss.css">
 
 </head>
 
@@ -36,17 +39,21 @@
     <header>
         <div class="headerWrap">
             <!-- 헤더 왼쪽 -->
-            <div class="headerLeft" onclick="location.href='/src/pages/p_mainPage/index.html'">LOGO</div>
+            <div class="headerLeft" onclick="location.href='../p_mainPage/index.html'">LOGO</div>
             <!-- 헤더 오른쪽 -->
             <div class="headerRight">
                 <div class="iconWrap">
-                    <div class="iconBtn" onclick="location.href='./testPage.html'">
+                    <div class="iconBtn" id="cart">
                         <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
                         <div class="cartNum">0</div>
                     </div>
-                    <div class="iconBtn" onclick="location.href='./testPage.html'">
+                    <div class="iconBtn" id="mypage">
                         <i class="fa-solid fa-user" aria-hidden="true"></i>
                     </div>
+                    <ul class="login">
+                        <li>로그인</li>
+                        <!-- <li onclick="location.href='your-link-here.html'">로그인</li> -->
+                    </ul>
                 </div>
             </div>
         </div>
@@ -81,13 +88,45 @@
 
     <div class="transitionDiv" id="transitionPage">
     </div>
+    <footer>
+        <nav>
+          <a href='' target='_blank'>이용약관</a> |
+          <a href='' target='_blank'>이용안내</a>
+        </nav>
+      
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+      
+        
+          <div style="flex: 1; min-width: 250px; text-align: left; ">
+            <p>
+              <span>저주식회사 CEO</span>
+              <span>이메일 : footer123@gmail.com</span><br />
+              <span>Copyright 2020. cocoder. All Rights Reserved.</span><br>
+              <span>ADD 12345 서울특별시 강남구 역삼동 123-12 </span><br>
+              <span>CPO 푸터 </span>
+            </p>
+          </div>
+      
 
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
+          <div style="flex: 1; min-width: 250px; text-align: center;">
+            <p><strong>CS CENTER</strong><br>
+              1644-1111<br>
+              CALL 09:00 ~ 17:00<br>
+              점심시간 12:00 ~ 13:00<br>
+              토/일/공휴일 휴무
+            </p>
+    
+          </div>
+
+          <div style="flex: 1; min-width: 250px; text-align: right; padding-right: 20px;">
+            <p><strong>DELIVERY & RETURN</strong><br>
+              교환반품주소: 서울시 역삼동 123<br>
+              우체국<br>
+              택배: 1588-1111
+            </p>
+          </div>
         </div>
-    </footer>
+      </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -10,4 +10,15 @@ $(document).ready(() => {
             "transition": "500ms"
         }
     )
+
+    $("#mypage").click(()=>
+        {
+            if(!isLogin())
+            {
+                window.location.href = "../p_loginPage/logIn_signUp.html";
+                return;
+            }
+
+            window.location.href = "../p_myPage/myPage.html";
+        });   
 })

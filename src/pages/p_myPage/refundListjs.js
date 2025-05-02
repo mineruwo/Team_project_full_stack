@@ -15,8 +15,9 @@ $(document).ready(() => {
 
     let refundList = currnentUser.refundList;
 
-    if(refundList == null || refundList == undefined)
+    if(refundList == null || refundList == undefined || refundList.length == 0)
     {
+        console.log("환불 데이터가 없습니다. 가상 데이터로 테스트를 진행합니다.");
         refundList = [
                 {
                     "orderDate": "20250424",
@@ -39,7 +40,6 @@ $(document).ready(() => {
         ]
     }
 
-    console.log(refundList);
     createOrderList(refundList, false);
 })
 

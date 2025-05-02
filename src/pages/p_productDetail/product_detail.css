@@ -413,3 +413,74 @@ footer p span {
     display: inline-block;
     margin-left: 20px;
 }
+
+/* modify css area */
+
+
+.thumb{
+    position: relative;
+    overflow: hidden;
+}
+
+.thumb img {
+    display: block;
+    margin: 0 auto;
+}
+
+.heart {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #000000;
+    transition: color 0.3s;
+}
+
+.heart:hover {
+    color: red;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+.heart.active {
+    color: red;
+}
+
+/* 상품 */
+.info {
+    padding: 16px 0 0;
+    min-height: 90px;
+    box-sizing: border-box;
+}
+
+.info b {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info del {
+    color: #999;
+    font-size: 14px;
+}
+
+.info .price {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 5px;
+    color: #e44d5c;
+}
+
+.thumPrice {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 5px;
+    color: #e44d5c;
+}

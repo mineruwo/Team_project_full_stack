@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).ready(async () => {
     let transEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
     $("#transitionPage").on(transEnd, () => {
 
@@ -19,6 +19,21 @@ $(document).ready(() => {
     }
 
     let orderList = currnentUser.orderList;
+
+    if(orderList == null || orderList.length == 0)
+    {
+        console.log(orderList);
+        console.log(`주문 내역이 없습니다. 가상 데이터로 표기를 진행합니다.`);
+
+        let readJson = await fetch("../../json/orderList.json");
+
+        let parseData = await readJson.json();
+
+        console.log(readJson);
+        console.log(parseData);
+
+        orderList = parseData.orderList;
+    }
 
     createOrderList(orderList, true);
 })

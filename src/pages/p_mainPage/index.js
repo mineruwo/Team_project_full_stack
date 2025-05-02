@@ -25,6 +25,9 @@ function scrollImg(itemSelector, prevButtonSelector, nextButtonSelector) {
 }
 
 
+///해당 메서드를 구현하였으나 사용하지 않았습니다. 
+// 아래 메서드 정리해주세요. 
+
 // 페이지 로드
 function loadGallery(galleryId) {
     const contentArea = document.getElementById('mainContent');
@@ -110,6 +113,10 @@ function heart() {
     });
 }
 
+
+//해당 메서드도 구현되었으나, 사용되지 않았습니다. 
+//메서드 진행 부탁드리겠습니다.
+
 // json 상품정보 연동 
 async function applyProductInfo(num) {
     let productList = await getProductList();
@@ -118,15 +125,26 @@ async function applyProductInfo(num) {
 
     // big article
     bigArticles.forEach((article, idx) => {
+
+        let calculIndex = (num - 1) * 6 + idx + 48
+
         // productList 48 ~ 83 큰 사진
-        let product = productList.productList[(num - 1) * 6 + idx + 48];
+        let product = productList.productList[calculIndex];
 
         if (!product) return;
 
-        // 상품 정보 보내기 
-        article.addEventListener('click', () => {
-            setClickItem(idx);
-        });
+
+        let linkTag = article.querySelector("#linkTag");
+        linkTag.setAttribute("data-index", calculIndex);
+
+        linkTag.addEventListener('click', (event)=>
+            {
+                event.preventDefault();
+                setClickItem(calculIndex);
+                window.location.href = "../p_productDetail/product_detail.html"
+            });
+
+
 
         let imgElement = article.querySelector('.thumb img');
         if (imgElement) {
@@ -143,15 +161,23 @@ async function applyProductInfo(num) {
 
     // small article
     smallArticles.forEach((article, idx) => {
+        let calculIndex = (num - 1) * 8 + idx;
         // productList 0~ 47 작은 사진
-        let product = productList.productList[(num - 1) * 8 + idx];
+        let product = productList.productList[calculIndex];
 
         if (!product) return;
 
         // 상품 정보 보내기 
-        article.addEventListener('click', () => {
-            setClickItem(idx);
-        });
+      
+        let linkTag = article.querySelector("#linkTag");
+        linkTag.setAttribute("data-index", calculIndex);
+
+        linkTag.addEventListener('click', (event)=>
+            {
+                event.preventDefault();
+                setClickItem(calculIndex);
+                window.location.href = "../p_productDetail/product_detail.html"
+            });
 
         let imgElement = article.querySelector('.thumb img');
         if (imgElement) {
@@ -168,6 +194,9 @@ async function applyProductInfo(num) {
     });
 }
 
+//위 메서드와 동작이 동일한 부분이 있습니다. 
+// //위 메서드를 모듈화 시켰으면 해당 메서드를 활용하는 편이 더 좋았을 것입니다.
+
 async function applyProductFirst() {
     let productList = await getProductList();
     let bigArticles = document.querySelectorAll('.bigArticle');
@@ -175,14 +204,22 @@ async function applyProductFirst() {
 
     // big article
     bigArticles.forEach((article, idx) => {
-        let product = productList.productList[idx * 6 + 48];
+
+        let calculIndex = idx * 6 + 48;
+
+        let product = productList.productList[calculIndex];
 
         if (!product) return;
 
-        // 상품 정보 보내기 
-        article.addEventListener('click', () => {
-            setClickItem(idx);
-        });
+        let linkTag = article.querySelector("#linkTag");
+        linkTag.setAttribute("data-index", calculIndex);
+
+        linkTag.addEventListener('click', (event)=>
+            {
+                event.preventDefault();
+                setClickItem(calculIndex);
+                window.location.href = "../p_productDetail/product_detail.html"
+            });
 
         let imgElement = article.querySelector('.thumb img');
         if (imgElement) {
@@ -199,13 +236,20 @@ async function applyProductFirst() {
 
     // small article
     smallArticles.forEach((article, idx) => {
-        let product = productList.productList[idx * 6];
+        let calculIndex = idx * 6;
+        let product = productList.productList[calculIndex];
         if (!product) return;
 
         // 상품 정보 보내기 
-        article.addEventListener('click', () => {
-            setClickItem(idx);
-        });
+        let linkTag = article.querySelector("#linkTag");
+        linkTag.setAttribute("data-index", calculIndex);
+
+        linkTag.addEventListener('click', (event)=>
+            {
+                event.preventDefault();
+                setClickItem(calculIndex);
+                window.location.href = "../p_productDetail/product_detail.html"
+            });
 
         let imgElement = article.querySelector('.thumb img');
         if (imgElement) {
@@ -225,18 +269,24 @@ async function applyProductFirst() {
 
 function setupRecentProductsTracking() {
     const productLinks = document.querySelectorAll(".products a");
+
     productLinks.forEach(link => {
         link.addEventListener("click", () => {
             const img = link.querySelector("img");
             const name = link.querySelector("b")?.innerText || "";
             const price = link.querySelector(".price")?.innerText.replace(/[^0-9]/g, '') || "0";
-            const href = link.getAttribute("href") || "#";
+            const href = link.getAttribute("data-linkPath") || "#";
+            const index = link.getAttribute("data-index") || 0;
+
+            
+            console.log(href);
 
             const product = {
                 name,
                 price,
                 img: img?.src || "",
-                url: href
+                url: href,
+                index : index
             };
 
             let recent = JSON.parse(localStorage.getItem("recentProducts")) || [];
@@ -264,6 +314,17 @@ function renderRecentProducts() {
             <div>${p.name}</div>
             <div>${Number(p.price).toLocaleString()}원</div>
         `;
+
+        item.index = p.index;
+
+        item.addEventListener("click", (event)=>
+            {
+                event.preventDefault();
+
+                setClickItem(item.index);
+                window.location.href = item.href; 
+            });
+
         container.appendChild(item);
     });
 }
@@ -284,11 +345,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // 하트
     heart();
 
-    // 첫 페이지 상품 불러오기 
+
+
+    
     applyProductFirst();
 
     // 최근 본 상품 클릭 이벤트 
+
     setupRecentProductsTracking();
     renderRecentProducts();
-
 });
+
+

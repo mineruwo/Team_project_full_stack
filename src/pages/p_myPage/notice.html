@@ -20,48 +20,44 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="noticecss.css">
     <!-- css 수정 필요 -->
     <script src="../../common/localStorage.js"></script>
+    <!-- 헤더 css -->
+    <link rel="stylesheet" href="../p_mainPage/header.css">
+    <!-- 헤더 아이콘 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="../p_mainPage/header.js"></script>
     <script src="noticeJS.js"></script>
+    <link rel="stylesheet" href="noticecss.css">
+
     <!--  -->
 </head>
 
 <body>
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Start Bootstrap</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">All Products</a></li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
-                        <i class="bi-cart-fill me-1"></i>
-                        Cart
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                    </button>
-                </form>
+    <header>
+        <div class="headerWrap">
+            <!-- 헤더 왼쪽 -->
+            <div class="headerLeft" onclick="location.href='../p_mainPage/index.html'">LOGO</div>
+            <!-- 헤더 오른쪽 -->
+            <div class="headerRight">
+                <div class="iconWrap">
+                    <div class="iconBtn" id="cart">
+                        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        <div class="cartNum">0</div>
+                    </div>
+                    <div class="iconBtn" id="mypage">
+                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                    </div>
+                    <ul class="login">
+                        <li>로그인</li>
+                        <!-- <li onclick="location.href='your-link-here.html'">로그인</li> -->
+                    </ul>
+                </div>
             </div>
         </div>
-    </nav>
+    </header>
     <!-- Header-->
     <div class="innerDiv">
         <div class="innerDivWrap">
@@ -77,8 +73,7 @@
                             스토어 이용약관 개정 안내
                         </button>
                     </h2>
-                    <div id="notice1" class="accordion-collapse collapse"
-                        data-bs-parent="#noticeAccordion">
+                    <div id="notice1" class="accordion-collapse collapse" data-bs-parent="#noticeAccordion">
                         <div class="accordion-body noticeItem">
                             <span style="color:#000000;">안녕하세요. 주식회사 무신사입니다.<br>
                                 &nbsp;<br>
@@ -111,8 +106,7 @@
                             산불 피해로 인한 일부 지역 배송 제한 안내
                         </button>
                     </h2>
-                    <div id="notice2" class="accordion-collapse collapse"
-                        data-bs-parent="#noticeAccordion">
+                    <div id="notice2" class="accordion-collapse collapse" data-bs-parent="#noticeAccordion">
                         <div class="accordion-body noticeItem">
                             <span style="font-size:12px;">안녕하세요. 무신사입니다.<br>
                                 <br>
@@ -139,13 +133,11 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed noticeButton" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#notice3" aria-expanded="false"
-                            aria-controls="notice3">
+                            data-bs-target="#notice3" aria-expanded="false" aria-controls="notice3">
                             개인정보처리방침 개정 내용 사전 안내(3/31 시행)
                         </button>
                     </h2>
-                    <div id="notice3" class="accordion-collapse collapse"
-                        data-bs-parent="#noticeAccordion">
+                    <div id="notice3" class="accordion-collapse collapse" data-bs-parent="#noticeAccordion">
                         <div class="accordion-body noticeItem">
                             <div class="box-detail" style="display: block;"><span style="color:#000000;"><span
                                         style="font-size:12px;">안녕하세요. 무신사 스토어(이하, 무신사)입니다.<br>
@@ -197,13 +189,11 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed noticeButton" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#notice4" aria-expanded="false"
-                            aria-controls="notice4">
+                            data-bs-target="#notice4" aria-expanded="false" aria-controls="notice4">
                             10월 공휴일로 인한 배송 지연 안내
                         </button>
                     </h2>
-                    <div id="notice4" class="accordion-collapse collapse"
-                        data-bs-parent="#noticeAccordion">
+                    <div id="notice4" class="accordion-collapse collapse" data-bs-parent="#noticeAccordion">
                         <div class="accordion-body noticeItem">
                             <span style="font-size:12px;"><span style="color:#000000;">안녕하세요. 무신사입니다.<br>
                                     <br>
