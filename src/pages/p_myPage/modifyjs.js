@@ -1,7 +1,7 @@
 $(document).ready(() => {
     let transEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
     $("#transitionPage").on(transEnd, () => {
-     
+
     });
 
     $("#transitionPage").css(
@@ -52,18 +52,27 @@ $(document).ready(() => {
         console.log(userModify);
     });
 
-    $("#addrModify").click(()=>
-        {
+    $("#addrModify").click(() => {
 
-            let option = 'width = 440px, height=600px, left =50px, top = 100px, menubar = no';
-            let userModify = window.open('modifyAdress.html', userInfoTable.textContent, option);
-    
-            console.log(userModify);
-        });
+        let option = 'width = 440px, height=600px, left =50px, top = 100px, menubar = no';
+        let userModify = window.open('modifyAdress.html', userInfoTable.textContent, option);
+
+        console.log(userModify);
+    });
+
+
+    $("#mypage").click(() => {
+        if (!isLogin()) {
+            window.location.href = "../p_loginPage/logIn_signUp.html";
+            return;
+        }
+
+        window.location.href = "../p_myPage/myPage.html";
+    });
 })
 
 history.pushState(null, null, document.URL);
-window.addEventListener('popstate', function() {
+window.addEventListener('popstate', function () {
 
     let transEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
 
@@ -75,7 +84,7 @@ window.addEventListener('popstate', function() {
         {
             "display": "block",
             "left": "0%",
-            "transition" : "500ms"
+            "transition": "500ms"
         }
     );
 });

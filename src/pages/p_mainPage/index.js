@@ -272,7 +272,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     heart();
 
-
-
     applyProductFirst();
+
+    $("#mypage").click(()=>
+        {
+            if(!isLogin())
+            {
+                window.location.href = "../p_loginPage/logIn_signUp.html";
+                return;
+            }
+
+            window.location.href = "../p_myPage/myPage.html";
+        });   
 });
